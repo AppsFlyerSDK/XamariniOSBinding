@@ -1,0 +1,6 @@
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/mtouch-cache/64/Link/Xamarin.iOS.dll
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/mtouch-cache/64/Link/Calabash.dll
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/mtouch-cache/64/Link/AppsFlyerXamarinSampleApp.exe
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/mtouch-cache/64/Link/AppsFlyerXamarinBinding.dll
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/mtouch-cache/64/Link/System.dll
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/mtouch-cache/64/Link/mscorlib.dll

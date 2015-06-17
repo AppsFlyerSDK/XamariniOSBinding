@@ -1,0 +1,5 @@
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinBinding/obj/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinBinding/bin/Debug/AppsFlyerXamarinBinding.dll.mdb
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinBinding/bin/Debug/AppsFlyerXamarinBinding.dll
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinBinding/obj/Debug/AppsFlyerXamarinBinding.dll
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinBinding/obj/Debug/AppsFlyerXamarinBinding.dll.mdb

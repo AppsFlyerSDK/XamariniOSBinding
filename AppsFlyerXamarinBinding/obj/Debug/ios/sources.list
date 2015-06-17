@@ -1,0 +1,4 @@
+obj/Debug/ios/ObjCRuntime/Messaging.g.cs
+obj/Debug/ios/AppsFlyerXamarinBinding/AppsFlyerTrackerDelegate.g.cs
+obj/Debug/ios/AppsFlyerXamarinBinding/AppsFlyerTracker.g.cs
+obj/Debug/ios/ObjCRuntime/Trampolines.g.cs

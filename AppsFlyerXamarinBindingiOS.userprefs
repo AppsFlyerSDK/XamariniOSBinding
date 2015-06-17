@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="AppsFlyerXamarinSampleApp/AppsFlyerXamariniOSSampleApp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.3" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AppsFlyerXamarinBinding/ApiDefinition.cs">
+    <Files>
+      <File FileName="AppsFlyerXamarinSampleApp/AppDelegate.cs" Line="20" Column="3" />
+      <File FileName="AppsFlyerXamarinSampleApp/ViewController.cs" Line="1" Column="1" />
+      <File FileName="AppsFlyerXamarinBinding/StructsAndEnums.cs" Line="1" Column="1" />
+      <File FileName="AppsFlyerXamarinBinding/ApiDefinition.cs" Line="88" Column="11" />
+      <File FileName="AppsFlyerXamarinSampleApp/AppsFlyerConversionDataDelegate.cs" Line="1" Column="1" />
+      <File FileName="AppsFlyerXamarinBinding/libAppsFlyerLib.linkwith.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

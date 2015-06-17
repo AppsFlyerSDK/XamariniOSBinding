@@ -1,0 +1,15 @@
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/ibtool/LaunchScreen.nib
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/ibtool/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/ibtool/Main.storyboardc/Info.plist
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/ibtool/Main.storyboardc/UIViewController-BYZ-38-t0r.nib
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/actool/partial-info.plist
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/actool/asset-manifest.plist
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/bin/iPhone/Debug/AppsFlyerXamarinSampleApp.exe.mdb
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/bin/iPhone/Debug/AppsFlyerXamarinSampleApp.exe
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/AppsFlyerXamarinSampleApp.exe
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/obj/iPhone/Debug/AppsFlyerXamarinSampleApp.exe.mdb
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/bin/iPhone/Debug/Calabash.dll
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/bin/iPhone/Debug/AppsFlyerXamarinBinding.dll
+/Users/golan/Documents/Dev/AppsFlyerXamarinBinding/AppsFlyerXamarinSampleApp/bin/iPhone/Debug/AppsFlyerXamarinBinding.dll.mdb
