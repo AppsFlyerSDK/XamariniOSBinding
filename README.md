@@ -1,63 +1,59 @@
-# XamarinAndroidBinding
+# XamariniOSBinding
 
-Xamarin Binding integration guide For Android
-AppsFlyer Xamarin Binding version 1.0.0
+Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 1.0.0
 
-#Introduction
+# Introduction
 AppsFlyer’s Xamarin binding provides application installation and events tracking functionality
 
 
-#Initial steps
+# Initial steps
 
 To Embed SDK into your Application:
 
-1. Copy AppsFlyerXamarinBindingAndroid.dll into your project.
+1. Copy AppsFlyerXamarinBinding.dll into your project.
 
 2. On Xamarin Studio go to References and click on Edit References. 
 
-3. Go to .Net Assembly tab and click on Browse… button
-
-4. Locate AppsFlyerXamarinBindingAndroid.dll and chose it.
-
-5. Locate GooglePlayServicesLib.dll and add it as well (for advertising Id
+3. Go to .Net Assembly tab and click on Browse… button.
+ 
+4. Locate AppsFlyerXamarinBinding.dll and chose it.
 
 
-#SDK Initialization
 
-Go to your MainActivity.cs and add:
+# SDK Initialization
+Go to your AppDelegate.cs and add:
 
-using Com.Appsflyer; at the top of the file.
+using AppsFlyerXamarinBinding; at the top of the file.
 
-Add the following code in the OnCreate method:
+Add the following code in the FinishedLaunching method:
 
-protected override void OnCreate (Bundle bundle)
+	public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 
-AppsFlyerLib.SetAppsFlyerKey ("YOUR_DEV_KEY_HERE"); 
-AppsFlyerLib.SendTracking (this);
+	AppsFlyerTracker.SharedTracker().AppleAppID = "YOUR_APP_ID_HERE";
+	AppsFlyerTracker.SharedTracker().AppsFlyerDevKey = "APPSFLYER_DEV_KEY_HERE";
+	AppsFlyerTracker.SharedTracker().IsDebug = true;
+	AppsFlyerTracker.SharedTracker().TrackAppLaunch();
 
-Basically, every API call for Android SDK is available here as well. For more information please refer to Appsflyer Android Integration guide.
 
+Set your appId & DevKey Replace appId & devKey with your values.
 
-Set your appId & DevKey 
-Replace devKey with your values
 You can get your AppsFlyer DevKey on our dashboard. See “SDK integration” on your app screen. 
 
 DevKey = your unique developer ID, which is accessible from your account, e.g. rbz2mfgZQY5mSEYNTyjwni // For example: 
 
-# Adding Custom Event 
-Example: “Add-to-cart” Event:
+#	Adding Custom Event 
+Example: “Add-to-cart” Event 
 
-AppsFlyerLib.TrackEvent(this, AFInAppEventType.AddToCart, new Dictionary<string, Java.Lang.Object> { 
-{AFInAppEventParameterName.ContentId, "id1234"}, 
-{AFInAppEventParameterName.ContentType, "tickets"},
-{AFInAppEventParameterName.Price, 123},
-{AFInAppEventParameterName.Currency, "USD"},
-});
+	var addToCartEvent = new NSDictionary (AFEventParameter.AFEventParamContentId, "id 123",
+	AFEventParameter.AFEventParamContentType, "type 1", AFEventParameter.AFEventParamCurrency,
+	"USD", AFEventParameter.AFEventParamDescription, "add to cart Description");
 
+	AppsFlyerTracker.SharedTracker().TrackEvent(AFEventName.AFEventAddToCart, addToCartEvent);
 
 
-# Conversion Data
+#	Conversion Data
 For Conversion data your should call this method:
 
-AppsFlyerLib.RegisterConversionListener (this, new AppsFlyerConversionDelegate ()); 
-AppsFlyerConversionDelegate.cs can be found in the sample app provided with this guide 
+	AppsFlyerTracker.SharedTracker().LoadConversionDataWithDelegate (new AppsFlyerConversionDataDelegate());
+
+AppsFlyerConversionDataDelegate.cs can be found in the sample app provided with this guide
