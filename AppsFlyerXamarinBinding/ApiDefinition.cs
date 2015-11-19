@@ -114,19 +114,13 @@ namespace AppsFlyerXamarinBinding
 		[Export ("getAppsFlyerUID")]
 		string GetAppsFlyerUID ();
 
-		// -(void)loadConversionDataWithDelegate:(id<AppsFlyerTrackerDelegate>)delegate;
-		[Availability (Deprecated = Platform.iOS_Version | Platform.Mac_Version)]
-		[Export ("loadConversionDataWithDelegate:")]
-		void LoadConversionDataWithDelegate (AppsFlyerTrackerDelegate afDelegate);
-
-		// -(void)handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication;
-		[Availability (Deprecated = Platform.iOS_Version | Platform.Mac_Version)]
-		[Export ("handleOpenURL:sourceApplication:")]
-		void HandleOpenURL (NSUrl url, string sourceApplication);
-
 		// -(void)handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication withAnnotaion:(id)annotation;
 		[Export ("handleOpenURL:sourceApplication:withAnnotaion:")]
 		void HandleOpenURL (NSUrl url, string sourceApplication, NSObject annotation);
+
+		//- (void) handleConversionDataWithDelegate:(id<AppsFlyerTrackerDelegate>) afDelegate
+		[Export ("handleConversionDataWithDelegate:")]
+		void handleConversionDataWithDelegate (AppsFlyerTrackerDelegate afDelegate);
 	}
 }
 
