@@ -1,12 +1,10 @@
 ﻿<Properties StartupItem="AppsFlyerSampleApp/AppsFlyerSampleApp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AppsFlyerSampleApp/AppDelegate.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="AppsFlyerXamarinBinding/libAppsFlyerLib.linkwith.cs" Line="4" Column="1" />
+      <File FileName="AppsFlyerXamarinBinding/libAppsFlyerLib.linkwith.cs" Line="1" Column="1" />
       <File FileName="AppsFlyerSampleApp/AppDelegate.cs" Line="21" Column="4" />
       <File FileName="AppsFlyerSampleApp/AppsFlyerConversionDataDelegate.cs" Line="1" Column="1" />
-      <File FileName="AppsFlyerSampleApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json" />
-      <File FileName="AppsFlyerSampleApp/Main.cs" Line="1" Column="1" />
       <File FileName="AppsFlyerSampleApp/ViewController.cs" Line="35" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
