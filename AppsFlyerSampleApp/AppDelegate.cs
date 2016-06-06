@@ -2,15 +2,16 @@
 using UIKit;
 using AppsFlyerXamarinBinding;
 
-
 namespace AppsFlyerSampleApp
 {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the
 	// User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
+
 	[Register ("AppDelegate")]
 	public class AppDelegate : UIApplicationDelegate
 	{
 		// class-level declarations
+		AppsFlyerXamarinBinding.AppsFlyerTracker tracker = AppsFlyerXamarinBinding.AppsFlyerTracker.SharedTracker();
 
 		public override UIWindow Window {
 			get;
@@ -21,13 +22,9 @@ namespace AppsFlyerSampleApp
 		{
 			// Override point for customization after application launch.
 			// If not required for your application you can safely delete this method
-
-			AppsFlyerXamarinBinding.AppsFlyerTracker tracker = AppsFlyerXamarinBinding.AppsFlyerTracker.SharedTracker();
-
 			tracker.IsDebug = true;
 			tracker.AppsFlyerDevKey = "rbz2mfgZQY5mSEYNTyjwni";
 			tracker.AppleAppID = "989898989";
-			tracker.TrackAppLaunch ();
 
 			AppsFlyerTracker.SharedTracker ().handleConversionDataWithDelegate (new AppsFlyerConversionDataDelegate());
 
@@ -58,6 +55,8 @@ namespace AppsFlyerSampleApp
 		{
 			// Restart any tasks that were paused (or not yet started) while the application was inactive. 
 			// If the application was previously in the background, optionally refresh the user interface.
+			tracker.TrackAppLaunch ();
+
 		}
 
 		public override void WillTerminate (UIApplication application)

@@ -49,10 +49,6 @@ namespace AppsFlyerXamarinBinding
 		[Export ("currencyCode", ArgumentSemantic.Retain)]
 		string CurrencyCode { get; set; }
 
-		// @property BOOL isHTTPS;
-		[Export ("isHTTPS")]
-		bool IsHTTPS { get; set; }
-
 		// @property BOOL disableAppleAdSupportTracking;
 		[Export ("disableAppleAdSupportTracking")]
 		bool DisableAppleAdSupportTracking { get; set; }
@@ -119,7 +115,7 @@ namespace AppsFlyerXamarinBinding
 		void HandleOpenURL (NSUrl url, string sourceApplication, NSObject annotation);
 
 		//- (void) handleConversionDataWithDelegate:(id<AppsFlyerTrackerDelegate>) afDelegate
-		[Export ("handleConversionDataWithDelegate:")]
+		[Export ("loadConversionDataWithDelegate:")]
 		void handleConversionDataWithDelegate (AppsFlyerTrackerDelegate afDelegate);
 	}
 }
