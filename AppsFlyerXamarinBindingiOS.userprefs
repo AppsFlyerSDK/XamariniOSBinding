@@ -1,29 +1,15 @@
 ﻿<Properties StartupItem="AppsFlyerSampleApp/AppsFlyerSampleApp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.iPhone" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AppsFlyerSampleApp/AppDelegate.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6s.9.3" />
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="AppsFlyerSampleApp/AppDelegate.cs" Line="4" Column="1" />
       <File FileName="AppsFlyerSampleApp/ViewController.cs" Line="1" Column="1" />
-      <File FileName="AppsFlyerXamarinBinding/ApiDefinition.cs" Line="51" Column="1" />
+      <File FileName="AppsFlyerXamarinBinding/ApiDefinition.cs" Line="1" Column="1" />
       <File FileName="AppsFlyerSampleApp/Main.cs" Line="1" Column="1" />
       <File FileName="AppsFlyerXamarinBinding/libAppsFlyerLib.linkwith.cs" Line="1" Column="1" />
-      <File FileName="AppsFlyerXamarinBinding/StructsAndEnums.cs" Line="23" Column="50" />
-      <File FileName="AppsFlyerXamarinBinding/Properties/AssemblyInfo.cs" Line="15" Column="51" />
+      <File FileName="AppsFlyerXamarinBinding/StructsAndEnums.cs" Line="1" Column="1" />
+      <File FileName="AppsFlyerXamarinBinding/Properties/AssemblyInfo.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="AppsFlyerXamarinBindingiOS" expanded="True" selected="True">
-            <Node name="AppsFlyerSampleApp" expanded="True" />
-            <Node name="AppsFlyerXamarinBindingiOS" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="libAppsFlyerLib.a" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
