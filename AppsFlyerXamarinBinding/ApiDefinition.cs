@@ -41,6 +41,10 @@ namespace AppsFlyerXamarinBinding
 		[Export ("appsFlyerDevKey", ArgumentSemantic.Retain)]
 		string AppsFlyerDevKey { get; set; }
 
+		// @property (nonatomic, setter = setAdditionalData:, strong) NSDictionary * customData;
+		[Export ("customData", ArgumentSemantic.Strong)]
+		NSDictionary CustomData { get; [Bind ("setAdditionalData:")] set; }
+
 		// @property (nonatomic, strong, setter = setAppleAppID:) NSString * appleAppID;
 		[Export ("appleAppID", ArgumentSemantic.Retain)]
 		string AppleAppID { get; set; }
@@ -110,13 +114,33 @@ namespace AppsFlyerXamarinBinding
 		[Export ("getAppsFlyerUID")]
 		string GetAppsFlyerUID ();
 
-		// -(void)handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication withAnnotaion:(id)annotation;
-		[Export ("handleOpenURL:sourceApplication:withAnnotaion:")]
+		// -(void)loadConversionDataWithDelegate:(id<AppsFlyerTrackerDelegate>)delegate __attribute__((deprecated("")));
+		[Export ("loadConversionDataWithDelegate:")]
+		void LoadConversionDataWithDelegate (AppsFlyerTrackerDelegate @delegate);
+
+		// -(void)handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication withAnnotation:(id)annotation;
+		[Export ("handleOpenURL:sourceApplication:withAnnotation:")]
 		void HandleOpenURL (NSUrl url, string sourceApplication, NSObject annotation);
 
-		//- (void) handleConversionDataWithDelegate:(id<AppsFlyerTrackerDelegate>) afDelegate
-		[Export ("loadConversionDataWithDelegate:")]
-		void handleConversionDataWithDelegate (AppsFlyerTrackerDelegate afDelegate);
+		// -(BOOL)continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *))restorationHandler __attribute__((availability(ios, introduced=9.0)));
+		[Export ("continueUserActivity:restorationHandler:")]
+		bool ContinueUserActivity (NSUserActivity userActivity, UIApplicationRestorationHandler restorationHandler);
+
+		// -(void)didUpdateUserActivity:(NSUserActivity *)userActivity __attribute__((availability(ios, introduced=9.0)));
+		[Export ("didUpdateUserActivity:")]
+		void DidUpdateUserActivity (NSUserActivity userActivity);
+
+		// -(void)handlePushNotification:(NSDictionary *)pushPayload;
+		[Export ("handlePushNotification:")]
+		void HandlePushNotification (NSDictionary pushPayload);
+
+		// -(void)registerUninstall:(NSData *)deviceToken;
+		[Export ("registerUninstall:")]
+		void RegisterUninstall (NSData deviceToken);
+
+		// -(NSString *)getSDKVersion;
+		[Export ("getSDKVersion")]
+		string SDKVersion { get; }
 	}
 }
 

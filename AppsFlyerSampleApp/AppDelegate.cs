@@ -26,7 +26,7 @@ namespace AppsFlyerSampleApp
 			tracker.AppsFlyerDevKey = "rbz2mfgZQY5mSEYNTyjwni";
 			tracker.AppleAppID = "989898989";
 
-			AppsFlyerTracker.SharedTracker ().handleConversionDataWithDelegate (new AppsFlyerConversionDataDelegate());
+			AppsFlyerTracker.SharedTracker ().LoadConversionDataWithDelegate (new AppsFlyerConversionDataDelegate());
 
 			return true;
 		}
@@ -62,6 +62,15 @@ namespace AppsFlyerSampleApp
 		public override void WillTerminate (UIApplication application)
 		{
 			// Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
+		}
+
+		//Universal Links
+		public override bool ContinueUserActivity (UIApplication application, 
+			NSUserActivity userActivity, 
+			UIApplicationRestorationHandler completionHandler)
+		{
+			AppsFlyerTracker.SharedTracker ().ContinueUserActivity (userActivity, completionHandler);
+			return true;
 		}
 	}
 }
