@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>AppsFlyerXamarinBindingiOS</id>
+    <version>1.1</version>
+    <title>AppsFlyerXamarinBindingiOS</title>
+    <authors>AppsFlyer</authors>
+    <owners>AppsFlyer</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>AppsFlyer’s Xamarin binding provides application installation and events tracking functionality.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>AppsFlyer AppsFlyerXamarin Xamarin</tags>
+	<dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="AppsFlyerXamarinBinding/bin/Release/AppsFlyerXamarinBinding.dll" target="lib/MonoTouch/AppsFlyerXamarinBinding.dll" /> 
+  </files>
+</package>

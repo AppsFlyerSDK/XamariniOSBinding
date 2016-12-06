@@ -5,6 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsFlyerXamarinBindingiOS"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsFlyerSampleApp", "AppsFlyerSampleApp\AppsFlyerSampleApp.csproj", "{403A3F9C-04FE-49D8-BD54-CABBDCFFC38F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{37761643-BBC5-4FCA-94E5-5A4C40FA443A}"
+	ProjectSection(SolutionItems) = preProject
+		AppsFlyerXamarinBindingiOS.nuspec = AppsFlyerXamarinBindingiOS.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
