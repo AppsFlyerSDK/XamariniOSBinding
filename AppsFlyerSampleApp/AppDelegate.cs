@@ -12,6 +12,7 @@ namespace AppsFlyerSampleApp
 	{
 		// class-level declarations
 		AppsFlyerXamarinBinding.AppsFlyerTracker tracker = AppsFlyerXamarinBinding.AppsFlyerTracker.SharedTracker();
+		AppsFlyerTrackerDelegate af_delegate = new AppsFlyerConversionDataDelegate();
 
 		public override UIWindow Window {
 			get;
@@ -26,7 +27,7 @@ namespace AppsFlyerSampleApp
 			tracker.AppsFlyerDevKey = "rbz2mfgZQY5mSEYNTyjwni";
 			tracker.AppleAppID = "989898989";
 
-			AppsFlyerTracker.SharedTracker ().LoadConversionDataWithDelegate (new AppsFlyerConversionDataDelegate());
+			AppsFlyerTracker.SharedTracker ().LoadConversionDataWithDelegate (af_delegate);
 
 			return true;
 		}
