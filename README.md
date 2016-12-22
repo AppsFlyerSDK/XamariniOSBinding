@@ -5,6 +5,9 @@ Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 1.0.
 # Introduction
 AppsFlyer’s Xamarin binding provides application installation and events tracking functionality
 
+# Nuget
+Install-Package AppsFlyerXamarinBinding <br>
+https://www.nuget.org/packages/AppsFlyerXamarinBinding
 
 # Initial steps
 
