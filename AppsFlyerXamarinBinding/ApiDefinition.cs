@@ -86,6 +86,10 @@ namespace AppsFlyerXamarinBinding
 		[Export ("useReceiptValidationSandbox")]
 		bool UseReceiptValidationSandbox { get; set; }
 
+		// @property (nonatomic, setter = setUseUninstallSandbox:) BOOL useUninstallSandbox;
+		[Export ("useUninstallSandbox")]
+		bool UseUninstallSandbox { get; [Bind ("setUseUninstallSandbox:")] set; }
+
 		// -(void)setUserEmails:(NSArray *)userEmails withCryptType:(EmailCryptType)type;
 		[Export ("setUserEmails:withCryptType:")]
 		void SetUserEmails (NSObject [] userEmails,  EmailCryptType type);

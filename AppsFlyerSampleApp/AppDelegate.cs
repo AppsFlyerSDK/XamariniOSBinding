@@ -29,6 +29,15 @@ namespace AppsFlyerSampleApp
 
 			AppsFlyerTracker.SharedTracker ().LoadConversionDataWithDelegate (af_delegate);
 
+			//for uninstall
+			var settings = UIUserNotificationSettings.GetSettingsForTypes (
+				UIUserNotificationType.Alert
+				| UIUserNotificationType.Badge
+				| UIUserNotificationType.Sound,
+				new NSSet ());
+			UIApplication.SharedApplication.RegisterUserNotificationSettings (settings);
+			UIApplication.SharedApplication.RegisterForRemoteNotifications ();
+
 			return true;
 		}
 
@@ -63,6 +72,11 @@ namespace AppsFlyerSampleApp
 		public override void WillTerminate (UIApplication application)
 		{
 			// Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
+		}
+
+		public override void RegisteredForRemoteNotifications (UIApplication application, NSData deviceToken)
+		{
+			tracker.RegisterUninstall (deviceToken);
 		}
 		public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
 		{
