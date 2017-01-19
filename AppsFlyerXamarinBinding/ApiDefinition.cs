@@ -86,6 +86,10 @@ namespace AppsFlyerXamarinBinding
 		[Export ("useReceiptValidationSandbox")]
 		bool UseReceiptValidationSandbox { get; set; }
 
+		// @property (nonatomic, setter = setUseUninstallSandbox:) BOOL useUninstallSandbox;
+		[Export ("useUninstallSandbox")]
+		bool UseUninstallSandbox { get; [Bind ("setUseUninstallSandbox:")] set; }
+
 		// -(void)setUserEmails:(NSArray *)userEmails withCryptType:(EmailCryptType)type;
 		[Export ("setUserEmails:withCryptType:")]
 		void SetUserEmails (NSObject [] userEmails,  EmailCryptType type);
@@ -118,9 +122,9 @@ namespace AppsFlyerXamarinBinding
 		[Export ("loadConversionDataWithDelegate:")]
 		void LoadConversionDataWithDelegate (AppsFlyerTrackerDelegate @delegate);
 
-		// -(void)handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication withAnnotation:(id)annotation;
-		[Export ("handleOpenURL:sourceApplication:withAnnotation:")]
-		void HandleOpenURL (NSUrl url, string sourceApplication, NSObject annotation);
+		// -(void)handleOpenUrl:(NSURL *)url options:(NSDictionary *)options;
+		[Export ("handleOpenUrl:options:")]
+		void handleOpenUrl (NSUrl url, NSDictionary options);
 
 		// -(BOOL)continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *))restorationHandler __attribute__((availability(ios, introduced=9.0)));
 		[Export ("continueUserActivity:restorationHandler:")]
