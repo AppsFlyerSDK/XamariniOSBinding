@@ -114,6 +114,11 @@ namespace AppsFlyerXamarinBinding
 		[Export ("validateAndTrackInAppPurchase:eventNameIfFailed:withValue:withProduct:price:currency:success:failure:")]
 		void ValidateAndTrackInAppPurchase (string eventNameIfSuucceed, string failedEventName, string value, string productIdentifier, NSDecimalNumber price, string currency, Action<NSDictionary> successBlock, Action<NSError, NSObject> failedBlock);
 
+
+		// -(void)trackLocation:(double)longitude latitude:(double)latitude;
+		[Export ("trackLocation:latitude:")]
+		void TrackLocation (double longitude, double latitude);
+
 		// -(NSString *)getAppsFlyerUID;
 		[Export ("getAppsFlyerUID")]
 		string GetAppsFlyerUID ();
@@ -145,6 +150,10 @@ namespace AppsFlyerXamarinBinding
 		// -(NSString *)getSDKVersion;
 		[Export ("getSDKVersion")]
 		string SDKVersion { get; }
+
+		// -(void)remoteDebuggingCallWithData:(NSString *)data;
+		[Export ("remoteDebuggingCallWithData:")]
+		void RemoteDebuggingCallWithData(string data);
 	}
 }
 
