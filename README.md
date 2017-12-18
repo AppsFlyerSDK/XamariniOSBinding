@@ -1,6 +1,6 @@
 # XamariniOSBinding
 
-Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 1.3.1
+Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 1.3.3
 
 # Introduction
 AppsFlyer’s Xamarin binding provides application installation and events tracking functionality
