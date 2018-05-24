@@ -21,8 +21,9 @@ namespace AppsFlyerSampleApp
 
 		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 		{
-			// Override point for customization after application launch.
-			// If not required for your application you can safely delete this method
+            // Override point for customization after application launch.
+            // If not required for your application you can safely delete this method
+            tracker.IsStopTracking = false;
 			tracker.IsDebug = true;
 			tracker.AppsFlyerDevKey = "rbz2mfgZQY5mSEYNTyjwni";
 			tracker.AppleAppID = "989898989";
