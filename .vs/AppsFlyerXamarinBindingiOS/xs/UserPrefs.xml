@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{403A3F9C-04FE-49D8-BD54-CABBDCFFC38F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AppsFlyerSampleApp/AppDelegate.cs">
+    <Files>
+      <File FileName="AppsFlyerSampleApp/AppDelegate.cs" Line="27" Column="23" />
+      <File FileName="AppsFlyerSampleApp/ViewController.cs" Line="1" Column="1" />
+      <File FileName="AppsFlyerXamarinBinding/ApiDefinition.cs" Line="1" Column="1" />
+      <File FileName="AppsFlyerSampleApp/Main.cs" Line="1" Column="1" />
+      <File FileName="AppsFlyerXamarinBinding/libAppsFlyerLib.linkwith.cs" Line="1" Column="1" />
+      <File FileName="AppsFlyerXamarinBinding/StructsAndEnums.cs" Line="1" Column="1" />
+      <File FileName="AppsFlyerXamarinBinding/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AppsFlyerXamarinBindingiOS" expanded="True">
+            <Node name="AppsFlyerSampleApp" expanded="True">
+              <Node name="AppDelegate.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.AppsFlyerSampleApp PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8A218271-971B-430E-AA25-E5B4AF4E2756" />
+</Properties>
