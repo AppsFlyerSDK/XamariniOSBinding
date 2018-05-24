@@ -1,8 +1,6 @@
-
 # XamariniOSBinding
 
-Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 1.3.4
-Built with AppsFlyer iOS SDK v4.8.4
+Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 1.3.3
 
 # Introduction
 AppsFlyer’s Xamarin binding provides application installation and events tracking functionality.
@@ -34,20 +32,20 @@ Go to your AppDelegate.cs and add:
 
     using AppsFlyerXamarinBinding;
 
-    // class-level declarations
-        AppsFlyerXamarinBinding.AppsFlyerTracker tracker = AppsFlyerXamarinBinding.AppsFlyerTracker.SharedTracker();
-        AppsFlyerTrackerDelegate af_delegate = new AppsFlyerConversionDataDelegate();
+	// class-level declarations
+		AppsFlyerXamarinBinding.AppsFlyerTracker tracker = AppsFlyerXamarinBinding.AppsFlyerTracker.SharedTracker();
+		AppsFlyerTrackerDelegate af_delegate = new AppsFlyerConversionDataDelegate();
 
 Add the following code in the FinishedLaunching method:
 
-    public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
-    {
-    tracker.AppsFlyerDevKey = "APPSFLYER_DEV_KEY_HERE";
-    tracker.AppleAppID = "YOUR_APP_ID_HERE";
-    tracker.IsDebug = true;
+	public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
+	{
+	tracker.AppsFlyerDevKey = "APPSFLYER_DEV_KEY_HERE";
+	tracker.AppleAppID = "YOUR_APP_ID_HERE";
+	tracker.IsDebug = true;
 
-    return true;
-    }
+	return true;
+	}
 
 
 Add the following code in the OnActivated method:
@@ -64,20 +62,20 @@ You can get your AppsFlyer DevKey on our dashboard. See “SDK integration” on
 
 DevKey = your unique developer ID, which is accessible from your account, e.g. rbz2mfgZQY5mSEYNTyjwni // For example:
 
-#   Adding Custom Event
+#	Adding Custom Event
 Example: “Add-to-cart” Event
 
-    var addToCartEvent = new NSDictionary (AFEventParameter.AFEventParamContentId, "id 123",
-    AFEventParameter.AFEventParamContentType, "type 1", AFEventParameter.AFEventParamCurrency,
-    "USD", AFEventParameter.AFEventParamDescription, "add to cart Description");
+	var addToCartEvent = new NSDictionary (AFEventParameter.AFEventParamContentId, "id 123",
+	AFEventParameter.AFEventParamContentType, "type 1", AFEventParameter.AFEventParamCurrency,
+	"USD", AFEventParameter.AFEventParamDescription, "add to cart Description");
 
-    AppsFlyerTracker.SharedTracker().TrackEvent(AFEventName.AFEventAddToCart, addToCartEvent);
+	AppsFlyerTracker.SharedTracker().TrackEvent(AFEventName.AFEventAddToCart, addToCartEvent);
 
 
-#   Conversion Data
+#	Conversion Data
 For Conversion data your should call this method in the FinishedLaunching method:
 ```
-    AppsFlyerTracker.SharedTracker().LoadConversionDataWithDelegate (af_delegate);
+	AppsFlyerTracker.SharedTracker().LoadConversionDataWithDelegate (af_delegate);
 ```
 
 AppsFlyerConversionDataDelegate.cs can be found here:
@@ -101,9 +99,3 @@ AppsFlyerConversionDataDelegate.cs can be found here:
         }
     }
 ```
-##  Opt-Out
-For complete opt out of the SDK use the following method call
-```
-tracker.IsStopTracking = true;
-```
-This will prevent any data from being sent out of the AppsFlyer SDK.
