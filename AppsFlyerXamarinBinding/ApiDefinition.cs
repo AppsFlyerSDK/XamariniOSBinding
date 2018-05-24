@@ -33,6 +33,10 @@ namespace AppsFlyerXamarinBinding
 	[BaseType (typeof (NSObject))]
 	interface AppsFlyerTracker {
 
+        // @property(nonatomic, setter = isStopTracking:) BOOL stopTracking;
+        [Export ("isStopTracking", ArgumentSemantic.Retain)]
+        bool IsStopTracking { get; set; }
+
 		// @property (nonatomic, strong, setter = setCustomerUserID:) NSString * customerUserID;
 		[Export ("customerUserID", ArgumentSemantic.Retain)]
 		string CustomerUserID { get; set; }

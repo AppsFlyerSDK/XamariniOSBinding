@@ -24,8 +24,10 @@ namespace AppsFlyerSampleApp
 			// Override point for customization after application launch.
 			// If not required for your application you can safely delete this method
 			tracker.IsDebug = true;
+            tracker.IsStopTracking = true;
 			tracker.AppsFlyerDevKey = "rbz2mfgZQY5mSEYNTyjwni";
 			tracker.AppleAppID = "989898989";
+
 
 			AppsFlyerTracker.SharedTracker ().LoadConversionDataWithDelegate (af_delegate);
 
