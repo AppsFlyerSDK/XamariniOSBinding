@@ -12,13 +12,13 @@ namespace AppsFlyerXamarinBinding
 	[BaseType (typeof (NSObject))]
 	interface AppsFlyerTrackerDelegate {
 
-		// @optional -(void)onConversionDataReceived:(NSDictionary *)installData;
-		[Export ("onConversionDataReceived:")]
-		void OnConversionDataReceived (NSDictionary installData);
+		
+		[Export ("onConversionDataSuccess:")]
+		void onConversionDataSuccess (NSDictionary conversionInfo);
 
-		// @optional -(void)onConversionDataRequestFailure:(NSError *)error;
-		[Export ("onConversionDataRequestFailure:")]
-		void OnConversionDataRequestFailure (NSError error);
+		
+		[Export ("onConversionDataFail:")]
+		void onConversionDataFail (NSError error);
 
 		// @optional -(void)onAppOpenAttribution:(NSDictionary *)attributionData;
 		[Export ("onAppOpenAttribution:")]

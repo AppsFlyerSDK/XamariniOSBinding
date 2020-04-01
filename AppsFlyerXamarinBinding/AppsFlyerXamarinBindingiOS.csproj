@@ -13,18 +13,18 @@
     <ReleaseVersion>1.1</ReleaseVersion>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>AppsFlyerXamarinBinding</PackageId>
-    <PackageVersion>1.3.5</PackageVersion>
+    <PackageVersion>5.2.0</PackageVersion>
     <Authors>AppsFlyer</Authors>
-    <Description>Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 1.3.5
-Built with AppsFlyer iOS SDK v4.10.4</Description>
+    <Description>Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 5.2.0
+Built with AppsFlyer iOS SDK v5.2.0</Description>
     <Copyright>AppsFlyer</Copyright>
     <PackageLicenseUrl>https://www.appsflyer.com/privacy-policy/</PackageLicenseUrl>
     <Owners>AppsFlyer</Owners>
     <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
-    <PackageReleaseNotes>Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 1.3.5
-Built with AppsFlyer iOS SDK v4.10.4</PackageReleaseNotes>
-    <Summary>Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 1.3.5
-Built with AppsFlyer iOS SDK v4.10.4</Summary>
+    <PackageReleaseNotes>Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 5.2.0
+Built with AppsFlyer iOS SDK v5.2.0</PackageReleaseNotes>
+    <Summary>Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 5.2.0
+Built with AppsFlyer iOS SDK v5.2.0</Summary>
     <Title>AppsFlyerXamarinBinding</Title>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
