@@ -5,8 +5,8 @@
 
 Xamarin Binding integration guide For iOS 
 
-AppsFlyer Xamarin Binding version `1.3.5` <br>
-Built with AppsFlyer iOS SDK `v4.10.4`
+AppsFlyer Xamarin Binding version `5.2.0` <br>
+Built with AppsFlyer iOS SDK `v5.2.0`
     
     
     
@@ -100,8 +100,9 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 {           
     AppsFlyerTracker.SharedTracker().AppleAppID = "<APP_ID>";
     AppsFlyerTracker.SharedTracker().AppsFlyerDevKey = "<YOUR_DEV_KEY>";
+    /* AppsFlyerTracker.SharedTracker().Delegate = af_delegate; */
     /* AppsFlyerTracker.SharedTracker().IsDebug = true; */
-    /* AppsFlyerTracker.SharedTracker().LoadConversionDataWithDelegate(af_delegate); */
+  
 
     return true;
 }
@@ -142,9 +143,9 @@ First add to the class-level declarations:
 AppsFlyerTrackerDelegate af_delegate = new AppsFlyerConversionDataDelegate();
 ```
 
-Then call this method in the FinishedLaunching method:
+Then set up the delegate in FinishedLaunching:
 ```c#
-AppsFlyerTracker.SharedTracker().LoadConversionDataWithDelegate (af_delegate);
+ AppsFlyerTracker.SharedTracker().Delegate = af_delegate;
 ```
 
 AppsFlyerConversionDataDelegate.cs can be found here:
@@ -159,12 +160,12 @@ public class AppsFlyerConversionDataDelegate : AppsFlyerTrackerDelegate
     
     public override void OnAppOpenAttributionFailure(NSError error) { }
     
-    public override void OnConversionDataReceived(NSDictionary installData)
+    public override void onConversionDataSuccess(NSDictionary conversionInfo)
     {
         Console.WriteLine("conversion data in xamarin = " + installData.Description);
     }
     
-    public override void OnConversionDataRequestFailure(NSError error) { }
+    public override void onConversionDataFail(NSError error) { }
 }
 ```
 
@@ -179,6 +180,11 @@ This will prevent any data from being sent out of the AppsFlyer SDK.
 ### <a id="UserInvite">
 ##  User invite
 Allowing your existing users to invite their friends and contacts as new users to your app can be a key growth factor for your app. AppsFlyer allows you to attribute and record new installs originating from user invites within your app.
+Set the OneLink ID, before calling trackAppLaunch. 
+```c#
+   AppsFlyerTracker.SharedTracker().setAppInviteOneLink("<OneLinKID>");
+```
+
 ```c#
         AppsFlyerXamarinBinding.AppsFlyerShareInviteHelper.generateInviteUrlWithLinkGenerator(
                 (linkGenerator) => {

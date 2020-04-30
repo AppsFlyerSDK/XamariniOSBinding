@@ -14,11 +14,11 @@ namespace AppsFlyerSampleApp
 
 		}
 
-		public override void OnConversionDataReceived (NSDictionary installData) {
-			Console.WriteLine ("conversion data in xamarin = " + installData.Description);
+		public override void onConversionDataSuccess (NSDictionary conversionInfo) {
+			Console.WriteLine ("conversion data in xamarin = " + conversionInfo.Description);
 		}
 
-		public override void OnConversionDataRequestFailure (NSError error){
+		public override void onConversionDataFail (NSError error){
 
 		}
 	}

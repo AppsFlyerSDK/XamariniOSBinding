@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{403A3F9C-04FE-49D8-BD54-CABBDCFFC38F}|Default">
   <MonoDevelop.Ide.ItemProperties.AppsFlyerSampleApp PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.51DC032B-038B-4824-B663-97785D80CA29" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AppsFlyerSampleApp/AppDelegate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AppsFlyerSampleApp/ViewController.cs">
     <Files>
       <File FileName="AppsFlyerSampleApp/AppDelegate.cs" Line="27" Column="23" />
-      <File FileName="AppsFlyerSampleApp/ViewController.cs" />
+      <File FileName="AppsFlyerSampleApp/ViewController.cs" Line="32" Column="13" />
       <File FileName="AppsFlyerXamarinBinding/ApiDefinition.cs" />
       <File FileName="AppsFlyerSampleApp/Main.cs" />
       <File FileName="AppsFlyerXamarinBinding/libAppsFlyerLib.linkwith.cs" />
@@ -15,7 +15,7 @@
         <State name="__root__">
           <Node name="AppsFlyerXamarinBindingiOS" expanded="True">
             <Node name="AppsFlyerSampleApp" expanded="True">
-              <Node name="AppDelegate.cs" selected="True" />
+              <Node name="ViewController.cs" selected="True" />
             </Node>
           </Node>
         </State>
