@@ -176,7 +176,20 @@ AppsFlyerTracker.SharedTracker().IsStopTracking = true;
 ```
 This will prevent any data from being sent out of the AppsFlyer SDK.
 
+### <a id="UserInvite">
+##  User invite
+Allowing your existing users to invite their friends and contacts as new users to your app can be a key growth factor for your app. AppsFlyer allows you to attribute and record new installs originating from user invites within your app.
+```c#
+        AppsFlyerXamarinBinding.AppsFlyerShareInviteHelper.generateInviteUrlWithLinkGenerator(
+                (linkGenerator) => {
+                    linkGenerator.setChannel("channel_name");
+                    linkGenerator.setReferrerName("ref_name");
+                    return linkGenerator;
+                } , completionHandler:
 
+                (NSURL) => { Console.WriteLine(NSURL) }
+        );
+```
 
 ### <a id="sample_app">
 ## Sample App 
