@@ -139,9 +139,9 @@ namespace AppsFlyerXamarinBinding
 		[Export ("continueUserActivity:restorationHandler:")]
 		bool ContinueUserActivity (NSUserActivity userActivity, UIApplicationRestorationHandler restorationHandler);
 
-		// -(void)didUpdateUserActivity:(NSUserActivity *)userActivity __attribute__((availability(ios, introduced=9.0)));
-		[Export ("didUpdateUserActivity:")]
-		void DidUpdateUserActivity (NSUserActivity userActivity);
+        // -(void)didUpdateUserActivity:(NSUserActivity *)userActivity __attribute__((availability(ios, introduced=9.0)));
+        [Export("didUpdateUserActivity:")]
+        void DidUpdateUserActivity(NSUserActivity userActivity);
 
 		// -(void)handlePushNotification:(NSDictionary *)pushPayload;
 		[Export ("handlePushNotification:")]
@@ -158,7 +158,74 @@ namespace AppsFlyerXamarinBinding
 		// -(void)remoteDebuggingCallWithData:(NSString *)data;
 		[Export ("remoteDebuggingCallWithData:")]
 		void RemoteDebuggingCallWithData(string data);
+
+		 [Export ("setAppInviteOneLink:")]
+		void setAppInviteOneLink (String appInviteOneLinkID);
+
+		 // @property (nonatomic, setter = setAppInviteOneLink:) NSString* appInviteOneLinkID;
+		 [Export ("appInviteOneLinkID", ArgumentSemantic.Retain)]
+		string appInviteOneLinkID { get;}
 	}
+
+	[BaseType (typeof (NSObject))]
+	interface AppsFlyerLinkGenerator{
+
+ [Export ("setChannel:")]	
+	void setChannel( String channel);
+
+	[Export ("setReferrerCustomerId:")]
+	void setReferrerCustomerId( NSString referrerCustomerId);
+
+/// A campaign name. Usage: Optional
+[Export ("setCampaign:")]
+ void setCampaign(String campaign);
+
+ [Export ("setReferrerUID:")]
+void setReferrerUID(String referrerUID);
+
+[Export ("setReferrerName:")]
+ void setReferrerName(String referrerName);
+
+
+/// The URL to referrer user avatar. Usage: Optional
+[Export ("setReferrerImageURL:")]
+void setReferrerImageURL(String referrerImageURL);
+
+[Export ("setAppleAppID:")]
+void setAppleAppID( String appleAppID);
+
+[Export ("setDeeplinkPath:")]
+void setDeeplinkPath( String deeplinkPath);
+
+[Export ("setBaseDeeplink:")]
+void setBaseDeeplink( String baseDeeplink);
+
+/// A single key value custom parameter. Usage: Optional
+[Export ("addParameterValue:forKey:")]
+void addParameterValue( String value,  String key);
+
+/// Multiple key value custom parameters. Usage: Optional
+[Export ("addParameters:")]
+void addParameters( NSDictionary parameters);
+	}
+
+
+
+
+    delegate AppsFlyerLinkGenerator GeneratorHandler(AppsFlyerLinkGenerator linkGenerator);
+
+
+    [BaseType (typeof (NSObject))]
+	interface AppsFlyerShareInviteHelper {
+
+        
+
+        [Static]
+		[Export ("generateInviteUrlWithLinkGenerator:completionHandler:")]
+		 void  generateInviteUrlWithLinkGenerator(GeneratorHandler generatorHandler, Action<NSUrl> completionHandler);
+
+	}
+
 }
 
 
