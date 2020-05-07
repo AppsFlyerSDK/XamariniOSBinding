@@ -28,7 +28,7 @@ namespace AppsFlyerSampleApp
 			tracker.AppsFlyerDevKey = "rbz2mfgZQY5mSEYNTyjwni";
 			tracker.AppleAppID = "989898989";
 
-			AppsFlyerTracker.SharedTracker ().LoadConversionDataWithDelegate (af_delegate);
+            AppsFlyerTracker.SharedTracker().Delegate = af_delegate;
 
 			//for uninstall
 			var settings = UIUserNotificationSettings.GetSettingsForTypes (
