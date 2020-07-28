@@ -9,6 +9,7 @@
     <RootNamespace>AppsFlyerSampleApp</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>AppsFlyerSampleApp</AssemblyName>
+    <ReleaseVersion>1.1</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,8 +23,9 @@
     <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>Apple Development: Vitaly Sokolov (U6WDWK9N3Q)</CodesignKey>
     <MtouchFastDev>true</MtouchFastDev>
+    <CodesignProvision>VS: com.appsflyer.xamarinsample Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -35,7 +37,8 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchFloat32>true</MtouchFloat32>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>Apple Development: Vitaly Sokolov (U6WDWK9N3Q)</CodesignKey>
+    <CodesignProvision>VS: com.appsflyer.xamarinsample Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -44,9 +47,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <MtouchArch>i386</MtouchArch>
+    <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>Apple Development: Vitaly Sokolov (U6WDWK9N3Q)</CodesignKey>
+    <CodesignProvision>VS: com.appsflyer.xamarinsample Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,25 +66,16 @@
     <MtouchFloat32>true</MtouchFloat32>
     <MtouchDebug>true</MtouchDebug>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchSdkVersion>9.3</MtouchSdkVersion>
+    <CodesignKey>Apple Development: Vitaly Sokolov (U6WDWK9N3Q)</CodesignKey>
+    <MtouchSdkVersion>13.6</MtouchSdkVersion>
     <MtouchLink>Full</MtouchLink>
+    <CodesignProvision>VS: com.appsflyer.xamarinsample Development</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="AppsFlyerXamarinBinding">
-      <HintPath>..\AppsFlyerXamarinBinding\bin\Release\AppsFlyerXamarinBinding.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
-    <ImageAsset Include="Resources\Images.xcassets\Image.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Images.xcassets\Image.imageset\af_logo.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\appIcon.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\appIcon180.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
@@ -98,6 +93,12 @@
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="AppsFlyerConversionDataDelegate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppsFlyerXamarinBinding\AppsFlyerXamarinBindingiOS.csproj">
+      <Project>{F85DBA77-44A5-4037-A811-9707791A426F}</Project>
+      <Name>AppsFlyerXamarinBindingiOS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -1,6 +1,7 @@
 ﻿using Foundation;
 using UIKit;
 using AppsFlyerXamarinBinding;
+using System;
 
 namespace AppsFlyerSampleApp
 {
@@ -11,8 +12,7 @@ namespace AppsFlyerSampleApp
 	public class AppDelegate : UIApplicationDelegate
 	{
 		// class-level declarations
-		AppsFlyerXamarinBinding.AppsFlyerTracker tracker = AppsFlyerXamarinBinding.AppsFlyerTracker.SharedTracker();
-		AppsFlyerTrackerDelegate af_delegate = new AppsFlyerConversionDataDelegate();
+		AppsFlyerTracker tracker = AppsFlyerTracker.SharedTracker ();
 
 		public override UIWindow Window {
 			get;
@@ -21,23 +21,31 @@ namespace AppsFlyerSampleApp
 
 		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 		{
-            // Override point for customization after application launch.
-            // If not required for your application you can safely delete this method
-            tracker.IsStopTracking = false;
+			// Override point for customization after application launch.
+			// If not required for your application you can safely delete this method
 			tracker.IsDebug = true;
-			tracker.AppsFlyerDevKey = "rbz2mfgZQY5mSEYNTyjwni";
-			tracker.AppleAppID = "989898989";
+			tracker.AppsFlyerDevKey = "4UGrDF4vFvPLbHq5bXtCza"; // Replace with your DevKey
+			tracker.AppleAppID = "753258300"; // Replace with your app ID
+			tracker.setAppInviteOneLink("E2bM"); // Replace with your OneLink ID
+			string [] networks = {"test_int", "partner_int"};
+			tracker.SharingFilter = networks;
 
-            AppsFlyerTracker.SharedTracker().Delegate = af_delegate;
 
-			//for uninstall
-			var settings = UIUserNotificationSettings.GetSettingsForTypes (
-				UIUserNotificationType.Alert
-				| UIUserNotificationType.Badge
-				| UIUserNotificationType.Sound,
-				new NSSet ());
-			UIApplication.SharedApplication.RegisterUserNotificationSettings (settings);
-			UIApplication.SharedApplication.RegisterForRemoteNotifications ();
+
+			// Conversion data callbacks
+			ViewController controller = (ViewController)Window.RootViewController;
+			AppsFlyerTrackerDelegate af_delegate = new AppsFlyerConversionDataDelegate (controller);
+			AppsFlyerTracker.SharedTracker().Delegate = af_delegate;
+
+            // Uninstall Measurement
+            var settings = UIUserNotificationSettings.GetSettingsForTypes (
+                UIUserNotificationType.Alert
+                | UIUserNotificationType.Badge
+                | UIUserNotificationType.Sound,
+                new NSSet ());
+
+            UIApplication.SharedApplication.RegisterUserNotificationSettings (settings);
+            UIApplication.SharedApplication.RegisterForRemoteNotifications ();
 
 			return true;
 		}
@@ -75,13 +83,22 @@ namespace AppsFlyerSampleApp
 			// Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
 		}
 
+        [Export ("application:didFailToRegisterForRemoteNotificationsWithError:")]
+        public override void FailedToRegisterForRemoteNotifications (UIApplication application, NSError error)
+        {
+			Console.WriteLine ("AppsFLyer: Failed to register for remote notification with error: " + error.Description);
+        }
+
+        [Export ("application:didRegisterForRemoteNotificationsWithDeviceToken:")]
 		public override void RegisteredForRemoteNotifications (UIApplication application, NSData deviceToken)
 		{
 			tracker.RegisterUninstall (deviceToken);
 		}
+
+		[Export ("application:openURL:options:")]
 		public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
 		{
-			tracker.handleOpenUrl (url, options);
+            tracker.handleOpenUrl (url, options);
 			return true;
 		}
 		//Universal Links
@@ -92,7 +109,7 @@ namespace AppsFlyerSampleApp
 			AppsFlyerTracker.SharedTracker ().ContinueUserActivity (userActivity, completionHandler);
 			return true;
 		}
-	}
+    }
 }
 
 
