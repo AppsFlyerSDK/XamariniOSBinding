@@ -48,21 +48,6 @@ Built with AppsFlyer iOS SDK v5.4.1</Summary>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="NuGet.Frameworks">
-      <HintPath>..\packages\NuGet.Frameworks.5.6.0\lib\netstandard2.0\NuGet.Frameworks.dll</HintPath>
-    </Reference>
-    <Reference Include="NuGet.Versioning">
-      <HintPath>..\packages\NuGet.Versioning.5.6.0\lib\netstandard2.0\NuGet.Versioning.dll</HintPath>
-    </Reference>
-    <Reference Include="NuGet.Common">
-      <HintPath>..\packages\NuGet.Common.5.6.0\lib\netstandard2.0\NuGet.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="NuGet.Configuration">
-      <HintPath>..\packages\NuGet.Configuration.5.6.0\lib\netstandard2.0\NuGet.Configuration.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
