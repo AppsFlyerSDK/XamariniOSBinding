@@ -5,8 +5,8 @@
 
 Xamarin Binding integration guide For iOS 
 
-AppsFlyer Xamarin Binding version `5.2.0` <br>
-Built with AppsFlyer iOS SDK `v5.2.0`
+AppsFlyer Xamarin Binding version `5.4.1` <br>
+Built with AppsFlyer iOS SDK `v5.4.1`
     
     
     
@@ -57,7 +57,7 @@ https://www.nuget.org/packages/AppsFlyerXamarinBinding
 
     1. Go to Project > Add NuGet Packages...
     2. Select the AppsFlyerXamarinBinding
-    3. Select under version -  1.3.5
+    3. Select under version -  5.4.1
     4. Click `Add Package`
 
 
@@ -186,15 +186,15 @@ Set the OneLink ID, before calling trackAppLaunch.
 ```
 
 ```c#
-        AppsFlyerXamarinBinding.AppsFlyerShareInviteHelper.generateInviteUrlWithLinkGenerator(
-                (linkGenerator) => {
-                    linkGenerator.setChannel("channel_name");
-                    linkGenerator.setReferrerName("ref_name");
-                    return linkGenerator;
-                } , completionHandler:
-
-                (NSURL) => { Console.WriteLine(NSURL) }
-        );
+            AppsFlyerXamarinBinding.AppsFlyerShareInviteHelper.generateInviteUrlWithLinkGenerator (
+                            (linkGenerator) => {
+                                linkGenerator.setChannel ("channel_name");
+                                linkGenerator.setReferrerName ("ref_name");
+                                return linkGenerator;
+                            }, completionHandler: (NSURL) => {
+                                Console.WriteLine (NSURL);
+                            }
+                    );
 ```
 
 ### <a id="sample_app">
