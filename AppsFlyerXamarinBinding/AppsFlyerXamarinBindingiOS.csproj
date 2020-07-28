@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\NuGet.Build.Packaging.0.2.5-dev.8\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.5-dev.8\build\NuGet.Build.Packaging.props')" />
+  <Import Project="..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -13,18 +13,16 @@
     <ReleaseVersion>1.1</ReleaseVersion>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>AppsFlyerXamarinBinding</PackageId>
-    <PackageVersion>5.2.0</PackageVersion>
+    <PackageVersion>5.4.1</PackageVersion>
     <Authors>AppsFlyer</Authors>
-    <Description>Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 5.2.0
-Built with AppsFlyer iOS SDK v5.2.0</Description>
+    <Description>AppsFlyer SDK iOS Xamarin Binding version 5.4.1</Description>
     <Copyright>AppsFlyer</Copyright>
     <PackageLicenseUrl>https://www.appsflyer.com/privacy-policy/</PackageLicenseUrl>
     <Owners>AppsFlyer</Owners>
     <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
-    <PackageReleaseNotes>Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 5.2.0
-Built with AppsFlyer iOS SDK v5.2.0</PackageReleaseNotes>
-    <Summary>Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 5.2.0
-Built with AppsFlyer iOS SDK v5.2.0</Summary>
+    <PackageReleaseNotes>iOS SDK 5.4.1</PackageReleaseNotes>
+    <Summary>Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 5.4.1
+Built with AppsFlyer iOS SDK v5.4.1</Summary>
     <Title>AppsFlyerXamarinBinding</Title>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -73,5 +71,5 @@ Built with AppsFlyer iOS SDK v5.2.0</Summary>
   <ItemGroup>
     <BundleResource Include="packages.config" />
   </ItemGroup>
-  <Import Project="..\packages\NuGet.Build.Packaging.0.2.5-dev.8\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.5-dev.8\build\NuGet.Build.Packaging.targets')" />
+  <Import Project="..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets')" />
 </Project>

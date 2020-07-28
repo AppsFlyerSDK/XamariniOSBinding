@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>AppsFlyerSampleApp</string>
+	<string>Xamarin Sample App</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -46,7 +46,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>aftest</string>
+				<string>sdktest</string>
 			</array>
 		</dict>
 	</array>
@@ -55,6 +55,8 @@
 		<string>remote-notification</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.appsflyer.sampleapp</string>
+	<string>com.appsflyer.xamarinsample</string>
+	<key>CFBundleDisplayName</key>
+	<string>Xamarin Sample App</string>
 </dict>
 </plist>

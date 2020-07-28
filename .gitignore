@@ -2,4 +2,5 @@ AppsFlyerSampleApp/bin/iPhone/Debug
 AppsFlyerSampleApp/bin
 AppsFlyerSampleApp/obj
 AppsFlyerXamarinBinding/obj
+.vs/
 **/[Pp]ackages/*
