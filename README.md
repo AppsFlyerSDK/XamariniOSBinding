@@ -5,21 +5,26 @@
 
 Xamarin Binding integration guide For iOS 
 
-AppsFlyer Xamarin Binding version `5.4.1` <br>
-Built with AppsFlyer iOS SDK `v5.4.1`
+AppsFlyer Xamarin Binding version `v6.0.1.1-beta` <br>
+Built with AppsFlyer iOS SDK `v6.0.1-beta`
+    
+## This is a BETA version of the ReactNative plugin for AppsFlyer SDK that is built with BETA version of iOS SDK v6.0.1. 
+**Do not use this version on Production builds!** 
+
+## <a id="v6-breaking-changes"> ❗ v6 Breaking Changes
+
+We have renamed some of the APIs. For more details, please check out our (Help Center)[https://support.appsflyer.com/hc/en-us/articles/360011571778#4-change-apis]
+    
+# Overview
+    
+AppsFlyer SDK provides app installation and event logging functionality. We have developed an SDK that is highly robust (7+ billion SDK installations to date), secure, lightweight and very simple to embed.
     
     
     
-# 1. Overview
-    
-AppsFlyer SDK provides app installation and event tracking functionality. We have developed an SDK that is highly robust (7+ billion SDK installations to date), secure, lightweight and very simple to embed.
-    
-    
-    
-You can track installs, updates and sessions and also track additional in-app events beyond app installs (including in-app purchases, game levels, etc.) to evaluate ROI and user engagement levels.
+You can measure installs, updates and sessions and also log additional in-app events beyond app installs (including in-app purchases, game levels, etc.) to evaluate ROI and user engagement levels.
     
 ---
-AppsFlyer’s Xamarin binding provides application installation and events tracking functionality.
+AppsFlyer’s Xamarin binding provides application installation and events logging functionality.
     
 The API for the binding coincides with the native iOS API, which can be found [here](https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS).
 
@@ -31,9 +36,9 @@ The API for the binding coincides with the native iOS API, which can be found [h
 - [Quick Start](#quickStart)
 - [API Methods](#api-methods)
     -  [SDK Initialization](#sdk_init)
-    -  [Tracking In-App Events](#adding_events)
+    -  [Logging In-App Events](#adding_events)
     -  [Get Conversion Data](#conversion_data)
-    -  [StopTracking](#StopTracking)
+    -  [Stop](#Stop)
 - [Sample App](#sample_app)
 
 
@@ -49,15 +54,15 @@ https://www.nuget.org/packages/AppsFlyerXamarinBinding
 
 
 
-# 2.0 Quick Start
+# Quick Start
 
 
 
-#### 2.1) Adding the Plugin to your Project
+#### Adding the Plugin to your Project
 
     1. Go to Project > Add NuGet Packages...
     2. Select the AppsFlyerXamarinBinding
-    3. Select under version -  5.4.1
+    3. Select under version -  6.0.1.1-beta
     4. Click `Add Package`
 
 
@@ -75,7 +80,7 @@ To Embed SDK into your Application Manually:
 
 
 
-# 3.0 API Methods
+# API Methods
 
 
 
@@ -98,10 +103,10 @@ Go to your AppDelegate.cs and add:
 ```c#
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
 {           
-    AppsFlyerTracker.SharedTracker().AppleAppID = "<APP_ID>";
-    AppsFlyerTracker.SharedTracker().AppsFlyerDevKey = "<YOUR_DEV_KEY>";
-    /* AppsFlyerTracker.SharedTracker().Delegate = af_delegate; */
-    /* AppsFlyerTracker.SharedTracker().IsDebug = true; */
+    AppsFlyerLib.Shared.AppleAppID = "<APP_ID>";
+    AppsFlyerLib.Shared.AppsFlyerDevKey = "<YOUR_DEV_KEY>";
+    /* AppsFlyerLib.Shared.Delegate = af_delegate; */
+    /* AppsFlyerLib.Shared.IsDebug = true; */
   
 
     return true;
@@ -112,7 +117,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 ```c#
 public override void OnActivated(UIApplication application)
 {
-    AppsFlyerTracker.SharedTracker().TrackAppLaunch();
+    AppsFlyerLib.Shared.Start();
 }
 ```
 
@@ -120,9 +125,9 @@ public override void OnActivated(UIApplication application)
 
 ### <a id="adding_events">
 
-## Tracking In-App Events
+## Logging In-App Events
 
-Tracking in-app events is performed by calling `TrackEvent` with event name and value parameters. See [In-App Events](https://support.appsflyer.com/hc/en-us/articles/115005544169-AppsFlyer-Rich-In-App-Events-Android-and-iOS) documentation for more details.
+Logging in-app events is performed by calling `LogEvent` with event name and value parameters. See [In-App Events](https://support.appsflyer.com/hc/en-us/articles/115005544169-AppsFlyer-Rich-In-App-Events-Android-and-iOS) documentation for more details.
 
 Event Example:
 ```c#
@@ -130,7 +135,7 @@ var addToCartEvent = new NSDictionary (AFEventParameter.AFEventParamContentId, "
 AFEventParameter.AFEventParamContentType, "type 1", AFEventParameter.AFEventParamCurrency,
 "USD", AFEventParameter.AFEventParamDescription, "add to cart Description");
 
-AppsFlyerTracker.SharedTracker().TrackEvent(AFEventName.AFEventAddToCart, addToCartEvent);
+AppsFlyerLib.Shared.LogEvent(AFEventName.AFEventAddToCart, addToCartEvent);
 ```
 
 ### <a id="conversion_data">
@@ -140,18 +145,18 @@ AppsFlyerTracker.SharedTracker().TrackEvent(AFEventName.AFEventAddToCart, addToC
 
 First add to the class-level declarations:
 ```c#
-AppsFlyerTrackerDelegate af_delegate = new AppsFlyerConversionDataDelegate();
+AppsFlyerLibDelegate af_delegate = new AppsFlyerConversionDataDelegate();
 ```
 
 Then set up the delegate in FinishedLaunching:
 ```c#
- AppsFlyerTracker.SharedTracker().Delegate = af_delegate;
+ AppsFlyerLib.Shared.Delegate = af_delegate;
 ```
 
 AppsFlyerConversionDataDelegate.cs can be found here:
 
 ```c#
-public class AppsFlyerConversionDataDelegate : AppsFlyerTrackerDelegate
+public class AppsFlyerConversionDataDelegate : AppsFlyerLibDelegate
 {
     public override void OnAppOpenAttribution(NSDictionary attributionData)
     {
@@ -160,29 +165,29 @@ public class AppsFlyerConversionDataDelegate : AppsFlyerTrackerDelegate
     
     public override void OnAppOpenAttributionFailure(NSError error) { }
     
-    public override void onConversionDataSuccess(NSDictionary conversionInfo)
+    public override void OnConversionDataSuccess(NSDictionary conversionInfo)
     {
         Console.WriteLine("conversion data in xamarin = " + installData.Description);
     }
     
-    public override void onConversionDataFail(NSError error) { }
+    public override void OnConversionDataFail(NSError error) { }
 }
 ```
 
-### <a id="StopTracking">
+### <a id="Stop">
 ##  Opt-Out
 For complete opt out of the SDK use the following method call 
 ```c#
-AppsFlyerTracker.SharedTracker().IsStopTracking = true;
+AppsFlyerLib.Shared.IsStopped = true;
 ```
 This will prevent any data from being sent out of the AppsFlyer SDK.
 
 ### <a id="UserInvite">
 ##  User invite
 Allowing your existing users to invite their friends and contacts as new users to your app can be a key growth factor for your app. AppsFlyer allows you to attribute and record new installs originating from user invites within your app.
-Set the OneLink ID, before calling trackAppLaunch. 
+Set the OneLink ID, before calling Start(). 
 ```c#
-   AppsFlyerTracker.SharedTracker().setAppInviteOneLink("<OneLinKID>");
+   AppsFlyerLib.Shared.AppInviteOneLinkID = "<OneLinKID>";
 ```
 
 ```c#
