@@ -35,7 +35,7 @@ namespace AppsFlyerSampleApp
                 AFEventParameter.AFEventParamContentType, "type 1",
                 AFEventParameter.AFEventParamCurrency, "USD",
                 AFEventParameter.AFEventParamDescription, "Description example");
-            AppsFlyerTracker.SharedTracker ().TrackEvent (AFEventName.AFEventAddToCart, addToCartEvent);
+            AppsFlyerLib.Shared.LogEvent (AFEventName.AFEventAddToCart, addToCartEvent);
         }
 
         partial void ShareButton_TouchUpInside (UIButton sender)

@@ -58,5 +58,7 @@
 	<string>com.appsflyer.xamarinsample</string>
 	<key>CFBundleDisplayName</key>
 	<string>Xamarin Sample App</string>
+	<key>Privacy - Tracking Usage Description</key>
+	<string>Please allow us to read your IDFA</string>
 </dict>
 </plist>

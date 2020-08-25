@@ -13,16 +13,15 @@
     <ReleaseVersion>1.1</ReleaseVersion>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>AppsFlyerXamarinBinding</PackageId>
-    <PackageVersion>5.4.1</PackageVersion>
+    <PackageVersion>6.0.1.1-beta</PackageVersion>
     <Authors>AppsFlyer</Authors>
-    <Description>AppsFlyer SDK iOS Xamarin Binding version 5.4.1</Description>
+    <Description>AppsFlyer SDK iOS Xamarin Binding version 6.0.1-beta</Description>
     <Copyright>AppsFlyer</Copyright>
     <PackageLicenseUrl>https://www.appsflyer.com/privacy-policy/</PackageLicenseUrl>
     <Owners>AppsFlyer</Owners>
     <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
-    <PackageReleaseNotes>iOS SDK 5.4.1</PackageReleaseNotes>
-    <Summary>Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 5.4.1
-Built with AppsFlyer iOS SDK v5.4.1</Summary>
+    <PackageReleaseNotes>iOS SDK 6.0.1-beta</PackageReleaseNotes>
+    <Summary>Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 6.0.1.1-beta Built with AppsFlyer iOS SDK v6.0.1-beta</Summary>
     <Title>AppsFlyerXamarinBinding</Title>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

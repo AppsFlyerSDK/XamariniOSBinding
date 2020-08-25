@@ -1,19 +1,18 @@
 ﻿using Foundation;
 using UIKit;
-using AppsFlyerXamarinBinding;
 using System;
+using AppsFlyerXamarinBinding;
 
 namespace AppsFlyerSampleApp
 {
-	// The UIApplicationDelegate for the application. This class is responsible for launching the
-	// User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
+    // The UIApplicationDelegate for the application. This class is responsible for launching the
+    // User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
 
-	[Register ("AppDelegate")]
+    [Register ("AppDelegate")]
 	public class AppDelegate : UIApplicationDelegate
 	{
 		// class-level declarations
-		AppsFlyerTracker tracker = AppsFlyerTracker.SharedTracker ();
-
+		AppsFlyerLib appsflyer = AppsFlyerLib.Shared;
 		public override UIWindow Window {
 			get;
 			set;
@@ -23,19 +22,24 @@ namespace AppsFlyerSampleApp
 		{
 			// Override point for customization after application launch.
 			// If not required for your application you can safely delete this method
-			tracker.IsDebug = true;
-			tracker.AppsFlyerDevKey = "4UGrDF4vFvPLbHq5bXtCza"; // Replace with your DevKey
-			tracker.AppleAppID = "753258300"; // Replace with your app ID
-			tracker.setAppInviteOneLink("E2bM"); // Replace with your OneLink ID
+			appsflyer.IsDebug = true;
+			appsflyer.AppsFlyerDevKey = "4UGrDF4vFvPLbHq5bXtCza"; // Replace with your DevKey
+			appsflyer.AppleAppID = "753258300"; // Replace with your app ID
+			appsflyer.AppInviteOneLinkID = "E2bM"; // Replace with your OneLink ID
+			if (UIDevice.CurrentDevice.CheckSystemVersion (14, 0)) {
+				appsflyer.WaitForAdvertisingIdentifierWithTimeoutInterval (10); // When Xamarin.iOS will support AppTrackingTransparency, you should implement a popup asking for IDFA permission
+				// Ask for the IDFA permission here (with AppTrackingTransparency framework)
+			}
+
 			string [] networks = {"test_int", "partner_int"};
-			tracker.SharingFilter = networks;
+			appsflyer.SharingFilter = networks;
 
 
 
 			// Conversion data callbacks
 			ViewController controller = (ViewController)Window.RootViewController;
-			AppsFlyerTrackerDelegate af_delegate = new AppsFlyerConversionDataDelegate (controller);
-			AppsFlyerTracker.SharedTracker().Delegate = af_delegate;
+			AppsFlyerLibDelegate af_delegate = new AppsFlyerConversionDataDelegate (controller);
+			AppsFlyerLib.Shared.Delegate = af_delegate;
 
             // Uninstall Measurement
             var settings = UIUserNotificationSettings.GetSettingsForTypes (
@@ -74,7 +78,7 @@ namespace AppsFlyerSampleApp
 		{
 			// Restart any tasks that were paused (or not yet started) while the application was inactive. 
 			// If the application was previously in the background, optionally refresh the user interface.
-			tracker.TrackAppLaunch ();
+			appsflyer.Start();
 
 		}
 
@@ -92,13 +96,13 @@ namespace AppsFlyerSampleApp
         [Export ("application:didRegisterForRemoteNotificationsWithDeviceToken:")]
 		public override void RegisteredForRemoteNotifications (UIApplication application, NSData deviceToken)
 		{
-			tracker.RegisterUninstall (deviceToken);
+			appsflyer.RegisterUninstall (deviceToken);
 		}
 
 		[Export ("application:openURL:options:")]
 		public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
 		{
-            tracker.handleOpenUrl (url, options);
+            appsflyer.handleOpenUrl (url, options);
 			return true;
 		}
 		//Universal Links
@@ -106,7 +110,7 @@ namespace AppsFlyerSampleApp
 			NSUserActivity userActivity, 
 			UIApplicationRestorationHandler completionHandler)
 		{
-			AppsFlyerTracker.SharedTracker ().ContinueUserActivity (userActivity, completionHandler);
+			AppsFlyerLib.Shared.ContinueUserActivity (userActivity, completionHandler);
 			return true;
 		}
     }
