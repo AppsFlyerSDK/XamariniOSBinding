@@ -80,9 +80,9 @@ namespace AppsFlyerXamarinBinding
         [Export ("appInviteOneLinkID", ArgumentSemantic.Retain)]
         string AppInviteOneLinkID { get; [Bind ("setAppInviteOneLink:")] set; }
 
-        // @property BOOL deviceLoggingDisabled;
-        [Export ("deviceLoggingDisabled")]
-        bool DeviceLoggingDisabled { get; set; }
+        // @property BOOL anonymizeUser;
+        [Export ("anonymizeUser")]
+        bool AnonymizeUser { get; set; }
 
         // @property BOOL disableCollectASA;
         [Export ("disableCollectASA")]
@@ -153,9 +153,9 @@ namespace AppsFlyerXamarinBinding
         [Export ("validateAndLogInAppPurchase:eventNameIfFailed:withValue:withProduct:price:currency:success:failure:")]
         void ValidateAndLogInAppPurchase (string eventNameIfSuucceed, string failedEventName, string value, string productIdentifier, NSDecimalNumber price, string currency, Action<NSDictionary> successBlock, Action<NSError, NSObject> failedBlock);
 
-        // -(void)logLocationEvent:(double)longitude latitude:(double)latitude;
-        [Export ("logLocationEvent:latitude:")]
-        void LogLocationEvent (double longitude, double latitude);
+        // -(void)logLocation:(double)longitude latitude:(double)latitude;
+        [Export ("logLocation:latitude:")]
+        void LogLocation (double longitude, double latitude);
 
         // -(NSString *)getAppsFlyerUID;
         [Export ("getAppsFlyerUID")]

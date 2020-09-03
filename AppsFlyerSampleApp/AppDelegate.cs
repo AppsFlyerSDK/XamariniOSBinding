@@ -26,11 +26,11 @@ namespace AppsFlyerSampleApp
 			appsflyer.AppsFlyerDevKey = "4UGrDF4vFvPLbHq5bXtCza"; // Replace with your DevKey
 			appsflyer.AppleAppID = "753258300"; // Replace with your app ID
 			appsflyer.AppInviteOneLinkID = "E2bM"; // Replace with your OneLink ID
+			appsflyer.AnonymizeUser = true;
 			if (UIDevice.CurrentDevice.CheckSystemVersion (14, 0)) {
 				appsflyer.WaitForAdvertisingIdentifierWithTimeoutInterval (10); // When Xamarin.iOS will support AppTrackingTransparency, you should implement a popup asking for IDFA permission
 				// Ask for the IDFA permission here (with AppTrackingTransparency framework)
 			}
-
 			string [] networks = {"test_int", "partner_int"};
 			appsflyer.SharingFilter = networks;
 
