@@ -21,7 +21,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>i386, x86_64</MtouchArch>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>Apple Development: Vitaly Sokolov (U6WDWK9N3Q)</CodesignKey>
     <MtouchFastDev>true</MtouchFastDev>
@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>i386, x86_64</MtouchArch>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <CodesignKey>Apple Development: Vitaly Sokolov (U6WDWK9N3Q)</CodesignKey>
     <CodesignProvision>VS: com.appsflyer.xamarinsample Development</CodesignProvision>
   </PropertyGroup>
@@ -76,6 +76,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="AppsFlyerXamarinBinding">
+      <HintPath>..\packages\AppsFlyerXamarinBinding.6.0.2\lib\xamarinios10\AppsFlyerXamarinBinding.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
@@ -84,6 +87,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -93,12 +97,6 @@
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="AppsFlyerConversionDataDelegate.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AppsFlyerXamarinBinding\AppsFlyerXamarinBindingiOS.csproj">
-      <Project>{F85DBA77-44A5-4037-A811-9707791A426F}</Project>
-      <Name>AppsFlyerXamarinBindingiOS</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

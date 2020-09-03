@@ -5,7 +5,7 @@ using UIKit;
 
 namespace AppsFlyerSampleApp
 {
-	public class AppsFlyerConversionDataDelegate : AppsFlyerTrackerDelegate
+	public class AppsFlyerConversionDataDelegate : AppsFlyerLibDelegate
 	{
 
 		private ViewController viewController;
@@ -38,7 +38,7 @@ namespace AppsFlyerSampleApp
 
 		}
 
-		public override void onConversionDataSuccess (NSDictionary conversionInfo) {
+		public override void OnConversionDataSuccess (NSDictionary conversionInfo) {
 			String message = "OnConversionDataSuccess:\n";
 			foreach (var kvp in conversionInfo) {
 				if (kvp.Value != null) {
@@ -54,7 +54,7 @@ namespace AppsFlyerSampleApp
 			}
 		}
 
-		public override void onConversionDataFail (NSError error){
+		public override void OnConversionDataFail (NSError error){
 
 		}
     }

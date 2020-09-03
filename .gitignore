@@ -4,3 +4,5 @@ AppsFlyerSampleApp/obj
 AppsFlyerXamarinBinding/obj
 .vs/
 **/[Pp]ackages/*
+
+AppsFlyerXamarinBinding/bin/Debug/

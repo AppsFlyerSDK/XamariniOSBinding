@@ -10,20 +10,20 @@
     <RootNamespace>AppsFlyerXamarinBinding</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>AppsFlyerXamarinBinding</AssemblyName>
-    <ReleaseVersion>1.1</ReleaseVersion>
+    <ReleaseVersion>6.0.2.0</ReleaseVersion>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>AppsFlyerXamarinBinding</PackageId>
-    <PackageVersion>5.4.1</PackageVersion>
+    <PackageVersion>6.0.2.0</PackageVersion>
     <Authors>AppsFlyer</Authors>
-    <Description>AppsFlyer SDK iOS Xamarin Binding version 5.4.1</Description>
+    <Description>AppsFlyer SDK iOS Xamarin Binding version 6.0.2.0</Description>
     <Copyright>AppsFlyer</Copyright>
     <PackageLicenseUrl>https://www.appsflyer.com/privacy-policy/</PackageLicenseUrl>
     <Owners>AppsFlyer</Owners>
     <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
-    <PackageReleaseNotes>iOS SDK 5.4.1</PackageReleaseNotes>
-    <Summary>Xamarin Binding integration guide For iOS AppsFlyer Xamarin Binding version 5.4.1
-Built with AppsFlyer iOS SDK v5.4.1</Summary>
+    <PackageReleaseNotes>iOS SDK 6.0.2</PackageReleaseNotes>
+    <Summary>AppsFlyer Xamarin Binding version 6.0.2.0. Built with AppsFlyer iOS SDK v6.0.2</Summary>
     <Title>AppsFlyerXamarinBinding</Title>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
