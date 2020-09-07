@@ -232,9 +232,9 @@ namespace AppsFlyerXamarinBinding
         void SetSharingFilterForAllPartners ();
 
 
-        // -(void)waitForAdvertisingIdentifierWithTimeoutInterval:(NSTimeInterval)timeoutInterval;
-        [Export ("waitForAdvertisingIdentifierWithTimeoutInterval:")]
-        void WaitForAdvertisingIdentifierWithTimeoutInterval (double timeoutInterval);
+        // -(void)waitForATTUserAuthorizationWithTimeoutInterval:(NSTimeInterval)timeoutInterval;
+        [Export ("waitForATTUserAuthorizationWithTimeoutInterval:")]
+        void waitForATTUserAuthorizationWithTimeoutInterval (double timeoutInterval);
 
         // @property (nonatomic) BOOL disableSKAdNetwork;
         [Export ("disableSKAdNetwork")]
