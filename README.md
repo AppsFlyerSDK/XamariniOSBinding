@@ -88,8 +88,6 @@ To Embed SDK into your Application Manually:
 
 
 
-Go to your MainActivity.cs and add:
-
 Go to your AppDelegate.cs and add:
 
 1) `using AppsFlyerXamarinBinding;` at the top of the file.
