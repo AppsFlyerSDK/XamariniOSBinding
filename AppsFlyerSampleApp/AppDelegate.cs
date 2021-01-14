@@ -33,11 +33,10 @@ namespace AppsFlyerSampleApp
 			}
 			string [] networks = {"test_int", "partner_int"};
 			appsflyer.SharingFilter = networks;
+			appsflyer.AddPushNotificationDeepLinkPath(new string [] { "key1", "key2" });
 
-
-
-			// Conversion data callbacks
-			ViewController controller = (ViewController)Window.RootViewController;
+            // Conversion data callbacks
+            ViewController controller = (ViewController)Window.RootViewController;
 			AppsFlyerLibDelegate af_delegate = new AppsFlyerConversionDataDelegate (controller);
 			AppsFlyerLib.Shared.Delegate = af_delegate;
 
