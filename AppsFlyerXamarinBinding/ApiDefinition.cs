@@ -239,6 +239,14 @@ namespace AppsFlyerXamarinBinding
         // @property (nonatomic) BOOL disableSKAdNetwork;
         [Export ("disableSKAdNetwork")]
         bool DisableSKAdNetwork { get; set; }
+
+        // - (void)appendParametersToDeepLinkingURLWithString:(NSString *)containsString parameters:(NSDictionary<NSString*, NSString*>*)parameters
+        [Export ("appendParametersToDeepLinkingURLWithString:parameters:")]
+        void AppendParametersToDeepLinkingURL (string containsString, NSDictionary parameters);
+
+        // - (void)addPushNotificationDeepLinkPath:(NSArray<NSString *> *)deepLinkPath;
+        [Export ("addPushNotificationDeepLinkPath:")]
+        void AddPushNotificationDeepLinkPath (string [] deepLinkPath);
     }
 
     [BaseType (typeof (NSObject))]
