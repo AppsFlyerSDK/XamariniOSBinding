@@ -7,7 +7,15 @@ namespace AppsFlyerXamarinBinding
 		EmailCryptTypeSHA1 = 1,
 		EmailCryptTypeMD5 = 2
 	}
-			
+
+	public enum AFSDKDeepLinkResultStatus : uint
+    {
+		AFSDKDeepLinkResultStatusNotFound = 0,
+		AFSDKDeepLinkResultStatusFound = 1,
+		AFSDKDeepLinkResultStatusFailure = 2,
+	}
+
+
 	public struct AFEventName {
 		public const string AFEventLevelAchieved 		   		= "af_level_achieved";
 		public const string AFEventAddPaymentInfo          		= "af_add_payment_info";
