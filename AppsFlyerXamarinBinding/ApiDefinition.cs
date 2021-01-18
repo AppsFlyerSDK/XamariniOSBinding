@@ -34,6 +34,95 @@ namespace AppsFlyerXamarinBinding
         NSDictionary<NSString, NSString> AllHTTPHeaderFieldsForResolveDeepLinkURL (NSUrl URL);
     }
 
+    // @protocol AppsFlyerDeepLinkDelegate <NSObject>
+    [Protocol, Model]
+    [BaseType (typeof (NSObject))]
+    interface AppsFlyerDeepLinkDelegate
+    {
+        // @optional - (void)didResolveDeepLink:(AppsFlyerDeepLinkResult *_Nonnull)result;
+        [Abstract]
+        [Export ("didResolveDeepLink:")]
+        void DidResolveDeepLink (AppsFlyerDeepLinkResult result);
+    }
+
+    // @interface AppsFlyerDeepLinkResult : NSObject
+    [BaseType (typeof (NSObject))]
+    interface AppsFlyerDeepLinkResult
+    {
+        // @property(readonly) AFSDKDeepLinkResultStatus status;
+        [Export ("status")]
+        AFSDKDeepLinkResultStatus status { get; }
+
+        //@property (readonly, nullable) AppsFlyerDeepLink* deepLink;
+        [Export ("deepLink")]
+        AppsFlyerDeepLink deepLink { get; }
+
+        //@property (readonly, nullable) NSError* error;
+        [Export ("error")]
+        NSError error { get; }
+    }
+
+    // @interface AppsFlyerDeepLink : NSObject
+    [BaseType (typeof (NSObject))]
+    interface AppsFlyerDeepLink
+    {
+        //@property (readonly, nonnull) NSDictionary<NSString*, id>* clickEvent;
+        [Export ("clickEvent")]
+        NSDictionary clickEvent { get; }
+
+        //@property (readonly, nullable) NSString* deeplinkValue;
+        [Export ("deeplinkValue")]
+        string deeplinkValue { get; }
+
+        //@property (readonly, nullable) NSString* matchType;
+        [Export ("matchType")]
+        string matchType { get; }
+
+        //@property (readonly, nullable) NSString* clickHTTPReferrer;
+        [Export ("clickHTTPReferrer")]
+        string clickHTTPReferrer { get; }
+
+        //@property (readonly, nullable) NSString* mediaSource;
+        [Export ("mediaSource")]
+        string mediaSource { get; }
+
+        //@property (readonly, nullable) NSString* campaign;
+        [Export ("campaign")]
+        string campaign { get; }
+
+        //@property (readonly, nullable) NSString* campaignId;
+        [Export ("campaignId")]
+        string campaignId { get; }
+
+        //@property (readonly, nullable) NSString* afSub1;
+        [Export ("afSub1")]
+        string afSub1 { get; }
+
+        //@property (readonly, nullable) NSString* afSub2;
+        [Export ("afSub2")]
+        string afSub2 { get; }
+
+        //@property (readonly, nullable) NSString* afSub3;
+        [Export ("afSub3")]
+        string afSub3 { get; }
+
+        //@property (readonly, nullable) NSString* afSub4;
+        [Export ("afSub4")]
+        string afSub4 { get; }
+
+        //@property (readonly, nullable) NSString* afSub5;
+        [Export ("afSub5")]
+        string afSub5 { get; }
+
+        //@property (readonly) BOOL isDeferred;
+        [Export ("isDeferred")]
+        bool isDeferred { get; }
+
+        //- (NSString *)toString;
+        [Export ("toString")]
+        string toString ();
+    }
+
     // @interface AppsFlyerLib : NSObject
     [BaseType (typeof (NSObject))]
     interface AppsFlyerLib
@@ -96,6 +185,16 @@ namespace AppsFlyerXamarinBinding
         // @property (nonatomic, unsafe_unretained) id<AppsFlyerLibDelegate> delegate;
         [Wrap ("WeakDelegate")]
         AppsFlyerLibDelegate Delegate { get; set; }
+
+        // @property (nonatomic, unsafe_unretained) id<AppsFlyerDeepLinkDelegate> deepLinkDelegate;
+        [Export ("deepLinkDelegate", ArgumentSemantic.UnsafeUnretained)]
+        [NullAllowed]
+        NSObject WeakDeepLinkDelegate { get; set; }
+
+        // @property (nonatomic, unsafe_unretained) id<AppsFlyerDeepLinkDelegate> deepLinkDelegate;
+        [Wrap ("WeakDeepLinkDelegate")]
+        AppsFlyerDeepLinkDelegate DeepLinkDelegate { get; set; }
+
 
         // @property (nonatomic, setter = setUseReceiptValidationSandbox:) BOOL useReceiptValidationSandbox;
         [Export ("useReceiptValidationSandbox")]

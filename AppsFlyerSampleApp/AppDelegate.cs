@@ -39,9 +39,10 @@ namespace AppsFlyerSampleApp
             ViewController controller = (ViewController)Window.RootViewController;
 			AppsFlyerLibDelegate af_delegate = new AppsFlyerConversionDataDelegate (controller);
 			AppsFlyerLib.Shared.Delegate = af_delegate;
+			AppsFlyerLib.Shared.DeepLinkDelegate = new MyAppsFlyerDeepLinkDelegate();
 
-            // Uninstall Measurement
-            var settings = UIUserNotificationSettings.GetSettingsForTypes (
+			// Uninstall Measurement
+			var settings = UIUserNotificationSettings.GetSettingsForTypes (
                 UIUserNotificationType.Alert
                 | UIUserNotificationType.Badge
                 | UIUserNotificationType.Sound,
