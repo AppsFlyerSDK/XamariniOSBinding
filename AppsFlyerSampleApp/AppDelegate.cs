@@ -41,6 +41,9 @@ namespace AppsFlyerSampleApp
 			AppsFlyerLib.Shared.Delegate = af_delegate;
 			AppsFlyerLib.Shared.DeepLinkDelegate = new MyAppsFlyerDeepLinkDelegate();
 
+			var partnerInfo = new NSDictionary ("id", "id123","type", 1,"desc", "Description example");
+			AppsFlyerLib.Shared.SetPartnerData ("test_partner", partnerInfo);
+
 			// Uninstall Measurement
 			var settings = UIUserNotificationSettings.GetSettingsForTypes (
                 UIUserNotificationType.Alert

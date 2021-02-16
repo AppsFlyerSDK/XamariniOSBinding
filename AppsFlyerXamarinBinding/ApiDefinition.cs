@@ -346,6 +346,10 @@ namespace AppsFlyerXamarinBinding
         // - (void)addPushNotificationDeepLinkPath:(NSArray<NSString *> *)deepLinkPath;
         [Export ("addPushNotificationDeepLinkPath:")]
         void AddPushNotificationDeepLinkPath (string [] deepLinkPath);
+
+        //- (void)setPartnerDataWithPartnerId:(NSString * _Nullable)partnerId partnerInfo:(NSDictionary<NSString*, id>* _Nullable) partnerInfo
+        [Export ("setPartnerDataWithPartnerId:partnerInfo:")]
+        void SetPartnerData (string partnerId, NSDictionary partnerInfo);
     }
 
     [BaseType (typeof (NSObject))]
