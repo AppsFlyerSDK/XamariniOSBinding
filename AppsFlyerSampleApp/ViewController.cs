@@ -31,16 +31,21 @@ namespace AppsFlyerSampleApp
 
         partial void EventButton_TouchUpInside (UIButton sender)
         {
-            var addToCartEvent = new NSDictionary (AFEventParameter.AFEventParamContentId, "id123",
+            var addToCartEvent = new NSDictionary (
+                AFEventParameter.AFEventParamContentId, "id123",
                 AFEventParameter.AFEventParamContentType, "type 1",
-                AFEventParameter.AFEventParamCurrency, "USD",
+                AFEventParameter.AFEventParamCurrency, "GBP",
+                AFEventParameter.AFEventParamRevenue, 20,
                 AFEventParameter.AFEventParamDescription, "Description example");
+
+            AppsFlyerLib.Shared.LogEvent (AFEventName.AFEventPurchase, addToCartEvent);
+
             AppsFlyerLib.Shared.LogEvent (AFEventName.AFEventAddToCart, addToCartEvent);
         }
 
         partial void ShareButton_TouchUpInside (UIButton sender)
         {
-            AppsFlyerXamarinBinding.AppsFlyerShareInviteHelper.generateInviteUrlWithLinkGenerator (
+            AppsFlyerShareInviteHelper.generateInviteUrlWithLinkGenerator (
                             (linkGenerator) => {
                                 linkGenerator.setChannel ("channel_name");
                                 linkGenerator.setReferrerName ("ref_name");
