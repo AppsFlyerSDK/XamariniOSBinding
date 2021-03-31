@@ -77,7 +77,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="AppsFlyerXamarinBinding">
-      <HintPath>..\packages\AppsFlyerXamarinBinding.6.2.4\lib\xamarinios10\AppsFlyerXamarinBinding.dll</HintPath>
+      <HintPath>..\packages\AppsFlyerXamarinBinding.6.2.4.1\lib\xamarinios10\AppsFlyerXamarinBinding.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing.Common.dll" />
   </ItemGroup>
