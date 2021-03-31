@@ -28,7 +28,7 @@ namespace AppsFlyerSampleApp
 			appsflyer.AppsFlyerDevKey = "4UGrDF4vFvPLbHq5bXtCza"; // Replace with your DevKey
 			appsflyer.AppleAppID = "753258300"; // Replace with your app ID
 			appsflyer.AppInviteOneLinkID = "E2bM"; // Replace with your OneLink ID
-			appsflyer.AnonymizeUser = true;
+			//appsflyer.AnonymizeUser = true;
 			if (UIDevice.CurrentDevice.CheckSystemVersion (14, 0)) {
 				appsflyer.waitForATTUserAuthorizationWithTimeoutInterval (10);
 				AppTrackingTransparency.ATTrackingManager.RequestTrackingAuthorizationAsync ();

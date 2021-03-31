@@ -10,17 +10,17 @@
     <RootNamespace>AppsFlyerXamarinBinding</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>AppsFlyerXamarinBinding</AssemblyName>
-    <ReleaseVersion>6.2.4.0</ReleaseVersion>
+    <ReleaseVersion>6.2.4.1</ReleaseVersion>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>AppsFlyerXamarinBinding</PackageId>
-    <PackageVersion>6.2.4.0</PackageVersion>
+    <PackageVersion>6.2.4.1</PackageVersion>
     <Authors>AppsFlyer</Authors>
     <Description>AppsFlyer SDK iOS Xamarin Binding</Description>
     <Copyright>AppsFlyer</Copyright>
     <PackageLicenseUrl>https://www.appsflyer.com/privacy-policy/</PackageLicenseUrl>
     <Owners>AppsFlyer</Owners>
     <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
-    <PackageReleaseNotes>iOS SDK 6.2.4</PackageReleaseNotes>
+    <PackageReleaseNotes>Downgrade Xamarin.iOS to 14.0.0.0</PackageReleaseNotes>
     <Summary>AppsFlyer SDK iOS Xamarin Binding</Summary>
     <Title>AppsFlyerXamarinBinding</Title>
     <SynchReleaseVersion>false</SynchReleaseVersion>
