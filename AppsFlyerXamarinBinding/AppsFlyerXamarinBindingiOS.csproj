@@ -10,17 +10,17 @@
     <RootNamespace>AppsFlyerXamarinBinding</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>AppsFlyerXamarinBinding</AssemblyName>
-    <ReleaseVersion>6.2.4.1</ReleaseVersion>
+    <ReleaseVersion>6.2.6.1</ReleaseVersion>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>AppsFlyerXamarinBinding</PackageId>
-    <PackageVersion>6.2.4.1</PackageVersion>
+    <PackageVersion>6.2.6.1</PackageVersion>
     <Authors>AppsFlyer</Authors>
     <Description>AppsFlyer SDK iOS Xamarin Binding</Description>
     <Copyright>AppsFlyer</Copyright>
     <PackageLicenseUrl>https://www.appsflyer.com/privacy-policy/</PackageLicenseUrl>
     <Owners>AppsFlyer</Owners>
     <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
-    <PackageReleaseNotes>Downgrade Xamarin.iOS to 14.0.0.0</PackageReleaseNotes>
+    <PackageReleaseNotes>AppsFlyer iOS SDK v6.2.6</PackageReleaseNotes>
     <Summary>AppsFlyer SDK iOS Xamarin Binding</Summary>
     <Title>AppsFlyerXamarinBinding</Title>
     <SynchReleaseVersion>false</SynchReleaseVersion>
@@ -37,7 +37,6 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
