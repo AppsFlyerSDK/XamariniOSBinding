@@ -38,12 +38,13 @@ namespace AppsFlyerXamarinBinding
 		public const string AFEventReEngage                		= "af_re_engage";
 		public const string AFEventUpdate                  		= "af_update";
 		public const string AFEventOpenedFromPushNotification 	= "af_opened_from_push_notification";
-	
+		public const string AFEventSubcribe                     = "af_subscribe";
+		public const string AFEventAdView                   	= "af_ad_view";
 	}
 
 	public struct AFEventParameter {
 		public const string AFEventParamLevel                  	= "af_level";
-		public const string AFEventParamScore              	   	=  "af_score";
+		public const string AFEventParamScore              	   	= "af_score";
 		public const string AFEventParamSuccess                	= "af_success";
 		public const string AFEventParamPrice 					= "af_price";
 		public const string AFEventParamContentType 			= "af_content_type";
