@@ -28,15 +28,15 @@ namespace AppsFlyerSampleApp
 			appsflyer.AppsFlyerDevKey = "4UGrDF4vFvPLbHq5bXtCza"; // Replace with your DevKey
 			appsflyer.AppleAppID = "753258300"; // Replace with your app ID
 			appsflyer.AppInviteOneLinkID = "E2bM"; // Replace with your OneLink ID
+			appsflyer.CurrentDeviceLanguage = "en-en12";
 			//appsflyer.AnonymizeUser = true;
 			if (UIDevice.CurrentDevice.CheckSystemVersion (14, 0)) {
 				appsflyer.waitForATTUserAuthorizationWithTimeoutInterval (10);
 				AppTrackingTransparency.ATTrackingManager.RequestTrackingAuthorizationAsync ();
 			}
 			string [] networks = {"test_int", "partner_int"};
-			appsflyer.SharingFilter = networks;
+			appsflyer.SetSharingFilterForPartners (networks);
 			appsflyer.AddPushNotificationDeepLinkPath(new string [] { "key1", "key2" });
-
             // Conversion data callbacks
             ViewController controller = (ViewController)Window.RootViewController;
 			AppsFlyerLibDelegate af_delegate = new AppsFlyerConversionDataDelegate (controller);
