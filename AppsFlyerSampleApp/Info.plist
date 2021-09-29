@@ -55,7 +55,7 @@
 		<string>remote-notification</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.appsflyer.xamarinsample</string>
+	<string>com.appsflyer.universallinks</string>
 	<key>CFBundleDisplayName</key>
 	<string>Xamarin Sample App</string>
 	<key>NSUserTrackingUsageDescription</key>
