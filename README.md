@@ -2,7 +2,7 @@
 
 Xamarin Binding integration guide For iOS 
 
-AppsFlyer Xamarin Binding version `v6.4.0.0` <br>
+AppsFlyer Xamarin Binding version `v6.4.0.1` <br>
 Built with AppsFlyer iOS SDK `v6.4.0`
 
 ## <a id="v6-breaking-changes"> ❗ v6 Breaking Changes
@@ -56,7 +56,7 @@ https://www.nuget.org/packages/AppsFlyerXamarinBinding
 
     1. Go to Project > Add NuGet Packages...
     2. Select the AppsFlyerXamarinBinding
-    3. Select under version -  6.4.0
+    3. Select under version -  6.4.0.1
     4. Click `Add Package`
 
 
