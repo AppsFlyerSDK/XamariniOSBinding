@@ -322,11 +322,13 @@ namespace AppsFlyerXamarinBinding
         [NullAllowed, Export ("facebookDeferredAppLink", ArgumentSemantic.Assign)]
         NSUrl FacebookDeferredAppLink { get; set; }
 
-        // @property (nonatomic) NSArray<NSString *> * _Nullable sharingFilter;
+        // @property (nonatomic) NSArray<NSString *> * _Nullable sharingFilter __attribute__((deprecated("starting SDK version 6.4.0, please use `setSharingFilterForAllPartners:`")));
+        [Obsolete ("starting SDK version 6.4.0, please use `setSharingFilterForAllPartners:`")]
         [NullAllowed, Export ("sharingFilter", ArgumentSemantic.Assign)]
         string [] SharingFilter { get; set; }
 
-        // -(void)setSharingFilterForAllPartners;
+        // -(void)setSharingFilterForAllPartners __attribute__((deprecated("starting SDK version 6.4.0, please use `setSharingFilterForAllPartners:`")));
+        [Obsolete ("starting SDK version 6.4.0, please use `setSharingFilterForAllPartners:`")]
         [Export ("setSharingFilterForAllPartners")]
         void SetSharingFilterForAllPartners ();
 
@@ -350,6 +352,14 @@ namespace AppsFlyerXamarinBinding
         //- (void)setPartnerDataWithPartnerId:(NSString * _Nullable)partnerId partnerInfo:(NSDictionary<NSString*, id>* _Nullable) partnerInfo
         [Export ("setPartnerDataWithPartnerId:partnerInfo:")]
         void SetPartnerData (string partnerId, NSDictionary partnerInfo);
+
+        // @property (nonatomic) NSString * _Nullable currentDeviceLanguage;
+        [NullAllowed, Export ("currentDeviceLanguage")]
+        string CurrentDeviceLanguage { get; set; }
+
+        // -(void)setSharingFilterForPartners:(NSArray<NSString *> * _Nullable)sharingFilter;
+        [Export ("setSharingFilterForPartners:")]
+        void SetSharingFilterForPartners ([NullAllowed] string [] sharingFilter);
     }
 
     [BaseType (typeof (NSObject))]

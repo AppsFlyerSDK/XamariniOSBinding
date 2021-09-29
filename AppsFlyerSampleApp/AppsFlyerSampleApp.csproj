@@ -39,6 +39,7 @@
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignKey>Apple Development: Vitaly Sokolov (U6WDWK9N3Q)</CodesignKey>
     <CodesignProvision>VS: com.appsflyer.xamarinsample Development</CodesignProvision>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -69,7 +70,7 @@
     <CodesignKey>Apple Development: Vitaly Sokolov (U6WDWK9N3Q)</CodesignKey>
     <MtouchSdkVersion>13.6</MtouchSdkVersion>
     <MtouchLink>Full</MtouchLink>
-    <CodesignProvision>VS: com.appsflyer.xamarinsample Development</CodesignProvision>
+    <CodesignProvision>Vitaly Automation iOS Universal Links app</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -77,7 +78,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="AppsFlyerXamarinBinding">
-      <HintPath>..\packages\AppsFlyerXamarinBinding.6.3.2\lib\xamarinios10\AppsFlyerXamarinBinding.dll</HintPath>
+      <HintPath>..\packages\AppsFlyerXamarinBinding.6.4.0.1\lib\xamarinios10\AppsFlyerXamarinBinding.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing.Common.dll" />
   </ItemGroup>

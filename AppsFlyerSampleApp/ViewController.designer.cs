@@ -24,7 +24,7 @@ namespace AppsFlyerSampleApp
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        public UIKit.UITextView oaoaTextView { get; set; }
+        public UIKit.UITextView deepLinkTextView { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -50,9 +50,9 @@ namespace AppsFlyerSampleApp
                 gcdTextView = null;
             }
 
-            if (oaoaTextView != null) {
-                oaoaTextView.Dispose ();
-                oaoaTextView = null;
+            if (deepLinkTextView != null) {
+                deepLinkTextView.Dispose ();
+                deepLinkTextView = null;
             }
 
             if (shareButton != null) {

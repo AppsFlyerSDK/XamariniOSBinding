@@ -9,7 +9,7 @@ namespace AppsFlyerSampleApp
     public partial class ViewController : UIViewController
     {
         internal string gcdString = "Loading...";
-        internal string oaoaString = "Will be presented when app is opened with the deeplink...";
+        internal string deepLinkString = "Will be presented when app is opened with the deeplink...";
 
         public ViewController (IntPtr handle) : base (handle)
         {
@@ -20,7 +20,7 @@ namespace AppsFlyerSampleApp
             base.ViewDidLoad ();
             // Perform any additional setup after loading the view, typically from a nib.
             this.gcdTextView.Text = gcdString;
-            this.oaoaTextView.Text = oaoaString;
+            this.deepLinkTextView.Text = deepLinkString;
         }
 
         public override void DidReceiveMemoryWarning ()
@@ -37,10 +37,9 @@ namespace AppsFlyerSampleApp
                 AFEventParameter.AFEventParamCurrency, "GBP",
                 AFEventParameter.AFEventParamRevenue, 20,
                 AFEventParameter.AFEventParamDescription, "Description example");
-
-            AppsFlyerLib.Shared.LogEvent (AFEventName.AFEventPurchase, addToCartEvent);
-
+            AppsFlyerLib.Shared.LogEvent ("login", new NSDictionary());
             AppsFlyerLib.Shared.LogEvent (AFEventName.AFEventAddToCart, addToCartEvent);
+            AppsFlyerLib.Shared.LogEvent (AFEventName.AFEventPurchase, addToCartEvent);
         }
 
         partial void ShareButton_TouchUpInside (UIButton sender)

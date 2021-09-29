@@ -16,29 +16,31 @@ namespace AppsFlyerSampleApp
 		public AppsFlyerConversionDataDelegate(ViewController viewController)
         {
 			this.viewController = viewController;
-			oaoaString = viewController.oaoaString;
+			oaoaString = viewController.deepLinkString;
 			gcdString = viewController.gcdString;
 			Console.WriteLine ("AppsFlyerConversionDelegate called");
 		}
 
-		public override void OnAppOpenAttribution (NSDictionary attributionData) {
-			string message = "OnAppOpenAttribution:\n";
-			foreach (var kvp in attributionData) {
-				message = message + kvp.Key.ToString () + " = " + kvp.Value.ToString () + "\n";
+        public override void OnAppOpenAttribution (NSDictionary attributionData)
+        {
+            string message = "OnAppOpenAttribution:\n";
+            foreach (var kvp in attributionData) {
+                message = message + kvp.Key.ToString () + " = " + kvp.Value.ToString () + "\n";
+            }
+            Console.WriteLine (message);
+            if (viewController.deepLinkTextView != null) {
+                viewController.deepLinkTextView.Text = message;
+            } else {
+                oaoaString = message;
 			}
-			Console.WriteLine (message);
-			if (viewController.oaoaTextView != null) {
-				viewController.oaoaTextView.Text = message;
-			} else {
-				oaoaString = message;
-			}
-		}
+        }
 
-		public override void OnAppOpenAttributionFailure (NSError error) {
+        public override void OnAppOpenAttributionFailure (NSError error)
+        {
 
-		}
+        }
 
-		public override void OnConversionDataSuccess (NSDictionary conversionInfo) {
+        public override void OnConversionDataSuccess (NSDictionary conversionInfo) {
 			String message = "OnConversionDataSuccess:\n";
 			foreach (var kvp in conversionInfo) {
 				if (kvp.Value != null) {

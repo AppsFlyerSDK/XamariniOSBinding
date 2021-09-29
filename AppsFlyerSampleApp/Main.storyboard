@@ -1,111 +1,121 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1664"/>
                         <viewControllerLayoutGuide type="bottom" id="1665"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="AppsFlyer Sample App" lineBreakMode="tailTruncation" minimumFontSize="10" id="3" textAlignment="center" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="93" y="50" width="228" height="26.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="AppsFlyer Sample App" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="3">
+                                <rect key="frame" x="90.5" y="50" width="233" height="26.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" systemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deferred Deep Link Data" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="312" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="113" y="86.5" width="188.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deferred Deep Link Data" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="312">
+                                <rect key="frame" x="113.5" y="86.5" width="187.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direct Deep Link Data:" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="313" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="121" y="413" width="172" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direct Deep Link Data:" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="313">
+                                <rect key="frame" x="121.5" y="413" width="171" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="1979" translatesAutoresizingMaskIntoConstraints="NO" text="Loading..." editable="NO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Loading..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1979">
                                 <rect key="frame" x="20" y="147" width="386" height="204"/>
-                                <color key="backgroundColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="0" alpha="0"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="204" id="2241"/>
+                                </constraints>
+                                <color key="textColor" systemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <constraints>
-                                    <constraint id="2241" firstAttribute="height" constant="204"/>
-                                </constraints>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="2244" translatesAutoresizingMaskIntoConstraints="NO" text="Will be presented when app is opened with the deeplink..." editable="NO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Will be presented when app is opened with the deeplink..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2244">
                                 <rect key="frame" x="20" y="473.5" width="374" height="204"/>
-                                <color key="backgroundColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="0" alpha="0"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="204" id="2246"/>
+                                </constraints>
+                                <color key="textColor" systemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <constraints>
-                                    <constraint id="2246" firstAttribute="height" constant="204"/>
-                                </constraints>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="2964" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="20" y="686" width="78" height="30"/>
-                                <state key="normal" title="Send Event"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="2964">
+                                <rect key="frame" x="20" y="812" width="85" height="30"/>
+                                <state key="normal" title="Send Events"/>
                                 <connections>
-                                    <action selector="EventButton_TouchUpInside:" destination="BYZ-38-t0r" id="2971" eventType="touchUpInside"/>
+                                    <action selector="EventButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2971"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="2967" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="354" y="686" width="40" height="30"/>
-                                <connections>
-                                    <action selector="ShareButton_TouchUpInside:" destination="BYZ-38-t0r" id="2977" eventType="touchUpInside"/>
-                                </connections>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="2967">
+                                <rect key="frame" x="354" y="812" width="40" height="30"/>
                                 <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="ShareButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2977"/>
+                                </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint id="1666" firstItem="3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
-                            <constraint id="1667" firstItem="3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50"/>
-                            <constraint id="1668" firstItem="312" firstAttribute="top" secondItem="3" secondAttribute="bottom" constant="10"/>
-                            <constraint id="1669" firstItem="312" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
-                            <constraint id="1759" firstItem="313" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
-                            <constraint id="1980" firstItem="1979" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="6"/>
-                            <constraint id="1981" firstItem="1979" firstAttribute="top" secondItem="312" secondAttribute="bottom" constant="40"/>
-                            <constraint id="1984" firstItem="313" firstAttribute="top" secondItem="1979" secondAttribute="bottom" constant="62"/>
-                            <constraint id="2251" firstItem="2244" firstAttribute="top" secondItem="313" secondAttribute="bottom" constant="40"/>
-                            <constraint id="2252" firstItem="2244" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
-                            <constraint id="2254" firstItem="2244" firstAttribute="height" secondItem="1979" secondAttribute="height"/>
-                            <constraint id="2965" firstItem="1665" firstAttribute="top" secondItem="2964" secondAttribute="bottom" constant="20"/>
-                            <constraint id="2966" firstItem="2964" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
-                            <constraint id="2968" firstItem="1665" firstAttribute="top" secondItem="2967" secondAttribute="bottom" constant="20"/>
-                            <constraint id="2969" firstItem="2967" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin"/>
-                            <constraint id="5959" firstItem="1979" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
-                            <constraint id="5960" firstItem="2244" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
-                            <constraint id="6100" firstAttribute="trailingMargin" secondItem="2244" secondAttribute="trailing"/>
+                            <constraint firstItem="3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1666"/>
+                            <constraint firstItem="3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="1667"/>
+                            <constraint firstItem="312" firstAttribute="top" secondItem="3" secondAttribute="bottom" constant="10" id="1668"/>
+                            <constraint firstItem="312" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1669"/>
+                            <constraint firstItem="313" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1759"/>
+                            <constraint firstItem="1979" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="6" id="1980"/>
+                            <constraint firstItem="1979" firstAttribute="top" secondItem="312" secondAttribute="bottom" constant="40" id="1981"/>
+                            <constraint firstItem="313" firstAttribute="top" secondItem="1979" secondAttribute="bottom" constant="62" id="1984"/>
+                            <constraint firstItem="2244" firstAttribute="top" secondItem="313" secondAttribute="bottom" constant="40" id="2251"/>
+                            <constraint firstItem="2244" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2252"/>
+                            <constraint firstItem="2244" firstAttribute="height" secondItem="1979" secondAttribute="height" id="2254"/>
+                            <constraint firstItem="1665" firstAttribute="top" secondItem="2964" secondAttribute="bottom" constant="20" id="2965"/>
+                            <constraint firstItem="2964" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2966"/>
+                            <constraint firstItem="1665" firstAttribute="top" secondItem="2967" secondAttribute="bottom" constant="20" id="2968"/>
+                            <constraint firstItem="2967" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2969"/>
+                            <constraint firstItem="1979" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5959"/>
+                            <constraint firstItem="2244" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5960"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2244" secondAttribute="trailing" id="6100"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="gcdTextView" destination="1979" id="name-outlet-1979"/>
-                        <outlet property="oaoaTextView" destination="2244" id="name-outlet-2244"/>
                         <outlet property="eventButton" destination="2964" id="name-outlet-2964"/>
+                        <outlet property="gcdTextView" destination="1979" id="name-outlet-1979"/>
+                        <outlet property="deepLinkTextView" destination="2244" id="name-outlet-2244"/>
                         <outlet property="shareButton" destination="2967" id="name-outlet-2967"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="578" y="262"/>
+            <point key="canvasLocation" x="837.68115942028987" y="175.44642857142856"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedScreenMetrics key="destination" type="retina5_5.fullscreen"/>
-        <simulatedOrientationMetrics key="orientation"/>
-    </simulatedMetricsContainer>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
