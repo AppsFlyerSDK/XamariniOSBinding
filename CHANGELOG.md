@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [6.4.0.3] - 2021-10-24
+
+### Changed
+
+- Downgraded Xamarin.iOS to 14.0.0 for backwards compatibility
+
 ## [6.4.0.1] - 2021-09-29
 
 ### Added
