@@ -77,10 +77,10 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="AppsFlyerXamarinBinding">
-      <HintPath>..\packages\AppsFlyerXamarinBinding.6.4.0.1\lib\xamarinios10\AppsFlyerXamarinBinding.dll</HintPath>
-    </Reference>
     <Reference Include="System.Drawing.Common.dll" />
+    <Reference Include="AppsFlyerXamarinBinding">
+      <HintPath>..\packages\AppsFlyerXamarinBinding.6.4.0.3\lib\xamarinios10\AppsFlyerXamarinBinding.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
