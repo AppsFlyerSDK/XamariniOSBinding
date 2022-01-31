@@ -31,10 +31,6 @@ namespace AppsFlyerSampleApp
 			//appsflyer.AppInviteOneLinkID = "E2bM"; // Replace with your OneLink ID
 			appsflyer.CurrentDeviceLanguage = "en-en12";
             //appsflyer.AnonymizeUser = true;
-            if (UIDevice.CurrentDevice.CheckSystemVersion (14, 0)) {
-				appsflyer.waitForATTUserAuthorizationWithTimeoutInterval (10);
-				AppTrackingTransparency.ATTrackingManager.RequestTrackingAuthorizationAsync ();
-			}
             string [] networks = { "all", "another"};
             appsflyer.SetSharingFilterForPartners (networks);
             appsflyer.AddPushNotificationDeepLinkPath(new string [] { "key1", "key2" });
@@ -80,10 +76,17 @@ namespace AppsFlyerSampleApp
 			// Here you can undo many of the changes made on entering the background.
 		}
 
+		[Export("applicationDidBecomeActive:")]
 		public override void OnActivated (UIApplication application)
 		{
 			// Restart any tasks that were paused (or not yet started) while the application was inactive. 
 			// If the application was previously in the background, optionally refresh the user interface.
+			if (UIDevice.CurrentDevice.CheckSystemVersion(14, 0))
+			{
+				appsflyer.waitForATTUserAuthorizationWithTimeoutInterval(10);
+				AppTrackingTransparency.ATTrackingManager.RequestTrackingAuthorizationAsync();
+			}
+
 			appsflyer.Start();
 
 		}
