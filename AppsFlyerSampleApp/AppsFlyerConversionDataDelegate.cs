@@ -23,7 +23,7 @@ namespace AppsFlyerSampleApp
 
         public override void OnAppOpenAttribution (NSDictionary attributionData)
         {
-            string message = "OnAppOpenAttribution:\n";
+            String message = "OnAppOpenAttribution:\n";
             foreach (var kvp in attributionData) {
                 message = message + kvp.Key.ToString () + " = " + kvp.Value.ToString () + "\n";
             }

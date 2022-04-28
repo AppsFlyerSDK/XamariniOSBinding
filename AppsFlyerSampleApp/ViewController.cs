@@ -46,8 +46,8 @@ namespace AppsFlyerSampleApp
         {
             AppsFlyerShareInviteHelper.generateInviteUrlWithLinkGenerator (
                             (linkGenerator) => {
-                                linkGenerator.setChannel ("channel_name");
-                                linkGenerator.setReferrerName ("ref_name");
+                                linkGenerator.setChannel ("my_channel");
+                                linkGenerator.setReferrerName ("my_ref");
                                 return linkGenerator;
                             }, completionHandler: (NSURL) => {
                                 Console.WriteLine (NSURL);
