@@ -26,10 +26,10 @@ namespace AppsFlyerSampleApp
 			//appsflyer.DisableSKAdNetwork = true;
 			appsflyer.CurrencyCode = "GBP";
 			appsflyer.OneLinkCustomDomains = new string [] { "automationsdk.blaster.afsdktests.com" };
-			appsflyer.AppsFlyerDevKey = "Dpyvt8YAJE2VmtZwZbjF8X"; // Replace with your DevKey
-			appsflyer.AppleAppID = "888707074"; // Replace with your app ID
-			//appsflyer.AppInviteOneLinkID = "E2bM"; // Replace with your OneLink ID
-			appsflyer.CurrentDeviceLanguage = "en-en12";
+			appsflyer.AppsFlyerDevKey = "4UGrDF4vFvPLbHq5bXtCza"; // Replace with your DevKey
+			appsflyer.AppleAppID = "753258300"; // Replace with your app ID
+			appsflyer.AppInviteOneLinkID = "E2bM"; // Replace with your OneLink ID
+            appsflyer.CurrentDeviceLanguage = "en-en12";
             //appsflyer.AnonymizeUser = true;
             string [] networks = { "all", "another"};
             appsflyer.SetSharingFilterForPartners (networks);

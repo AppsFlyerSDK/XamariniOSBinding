@@ -3,8 +3,7 @@ AppsFlyerSampleApp/bin
 AppsFlyerSampleApp/obj
 AppsFlyerXamarinBinding/obj
 .vs/
+.idea/
 **/[Pp]ackages/*
-
 AppsFlyerXamarinBinding/bin/Debug/
-
 AppsFlyerXamarinBinding/bin/Release/.idea/

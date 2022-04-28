@@ -10,18 +10,18 @@
     <RootNamespace>AppsFlyerXamarinBinding</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>AppsFlyerXamarinBinding</AssemblyName>
-    <ReleaseVersion>6.4.0.3</ReleaseVersion>
+    <ReleaseVersion>6.5.4.0</ReleaseVersion>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>AppsFlyerXamarinBinding</PackageId>
-    <PackageVersion>6.4.0.3</PackageVersion>
+    <PackageVersion>6.5.4.0</PackageVersion>
     <Authors>AppsFlyer</Authors>
     <Description>AppsFlyer SDK iOS Xamarin Binding</Description>
     <Copyright>AppsFlyer</Copyright>
     <PackageLicenseUrl>https://www.appsflyer.com/privacy-policy/</PackageLicenseUrl>
     <Owners>AppsFlyer</Owners>
     <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
-    <PackageReleaseNotes>AppsFlyer iOS SDK v6.4.0
-Uses Xamarin.iOS 14.0</PackageReleaseNotes>
+    <PackageReleaseNotes>AppsFlyer iOS SDK v6.5.4
+Uses Xamarin.iOS 15.0</PackageReleaseNotes>
     <Summary>AppsFlyer SDK iOS Xamarin Binding</Summary>
     <Title>AppsFlyerXamarinBinding</Title>
     <SynchReleaseVersion>false</SynchReleaseVersion>
