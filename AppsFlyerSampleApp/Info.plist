@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Xamarin Sample App</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.appsflyer.xamarinsample</string>
+	<string>com.gaincapital.forex</string>
 	<key>CFBundleName</key>
 	<string>Xamarin Sample App</string>
 	<key>CFBundleShortVersionString</key>
@@ -24,7 +24,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
-	<string>9.0</string>
+	<string>12.0</string>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>This will allow us to read IDFA</string>
 	<key>UIBackgroundModes</key>

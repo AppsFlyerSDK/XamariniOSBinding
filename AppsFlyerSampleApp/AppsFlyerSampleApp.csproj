@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-ios</TargetFramework>
+    <SupportedOSPlatformVersion>12.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -20,7 +24,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>Apple Development: Vitaly Sokolov (U6WDWK9N3Q)</CodesignKey>
@@ -71,33 +75,9 @@
     <MtouchLink>Full</MtouchLink>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="Xamarin.iOS" />
-    <Reference Include="System.Drawing.Common.dll" />
     <Reference Include="AppsFlyerXamarinBinding">
-      <HintPath>..\packages\AppsFlyerXamarinBinding.6.5.4\lib\xamarinios10\AppsFlyerXamarinBinding.dll</HintPath>
+      <HintPath>..\AppsFlyerXamarinBinding\bin\Release\net6.0-ios\AppsFlyerXamarinBinding.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
-    <InterfaceDefinition Include="Main.storyboard" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Info.plist" />
-    <None Include="Entitlements.plist" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Main.cs" />
-    <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AppsFlyerConversionDataDelegate.cs" />
-    <Compile Include="MyAppsFlyerDeepLinkDelegate.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+ 
 </Project>
