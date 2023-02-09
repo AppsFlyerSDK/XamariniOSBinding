@@ -24,7 +24,7 @@
         <Copyright>AppsFlyer</Copyright>
         <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageVersion>6.9.2-beta1</PackageVersion>
+        <PackageVersion>6.9.2</PackageVersion>
         <!--<GeneratePackageOnBuild>true</GeneratePackageOnBuild>-->
     </PropertyGroup>
 

@@ -14,6 +14,10 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Xamarin.AppsFlyer.iOS" />
+    <None Remove="AppsFlyerXamarinBinding" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AppsFlyerXamarinBinding" Version="6.9.2-beta1" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon167.png">
