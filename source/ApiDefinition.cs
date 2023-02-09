@@ -248,9 +248,9 @@ namespace AppsFlyerXamarinBinding
         [Export ("logEventWithEventName:eventValues:completionHandler:")]
         void LogEventWithEventName (string eventName, [NullAllowed] NSDictionary<NSString, NSObject> eventValues, [NullAllowed] Action<NSDictionary<NSString, NSObject>, NSError> completionHandler);
 
-        // -(void)validateAndLogInAppPurchase:(NSString *)eventNameIfSuucceed eventNameIfFailed:(NSString *)failedEventName withValue:(NSString *)value withProduct:(NSString *)productIdentifier price:(NSDecimalNumber *)price currency:(NSString *)currency success:(void (^)(NSDictionary *))successBlock failure:(void (^)(NSError *, id))failedBlock;
-        [Export ("validateAndLogInAppPurchase:eventNameIfFailed:withValue:withProduct:price:currency:success:failure:")]
-        void ValidateAndLogInAppPurchase (string eventNameIfSuucceed, string failedEventName, string value, string productIdentifier, NSDecimalNumber price, string currency, Action<NSDictionary> successBlock, Action<NSError, NSObject> failedBlock);
+        // -(void)validateAndLogInAppPurchase:(NSString * _Nullable)productIdentifier price:(NSString * _Nullable)price currency:(NSString * _Nullable)currency transactionId:(NSString * _Nullable)transactionId additionalParameters:(NSDictionary * _Nullable)params success:(void (^ _Nullable)(NSDictionary * _Nonnull))successBlock failure:(void (^ _Nullable)(NSError * _Nullable, id _Nullable))failedBlock __attribute__((availability(ios, introduced=7.0)));
+        [Export("validateAndLogInAppPurchase:price:currency:transactionId:additionalParameters:success:failure:")]
+        void ValidateAndLogInAppPurchase([NullAllowed] string productIdentifier, [NullAllowed] string price, [NullAllowed] string currency, [NullAllowed] string transactionId, [NullAllowed] NSDictionary @params, [NullAllowed] Action<NSDictionary> successBlock, [NullAllowed] Action<NSError, NSObject> failedBlock);
 
         // -(void)logLocation:(double)longitude latitude:(double)latitude;
         [Export ("logLocation:latitude:")]

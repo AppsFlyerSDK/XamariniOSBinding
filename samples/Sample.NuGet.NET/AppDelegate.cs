@@ -58,6 +58,13 @@ public class AppDelegate : UIApplicationDelegate {
     public override void OnActivated(UIApplication application)
     {
         AppsFlyerLib.Shared.Start();
+
+
+        AppsFlyerLib.Shared.ValidateAndLogInAppPurchase("productId", "price", "USD", "123", null, (dictionary) => {
+            Console.WriteLine(dictionary.Description);
+        }, (err, obj) => {
+            Console.WriteLine(err.Description);
+        });
     }
 }
 
