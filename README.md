@@ -2,10 +2,10 @@
 
 Xamarin Binding integration guide For iOS 
 
-AppsFlyer Xamarin Binding version `v6.5.4.0` <br>
-Built with AppsFlyer iOS SDK `v6.5.4`
+AppsFlyer Xamarin Binding version `v6.9.2` <br>
+Built with AppsFlyer iOS SDK `v6.9.2`
 
-## <a id="v6-breaking-changes"> ❗ v6 Breaking Changes
+## ❗ v6 Breaking Changes
 
 We have renamed some of the APIs. For more details, please check out our [Help Center](https://support.appsflyer.com/hc/en-us/articles/360011571778#4-change-apis)
     
@@ -36,15 +36,10 @@ The API for the binding coincides with the native iOS API, which can be found [h
 - [Sample App](#sample_app)
 
 
-### <a id="nuget_install">
-
 
 # Nuget
 Install-Package AppsFlyerXamarinBinding <br>
 https://www.nuget.org/packages/AppsFlyerXamarinBinding
-
-
-### <a id="quickStart">
 
 
 
@@ -56,7 +51,7 @@ https://www.nuget.org/packages/AppsFlyerXamarinBinding
 
     1. Go to Project > Add NuGet Packages...
     2. Select the AppsFlyerXamarinBinding
-    3. Select under version -  6.5.4.0
+    3. Select under version -  6.9.2
     4. Click `Add Package`
 
 
@@ -70,15 +65,10 @@ To Embed SDK into your Application Manually:
     3. Go to .Net Assembly tab and click on Browse… button.
     4. Locate AppsFlyerXamarinBinding.dll and chose it.
 
-### <a id="api-methods">
-
 
 
 # API Methods
 
-
-
-### <a id="sdk_init">
 
 
 ##  SDK Initialization
@@ -115,22 +105,19 @@ public override void OnActivated(UIApplication application)
 
 
 
-### <a id="adding_events">
-
 ## Logging In-App Events
 
 Logging in-app events is performed by calling `LogEvent` with event name and value parameters. See [In-App Events](https://support.appsflyer.com/hc/en-us/articles/115005544169-AppsFlyer-Rich-In-App-Events-Android-and-iOS) documentation for more details.
 
 Event Example:
 ```c#
-var addToCartEvent = new NSDictionary (AFEventParameter.AFEventParamContentId, "id 123",
-AFEventParameter.AFEventParamContentType, "type 1", AFEventParameter.AFEventParamCurrency,
-"USD", AFEventParameter.AFEventParamDescription, "add to cart Description");
+var addToCartEvent = new NSDictionary(AFEventParameter.AFEventParamContentId, "id 1",
+                                      AFEventParameter.AFEventParamContentType, "type 1", 
+                                      AFEventParameter.AFEventParamCurrency, "USD", 
+                                      AFEventParameter.AFEventParamDescription, "description");
 
 AppsFlyerLib.Shared.LogEvent(AFEventName.AFEventAddToCart, addToCartEvent);
 ```
-
-### <a id="conversion_data">
 
 ##  Get Conversion Data
 
@@ -142,7 +129,7 @@ AppsFlyerLibDelegate af_delegate = new AppsFlyerConversionDataDelegate();
 
 Then set up the delegate in FinishedLaunching:
 ```c#
- AppsFlyerLib.Shared.Delegate = af_delegate;
+AppsFlyerLib.Shared.Delegate = af_delegate;
 ```
 
 AppsFlyerConversionDataDelegate.cs can be found here:
@@ -166,7 +153,6 @@ public class AppsFlyerConversionDataDelegate : AppsFlyerLibDelegate
 }
 ```
 
-### <a id="Stop">
 ##  Opt-Out
 For complete opt out of the SDK use the following method call 
 ```c#
@@ -174,30 +160,29 @@ AppsFlyerLib.Shared.IsStopped = true;
 ```
 This will prevent any data from being sent out of the AppsFlyer SDK.
 
-### <a id="UserInvite">
 ##  User invite
 Allowing your existing users to invite their friends and contacts as new users to your app can be a key growth factor for your app. AppsFlyer allows you to attribute and record new installs originating from user invites within your app.
 Set the OneLink ID, before calling Start(). 
 ```c#
-   AppsFlyerLib.Shared.AppInviteOneLinkID = "<OneLinKID>";
+AppsFlyerLib.Shared.AppInviteOneLinkID = "<OneLinKID>";
 ```
 
 ```c#
-            AppsFlyerXamarinBinding.AppsFlyerShareInviteHelper.generateInviteUrlWithLinkGenerator (
-                            (linkGenerator) => {
-                                linkGenerator.setChannel ("channel_name");
-                                linkGenerator.setReferrerName ("ref_name");
-                                return linkGenerator;
-                            }, completionHandler: (NSURL) => {
-                                Console.WriteLine (NSURL);
-                            }
-                    );
+AppsFlyerXamarinBinding.AppsFlyerShareInviteHelper.generateInviteUrlWithLinkGenerator ((linkGenerator) => {
+        linkGenerator.setChannel ("channel_name");
+        linkGenerator.setReferrerName ("ref_name");
+        return linkGenerator;
+    }, completionHandler: (NSURL) => {
+        Console.WriteLine (NSURL);
+    }
+);
 ```
 
-### <a id="sample_app">
 ## Sample App 
-Sample app can be found here:
-https://github.com/AppsFlyerSDK/XamariniOSBinding/tree/master/AppsFlyerSampleApp
+Sample apps for `xamarin.ios10` and `net6.0-ios` can be found here:
+```
+XamariniOSBinding/samples
+```
 
 
 ---

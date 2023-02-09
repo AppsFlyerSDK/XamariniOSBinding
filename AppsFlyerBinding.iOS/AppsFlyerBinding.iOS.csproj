@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Xamarin.Legacy.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>xamarin.ios10;net6.0-ios</TargetFrameworks>
+        <NoNFloatUsing Condition="'$(TargetFramework)' == 'xamarin.ios10'">true</NoNFloatUsing>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>true</ImplicitUsings>
+        <IsBindingProject>true</IsBindingProject>
+        <NoBindingEmbedding>true</NoBindingEmbedding>
+        <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
+        <RootNamespace>AppsFlyerXamarinBinding</RootNamespace>
+        <AssemblyName>AppsFlyerBinding.iOS</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <FileVersion>6.9.2.1</FileVersion>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+    <PropertyGroup>
+        <PackageId>AppsFlyerXamarinBinding</PackageId>
+        <Title>AppsFlyer SDK for Xamarin iOS</Title>
+        <Summary>C# binding for AppsFlyer official SDK</Summary>
+        <Description>C# binding for AppsFlyer official SDK</Description>
+        <Authors>AppsFlyer</Authors>
+        <Owners>AppsFlyer</Owners>
+        <Copyright>AppsFlyer</Copyright>
+        <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageVersion>6.9.2</PackageVersion>
+        <!--<GeneratePackageOnBuild>true</GeneratePackageOnBuild>-->
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="../AssemblyInfo.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- build/Xamarin.AppsFlyer.iOS.targets must the same as PackageId -->
+        <None Include="AppsFlyerBinding.iOS.targets" Pack="True" PackagePath="build/AppsFlyerXamarinBinding.targets" />
+        <None Include="AppsFlyerBinding.iOS.targets" Pack="True" PackagePath="buildTransitive/AppsFlyerXamarinBinding.targets" />
+
+        <None Include="../README.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+
+    <!-- An iOS app project cannot find Xcframeworks within a NuGet if a TFM
+         previous than net6.0-ios is used.
+         https://github.com/xamarin/xamarin-macios/issues/13693
+         You must include the Xcframework's NativeReference tag into the iOS app
+         project so sidecar can work properly. -->
+    <!-- This workaround was designed like this to have the same
+         NativeReference tag for the iOS binding and for the .targets file -->
+    <Import Project="AppsFlyerBinding.iOS.targets" />
+    <ItemGroup>
+        <_NativeReference Include="../frameworks/AppsFlyerLib.xcframework">
+            <_Id>$(_AppsFlyerLibId)</_Id>
+        </_NativeReference>
+    </ItemGroup>
+    <!-- End of workaround -->
+    <ItemGroup Condition="'$(TargetFramework)' == 'xamarin.ios10'">
+        <Compile Remove="../source/ApiDefinition.cs" />
+        <Compile Remove="../source/StructsAndEnums.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <ObjcBindingCoreSource Include="../source/StructsAndEnums.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true'" />
+        <ObjcBindingApiDefinition Include="../source/ApiDefinition.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true'" />
+    </ItemGroup>
+<!--    <ItemGroup>
+        <PackageReference Include="Xamarin.Build.Download" Version="0.11.3" PrivateAssets="None" />
+    </ItemGroup>-->
+</Project>
