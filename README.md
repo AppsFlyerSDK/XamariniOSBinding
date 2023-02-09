@@ -179,8 +179,10 @@ AppsFlyerXamarinBinding.AppsFlyerShareInviteHelper.generateInviteUrlWithLinkGene
 ```
 
 ## Sample App 
-Sample app can be found here:
-https://github.com/AppsFlyerSDK/XamariniOSBinding/tree/master/AppsFlyerSampleApp
+Sample apps for `xamarin.ios10` and `net6.0-ios` can be found here:
+```
+XamariniOSBinding/samples
+```
 
 
 ---
