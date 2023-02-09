@@ -69,9 +69,6 @@
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
-      <PackageReference Include="Xamarin.AppsFlyer.iOS">
-        <Version>6.9.2-beta6</Version>
-      </PackageReference>
     </ItemGroup>
     <ItemGroup>
         <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">

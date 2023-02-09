@@ -15,7 +15,7 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
     <PropertyGroup>
-        <PackageId>Xamarin.AppsFlyer.iOS</PackageId>
+        <PackageId>AppsFlyerXamarinBinding</PackageId>
         <Title>AppsFlyer SDK for Xamarin iOS</Title>
         <Summary>C# binding for AppsFlyer official SDK</Summary>
         <Description>C# binding for AppsFlyer official SDK</Description>
@@ -24,7 +24,7 @@
         <Copyright>AppsFlyer</Copyright>
         <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageVersion>6.9.2-beta7</PackageVersion>
+        <PackageVersion>6.9.2-beta1</PackageVersion>
         <!--<GeneratePackageOnBuild>true</GeneratePackageOnBuild>-->
     </PropertyGroup>
 
@@ -34,8 +34,8 @@
 
     <ItemGroup>
         <!-- build/Xamarin.AppsFlyer.iOS.targets must the same as PackageId -->
-        <None Include="AppsFlyerBinding.iOS.targets" Pack="True" PackagePath="build/Xamarin.AppsFlyer.iOS.targets" />
-        <None Include="AppsFlyerBinding.iOS.targets" Pack="True" PackagePath="buildTransitive/Xamarin.AppsFlyer.iOS.targets" />
+        <None Include="AppsFlyerBinding.iOS.targets" Pack="True" PackagePath="build/AppsFlyerXamarinBinding.targets" />
+        <None Include="AppsFlyerBinding.iOS.targets" Pack="True" PackagePath="buildTransitive/AppsFlyerXamarinBinding.targets" />
 
         <None Include="../README.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
