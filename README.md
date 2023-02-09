@@ -5,7 +5,7 @@ Xamarin Binding integration guide For iOS
 AppsFlyer Xamarin Binding version `v6.9.2` <br>
 Built with AppsFlyer iOS SDK `v6.9.2`
 
-##❗ v6 Breaking Changes
+## ❗ v6 Breaking Changes
 
 We have renamed some of the APIs. For more details, please check out our [Help Center](https://support.appsflyer.com/hc/en-us/articles/360011571778#4-change-apis)
     
@@ -51,7 +51,7 @@ https://www.nuget.org/packages/AppsFlyerXamarinBinding
 
     1. Go to Project > Add NuGet Packages...
     2. Select the AppsFlyerXamarinBinding
-    3. Select under version -  6.5.4.0
+    3. Select under version -  6.9.2
     4. Click `Add Package`
 
 
@@ -111,9 +111,10 @@ Logging in-app events is performed by calling `LogEvent` with event name and val
 
 Event Example:
 ```c#
-var addToCartEvent = new NSDictionary (AFEventParameter.AFEventParamContentId, "id 123",
-AFEventParameter.AFEventParamContentType, "type 1", AFEventParameter.AFEventParamCurrency,
-"USD", AFEventParameter.AFEventParamDescription, "add to cart Description");
+var addToCartEvent = new NSDictionary(AFEventParameter.AFEventParamContentId, "id 1",
+                                      AFEventParameter.AFEventParamContentType, "type 1", 
+                                      AFEventParameter.AFEventParamCurrency, "USD", 
+                                      AFEventParameter.AFEventParamDescription, "description");
 
 AppsFlyerLib.Shared.LogEvent(AFEventName.AFEventAddToCart, addToCartEvent);
 ```
@@ -128,7 +129,7 @@ AppsFlyerLibDelegate af_delegate = new AppsFlyerConversionDataDelegate();
 
 Then set up the delegate in FinishedLaunching:
 ```c#
- AppsFlyerLib.Shared.Delegate = af_delegate;
+AppsFlyerLib.Shared.Delegate = af_delegate;
 ```
 
 AppsFlyerConversionDataDelegate.cs can be found here:
@@ -163,7 +164,7 @@ This will prevent any data from being sent out of the AppsFlyer SDK.
 Allowing your existing users to invite their friends and contacts as new users to your app can be a key growth factor for your app. AppsFlyer allows you to attribute and record new installs originating from user invites within your app.
 Set the OneLink ID, before calling Start(). 
 ```c#
-   AppsFlyerLib.Shared.AppInviteOneLinkID = "<OneLinKID>";
+AppsFlyerLib.Shared.AppInviteOneLinkID = "<OneLinKID>";
 ```
 
 ```c#
