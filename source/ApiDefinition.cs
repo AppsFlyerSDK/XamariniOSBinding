@@ -130,8 +130,9 @@ namespace AppsFlyerXamarinBinding
 
         // +(AppsFlyerLib * _Nonnull)shared;
         [Static]
+        [Internal]
         [Export ("shared")]
-        AppsFlyerLib Shared { get; }
+        AppsFlyerLib __Shared { get; }
 
         // @property (nonatomic, strong, setter = setCustomerUserID:) NSString * customerUserID;
         [Export ("customerUserID", ArgumentSemantic.Retain)]
@@ -360,6 +361,10 @@ namespace AppsFlyerXamarinBinding
         // -(void)setSharingFilterForPartners:(NSArray<NSString *> * _Nullable)sharingFilter;
         [Export ("setSharingFilterForPartners:")]
         void SetSharingFilterForPartners ([NullAllowed] string [] sharingFilter);
+
+        // -(void)setPluginInfoWith:(AFSDKPlugin)plugin pluginVersion:(NSString * _Nonnull)version additionalParams:(NSDictionary * _Nullable)additionalParams __attribute__((swift_name("setPluginInfo(plugin:version:additionalParams:)")));
+        [Export("setPluginInfoWith:pluginVersion:additionalParams:")]
+        void SetPluginInfoWith(AFSDKPlugin plugin, string version, [NullAllowed] NSDictionary additionalParams);
     }
 
     [BaseType (typeof (NSObject))]

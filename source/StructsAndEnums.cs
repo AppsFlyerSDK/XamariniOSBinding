@@ -15,8 +15,27 @@ namespace AppsFlyerXamarinBinding
 		AFSDKDeepLinkResultStatusFailure = 2,
 	}
 
+    public enum AFSDKPlugin : long
+    {
+        IOSNative,
+        Unity,
+        Flutter,
+        ReactNative,
+        AdobeAir,
+        AdobeMobile,
+        Cocos2dx,
+        Cordova,
+        Mparticle,
+        NativeScript,
+        Expo,
+        Unreal,
+        Xamarin,
+        Capacitor,
+        Segment,
+        AdobeSwiftAEP
+    }
 
-	public struct AFEventName {
+    public struct AFEventName {
 		public const string AFEventLevelAchieved 		   		= "af_level_achieved";
 		public const string AFEventAddPaymentInfo          		= "af_add_payment_info";
 		public const string AFEventAddToCart               		= "af_add_to_cart";
