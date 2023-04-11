@@ -10,8 +10,8 @@
         <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
         <RootNamespace>AppsFlyerXamarinBinding</RootNamespace>
         <AssemblyName>AppsFlyerBinding.iOS</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <FileVersion>6.9.2.1</FileVersion>
+        <AssemblyVersion>6.10.1.111</AssemblyVersion>
+        <FileVersion>6.10.1</FileVersion>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
     <PropertyGroup>
@@ -24,7 +24,7 @@
         <Copyright>AppsFlyer</Copyright>
         <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageVersion>6.9.3-beta1</PackageVersion>
+        <PackageVersion>6.10.1</PackageVersion>
         <!--<GeneratePackageOnBuild>true</GeneratePackageOnBuild>-->
     </PropertyGroup>
 
@@ -37,7 +37,7 @@
         <None Include="AppsFlyerBinding.iOS.targets" Pack="True" PackagePath="build/AppsFlyerXamarinBinding.targets" />
         <None Include="AppsFlyerBinding.iOS.targets" Pack="True" PackagePath="buildTransitive/AppsFlyerXamarinBinding.targets" />
 
-        <None Include="../README.md" Pack="true" PackagePath="\"/>
+        <None Include="../README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 
     <!-- An iOS app project cannot find Xcframeworks within a NuGet if a TFM
