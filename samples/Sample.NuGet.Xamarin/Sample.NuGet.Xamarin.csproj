@@ -24,7 +24,7 @@
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
         <MtouchArch>x86_64</MtouchArch>
-        <MtouchLink>None</MtouchLink>
+        <MtouchLink>SdkOnly</MtouchLink>
         <MtouchDebug>true</MtouchDebug>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -69,9 +69,7 @@
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
-      <PackageReference Include="AppsFlyerXamarinBinding">
-        <Version>6.10.1-beta7</Version>
-      </PackageReference>
+      <PackageReference Include="AppsFlyerXamarinBinding" Version="6.12.*" />
     </ItemGroup>
     <ItemGroup>
         <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">

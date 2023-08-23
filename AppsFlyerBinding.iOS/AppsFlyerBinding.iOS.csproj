@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Xamarin.Legacy.Sdk">
     <PropertyGroup>
         <TargetFrameworks>xamarin.ios10;net6.0-ios</TargetFrameworks>
@@ -10,8 +9,8 @@
         <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
         <RootNamespace>AppsFlyerXamarinBinding</RootNamespace>
         <AssemblyName>AppsFlyerBinding.iOS</AssemblyName>
-        <AssemblyVersion>6.10.1.111</AssemblyVersion>
-        <FileVersion>6.10.1</FileVersion>
+        <AssemblyVersion>6.12.1</AssemblyVersion>
+        <FileVersion>6.12.1</FileVersion>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
     <PropertyGroup>
@@ -24,7 +23,7 @@
         <Copyright>AppsFlyer</Copyright>
         <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageVersion>6.10.1</PackageVersion>
+        <PackageVersion>6.12.1</PackageVersion>
         <!--<GeneratePackageOnBuild>true</GeneratePackageOnBuild>-->
     </PropertyGroup>
 
@@ -62,7 +61,4 @@
         <ObjcBindingCoreSource Include="../source/StructsAndEnums.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true'" />
         <ObjcBindingApiDefinition Include="../source/ApiDefinition.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true'" />
     </ItemGroup>
-<!--    <ItemGroup>
-        <PackageReference Include="Xamarin.Build.Download" Version="0.11.3" PrivateAssets="None" />
-    </ItemGroup>-->
 </Project>

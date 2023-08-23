@@ -16,12 +16,13 @@ namespace AppsFlyerXamarinBinding
                 {
                     return Instance;
                 }
+#pragma warning disable CS8602, CS8604
                 var assembly = typeof(AppsFlyerLib).GetTypeInfo().Assembly;
                 var assemblyName = new AssemblyName(assembly.FullName);
                 var version = assemblyName.Version.ToString();
 
-                
                 Instance.SetPluginInfoWith(AFSDKPlugin.Xamarin, version, null);
+#pragma warning restore CS8602, CS8604
                 didSetPlugin = true;
                 return Instance;
             }
