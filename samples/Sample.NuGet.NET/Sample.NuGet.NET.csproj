@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <CreatePackage>false</CreatePackage>
@@ -17,7 +18,7 @@
     <None Remove="AppsFlyerXamarinBinding" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="AppsFlyerXamarinBinding" Version="6.10.1-beta7" />
+    <PackageReference Include="AppsFlyerXamarinBinding" Version="6.12.*" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon167.png">
