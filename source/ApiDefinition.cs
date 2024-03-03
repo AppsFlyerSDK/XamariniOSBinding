@@ -365,6 +365,14 @@ namespace AppsFlyerXamarinBinding
         // -(void)setPluginInfoWith:(AFSDKPlugin)plugin pluginVersion:(NSString * _Nonnull)version additionalParams:(NSDictionary * _Nullable)additionalParams __attribute__((swift_name("setPluginInfo(plugin:version:additionalParams:)")));
         [Export("setPluginInfoWith:pluginVersion:additionalParams:")]
         void SetPluginInfoWith(AFSDKPlugin plugin, string version, [NullAllowed] NSDictionary additionalParams);
+
+        //- (void) enableTCFDataCollection:(BOOL) shouldCollectConsentData;
+        [Export("enableTCFDataCollection:")]
+        void EnableTCFDataCollection(bool shouldCollectConsentData);
+
+        //- (void)setConsentData:(AppsFlyerConsent *)consent;
+        [Export("setConsentData:")]
+        void SetConsentData(AppsFlyerConsent consent);
     }
 
     [BaseType (typeof (NSObject))]
@@ -438,6 +446,19 @@ namespace AppsFlyerXamarinBinding
         [Static]
         [Export ("logAndOpenStore:campaign:paramters:openStore:")]
         void LogAndOpenStore (string appID, [NullAllowed] string campaign, [NullAllowed] NSDictionary parameters, Action<NSUrlSession, NSUrl> openStoreBlock);
+    }
+
+    // @interface AppsFlyerConsent : NSObject <NSCoding>
+    [BaseType (typeof (NSObject))]
+    interface AppsFlyerConsent :INSCoding
+    {
+        // - (instancetype)initForGDPRUserWithHasConsentForDataUsage:(BOOL)hasConsentForDataUsage hasConsentForAdsPersonalization:(BOOL)hasConsentForAdsPersonalization;
+        [Export ("initForGDPRUserWithHasConsentForDataUsage:hasConsentForAdsPersonalization:")]
+        AppsFlyerConsent initForGDPRUser (bool hasConsentForDataUsage, bool hasConsentForAdsPersonalization);
+
+        // - (instancetype)initNonGDPRUser;
+        [Export ("initNonGDPRUser")]
+        AppsFlyerConsent initNonGDPRUser();
     }
 }
 

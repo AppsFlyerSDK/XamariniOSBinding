@@ -9,8 +9,8 @@
         <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
         <RootNamespace>AppsFlyerXamarinBinding</RootNamespace>
         <AssemblyName>AppsFlyerBinding.iOS</AssemblyName>
-        <AssemblyVersion>6.12.1</AssemblyVersion>
-        <FileVersion>6.12.1</FileVersion>
+        <AssemblyVersion>6.13.0</AssemblyVersion>
+        <FileVersion>6.13.0</FileVersion>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
     <PropertyGroup>
@@ -23,8 +23,8 @@
         <Copyright>AppsFlyer</Copyright>
         <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageVersion>6.12.1</PackageVersion>
-        <!--<GeneratePackageOnBuild>true</GeneratePackageOnBuild>-->
+        <PackageVersion>6.13.0</PackageVersion>
+        <!-- <GeneratePackageOnBuild>true</GeneratePackageOnBuild> -->
     </PropertyGroup>
 
     <ItemGroup>

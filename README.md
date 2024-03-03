@@ -2,8 +2,8 @@
 
 Xamarin Binding integration guide For iOS 
 
-AppsFlyer Xamarin Binding version `v6.12.1` <br>
-Built with AppsFlyer iOS SDK `v6.12.1`
+AppsFlyer Xamarin Binding version `v6.13.0` <br>
+Built with AppsFlyer iOS SDK `v6.13.0`
 
 ## ❗ v6 Breaking Changes
 
@@ -178,6 +178,99 @@ AppsFlyerXamarinBinding.AppsFlyerShareInviteHelper.generateInviteUrlWithLinkGene
 );
 ```
 
+##  DMA consent
+As part of the EU Digital Marketing Act (DMA) legislation, big tech companies must get consent from European end users before using personal data from third-party services for advertising.<br>
+More information [here](https://dev.appsflyer.com/hc/docs/send-consent-for-dma-compliance)
+
+The SDK offers two alternative methods for gathering consent data:<br>
+1. Through a Consent Management Platform (CMP): If the app uses a CMP that complies with the Transparency and Consent Framework (TCF) v2.2 protocol, the SDK can automatically retrieve the consent details.
+
+OR
+
+2. Through a dedicated SDK API: Developers can pass Google's required consent data directly to the SDK using a specific API designed for this purpose.
+
+### Use CMP to collect consent data
+1. Call `AppsFlyerLib.Shared.EnableTCFDataCollection(true);` before calling start()
+```c#
+AppsFlyerLib.Shared.EnableTCFDataCollection(true);
+```
+2. call start() **only after** the user approve the cmp consent pop up
+
+Full example:
+```c#
+[Export("application:didFinishLaunchingWithOptions:")]
+    public bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+    {
+        AppsFlyerLib.Shared.AppleAppID = "xXxXxX";
+        AppsFlyerLib.Shared.AppsFlyerDevKey = "xXxXxX";
+        AppsFlyerLib.Shared.EnableTCFDataCollection(true);
+        return true;
+    }
+
+[Export("applicationDidBecomeActive:")]
+    public void OnActivated(UIApplication application)
+    {
+        if (cmpManager.hasConsent()){
+            AppsFlyerLib.Shared.Start();
+        }
+    }
+```
+Note: `cmpManager` is here just for the example. use your own CMP.
+
+### Manually collect consent data
+If your app does not use a CMP compatible with TCF v2.2, use the SDK API detailed below to provide the consent data directly to the SDK.
+
+#### When GDPR applies to the user
+1. Given that GDPR is applicable to the user, determine whether the consent data is already stored for this session.
+    1. If there is no consent data stored, show the consent dialog to capture the user consent decision.
+    2. If there is consent data stored continue to the next step.
+2. To transfer the consent data to the SDK create an AppsFlyerConsent object using forGDPRUser method that accepts the following parameters:
+    1. `hasConsentForDataUsage`: boolean - Indicates whether the user has consented to use their data for advertising purposes.
+    2. `hasConsentForAdsPersonalization: boolean` - Indicates whether the user has consented to use their data for personalized advertising.
+4. Call `AppsFlyerLib.Shared.SetConsentData(consent);` with the AppsFlyerConsent object.
+5. Call `AppsFlyerLib.Shared.Start();`
+
+Full example:
+```c#
+[Export("application:didFinishLaunchingWithOptions:")]
+    public bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+    {
+        AppsFlyerLib.Shared.AppleAppID = "xXxXxX";
+        AppsFlyerLib.Shared.AppsFlyerDevKey = "xXxXxX";
+        AppsFlyerConsent consent = new AppsFlyerConsent().initForGDPRUser(true, true);
+        AppsFlyerLib.Shared.SetConsentData(consent);
+        return true;
+    }
+
+[Export("applicationDidBecomeActive:")]
+    public void OnActivated(UIApplication application)
+    {
+        AppsFlyerLib.Shared.Start();
+    }
+```
+#### When GDPR does not apply to the user
+1. Create an AppsFlyerConsent object using forNonGDPRUser method that doesn't accepts any parameters
+2. Call `AppsFlyerLib.Shared.SetConsentData(consent);` with the AppsFlyerConsent object.
+3. Call `AppsFlyerLib.Shared.Start();`
+
+Full example:
+```c#
+[Export("application:didFinishLaunchingWithOptions:")]
+    public bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+    {
+        AppsFlyerLib.Shared.AppleAppID = "xXxXxX";
+        AppsFlyerLib.Shared.AppsFlyerDevKey = "xXxXxX";
+        AppsFlyerConsent consent = new AppsFlyerConsent().initNonGDPRUser();
+        AppsFlyerLib.Shared.SetConsentData(consent);
+        return true;
+    }
+
+[Export("applicationDidBecomeActive:")]
+    public void OnActivated(UIApplication application)
+    {
+        AppsFlyerLib.Shared.Start();
+    }
+```
 ## Sample App 
 Sample apps for `xamarin.ios10` and `net6.0-ios` can be found here:
 ```
