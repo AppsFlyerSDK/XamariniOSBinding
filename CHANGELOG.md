@@ -9,7 +9,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Changed
 
 - Updated iOS SDK to v6.13.1
-- Updated Android SDK to v6.13.0
 - Add DMA supprot
 
 ## [6.5.4.0] - 2022-04-28
