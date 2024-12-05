@@ -1,7 +1,6 @@
-<Project Sdk="Xamarin.Legacy.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>xamarin.ios10;net6.0-ios</TargetFrameworks>
-        <NoNFloatUsing Condition="'$(TargetFramework)' == 'xamarin.ios10'">true</NoNFloatUsing>
+        <TargetFramework>net8.0-ios</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>true</ImplicitUsings>
         <IsBindingProject>true</IsBindingProject>
@@ -25,6 +24,10 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageVersion>6.13.1</PackageVersion>
         <!-- <GeneratePackageOnBuild>true</GeneratePackageOnBuild> -->
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <EmbedAllSources>true</EmbedAllSources>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
