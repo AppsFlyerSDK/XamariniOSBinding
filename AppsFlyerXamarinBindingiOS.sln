@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.NuGet.NET", "samples
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.NuGet.Xamarin", "samples\Sample.NuGet.Xamarin\Sample.NuGet.Xamarin.csproj", "{208E2B7F-6431-4D94-866A-2DF7A823C359}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Empty.Xamarin.iOS", "Empty.Xamarin.iOS\Empty.Xamarin.iOS.csproj", "{48881F20-A671-4684-ACC7-B3BB88804895}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,5 +55,17 @@ Global
 		{208E2B7F-6431-4D94-866A-2DF7A823C359}.Debug|iPhone.Build.0 = Debug|iPhone
 		{208E2B7F-6431-4D94-866A-2DF7A823C359}.Release|iPhone.ActiveCfg = Release|iPhone
 		{208E2B7F-6431-4D94-866A-2DF7A823C359}.Release|iPhone.Build.0 = Release|iPhone
+		{48881F20-A671-4684-ACC7-B3BB88804895}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{48881F20-A671-4684-ACC7-B3BB88804895}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{48881F20-A671-4684-ACC7-B3BB88804895}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{48881F20-A671-4684-ACC7-B3BB88804895}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
+		{48881F20-A671-4684-ACC7-B3BB88804895}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{48881F20-A671-4684-ACC7-B3BB88804895}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{48881F20-A671-4684-ACC7-B3BB88804895}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{48881F20-A671-4684-ACC7-B3BB88804895}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{48881F20-A671-4684-ACC7-B3BB88804895}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{48881F20-A671-4684-ACC7-B3BB88804895}.Debug|iPhone.Build.0 = Debug|iPhone
+		{48881F20-A671-4684-ACC7-B3BB88804895}.Release|iPhone.ActiveCfg = Release|iPhone
+		{48881F20-A671-4684-ACC7-B3BB88804895}.Release|iPhone.Build.0 = Release|iPhone
 	EndGlobalSection
 EndGlobal
