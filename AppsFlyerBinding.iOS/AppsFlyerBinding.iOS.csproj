@@ -1,6 +1,6 @@
 <Project Sdk="Xamarin.Legacy.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>xamarin.ios10;net6.0-ios</TargetFrameworks>
+        <TargetFrameworks>xamarin.ios10;net7.0-ios</TargetFrameworks>
         <NoNFloatUsing Condition="'$(TargetFramework)' == 'xamarin.ios10'">true</NoNFloatUsing>
         <Nullable>enable</Nullable>
         <ImplicitUsings>true</ImplicitUsings>
