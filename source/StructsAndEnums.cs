@@ -102,5 +102,16 @@ namespace AppsFlyerXamarinBinding
 		public const string AFEventParam9                      	= "af_param_9";
 		public const string AFEventParam10                     	= "af_param_10";
 	}
+
+	// 	typedef NS_CLOSED_ENUM(NSUInteger, AFSDKValidateAndLogStatus) {
+	//     AFSDKValidateAndLogStatusSuccess,
+	//     AFSDKValidateAndLogStatusFailure,
+	//         AFSDKValidateAndLogStatusError
+	// } NS_SWIFT_NAME(ValidateAndLogStatus);
+	public enum AFSDKValidateAndLogStatus : uint {
+		AFSDKValidateAndLogStatusSuccess,
+		AFSDKValidateAndLogStatusFailure,
+		AFSDKValidateAndLogStatusError,
+	}
 }
 

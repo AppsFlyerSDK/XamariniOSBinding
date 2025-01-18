@@ -62,6 +62,20 @@ namespace Sample.NuGet.Xamarin
         public void OnActivated(UIApplication application)
         {
             AppsFlyerLib.Shared.Start();
+
+            var keys = new NSString[] { new NSString("Key1"), new NSString("Key2") };
+            var values = new NSObject[] { new NSString("Value1"), new NSString("Value2") };
+
+            // Create NSDictionary
+            var dictionary = NSDictionary.FromObjectsAndKeys(values, keys);
+
+            AFSDKPurchaseDetails details = new AFSDKPurchaseDetails().initWithProductId("1234", "4.0", "USD", "123456789");
+            AppsFlyerLib.Shared.ValidateAndLogInAppPurchase(details, dictionary, (dict) =>
+            {
+                Console.WriteLine(dict.Description);
+                Console.WriteLine(dict.status);
+                Console.WriteLine(dict.error.Description);
+            });
         }        
     }
 
