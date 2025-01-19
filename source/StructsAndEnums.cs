@@ -113,5 +113,39 @@ namespace AppsFlyerXamarinBinding
 		AFSDKValidateAndLogStatusFailure,
 		AFSDKValidateAndLogStatusError,
 	}
+
+// typedef NS_CLOSED_ENUM(NSUInteger, AppsFlyerAdRevenueMediationNetworkType) {
+//     AppsFlyerAdRevenueMediationNetworkTypeGoogleAdMob = 1,
+//     AppsFlyerAdRevenueMediationNetworkTypeIronSource = 2,
+//     AppsFlyerAdRevenueMediationNetworkTypeApplovinMax= 3,
+//     AppsFlyerAdRevenueMediationNetworkTypeFyber = 4,
+//     AppsFlyerAdRevenueMediationNetworkTypeAppodeal = 5,
+//     AppsFlyerAdRevenueMediationNetworkTypeAdmost = 6,
+//     AppsFlyerAdRevenueMediationNetworkTypeTopon = 7,
+//     AppsFlyerAdRevenueMediationNetworkTypeTradplus = 8,
+//     AppsFlyerAdRevenueMediationNetworkTypeYandex = 9,
+//     AppsFlyerAdRevenueMediationNetworkTypeChartBoost = 10,
+//     AppsFlyerAdRevenueMediationNetworkTypeUnity = 11,
+//     AppsFlyerAdRevenueMediationNetworkTypeToponPte = 12,
+//     AppsFlyerAdRevenueMediationNetworkTypeCustom = 13,
+//     AppsFlyerAdRevenueMediationNetworkTypeDirectMonetization = 14
+// } NS_SWIFT_NAME(MediationNetworkType);
+	public enum AppsFlyerAdRevenueMediationNetworkType : uint
+    {
+    GoogleAdMob = 1,
+    IronSource = 2,
+    ApplovinMax= 3,
+    Fyber = 4,
+    Appodeal = 5,
+    Admost = 6,
+    Topon = 7,
+    Tradplus = 8,
+    Yandex = 9,
+    ChartBoost = 10,
+    Unity = 11,
+    ToponPte = 12,
+    Custom = 13,
+    DirectMonetization = 14,
+	}
 }
 

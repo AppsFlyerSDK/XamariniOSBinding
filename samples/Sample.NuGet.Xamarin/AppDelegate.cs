@@ -76,6 +76,10 @@ namespace Sample.NuGet.Xamarin
                 Console.WriteLine(dict.status);
                 Console.WriteLine(dict.error.Description);
             });
+
+            AFAdRevenueData adRevenueData = new AFAdRevenueData().initWithMonetizationNetwork("ironsource", AppsFlyerAdRevenueMediationNetworkType.Admost, "USD", 23.3);
+            AppsFlyerLib.Shared.LogAdRevenue(adRevenueData, dictionary);
+            AppsFlyerLib.Shared.LogEvent("####Moris###", dictionary);
         }        
     }
 

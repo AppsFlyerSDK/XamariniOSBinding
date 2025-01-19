@@ -59,18 +59,20 @@ public class AppDelegate : UIApplicationDelegate {
     {
         AppsFlyerLib.Shared.Start();
 
-        
-        AppsFlyerLib.Shared.ValidateAndLogInAppPurchase("productId", "price", "USD", "123", null, (dictionary) => {
-            Console.WriteLine(dictionary.Description);
-        }, (err, obj) => {
-            Console.WriteLine(err.Description);
-        });
-
         var keys = new NSString[] { new NSString("Key1"), new NSString("Key2") };
         var values = new NSObject[] { new NSString("Value1"), new NSString("Value2") };
 
         // Create NSDictionary
         var dictionary = NSDictionary.FromObjectsAndKeys(values, keys);
+
+
+        AppsFlyerLib.Shared.ValidateAndLogInAppPurchase("1234", "4.0", "USD", "1234567890", null, (dictionary) =>
+        {
+            Console.WriteLine(dictionary.Description);
+        }, (err, obj) =>
+        {
+            Console.WriteLine(err.Description);
+        });
 
         AFSDKPurchaseDetails details = new AFSDKPurchaseDetails();
         details.initWithProductId("1234", "4.0", "USD", "123456789");
@@ -80,6 +82,10 @@ public class AppDelegate : UIApplicationDelegate {
             Console.WriteLine(dict.status);
             Console.WriteLine(dict.error.Description);
         });
+
+        AFAdRevenueData adRevenueData = new AFAdRevenueData().initWithMonetizationNetwork("ironsource", AppsFlyerAdRevenueMediationNetworkType.Admost, "USD", 23.3);
+        AppsFlyerLib.Shared.LogAdRevenue(adRevenueData, dictionary);
+        AppsFlyerLib.Shared.LogEvent("####Moris###", dictionary);
     }
 }
 
