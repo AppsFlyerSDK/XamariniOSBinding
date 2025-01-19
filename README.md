@@ -33,6 +33,7 @@ The API for the binding coincides with the native iOS API, which can be found [h
     -  [Logging In-App Events](#adding_events)
     -  [Get Conversion Data](#conversion_data)
     -  [Stop](#Stop)
+    -  [validateAndLogV2](#validateAndLogV2)
 - [Sample App](#sample_app)
 
 
@@ -271,6 +272,25 @@ Full example:
         AppsFlyerLib.Shared.Start();
     }
 ```
+## ValidateAndLogV2
+[Here](https://dev.appsflyer.com/hc/docs/validate-and-log-purchase-ios) you can find the info on what is the ValidateAndLog API purpose.
+```c#
+AFSDKPurchaseDetails details = new AFSDKPurchaseDetails().initWithProductId("1234", "4.0", "USD", "123456789");
+AppsFlyerLib.Shared.ValidateAndLogInAppPurchase(details, dictionary, (dict) =>
+{
+    Console.WriteLine(dict.Description);
+    Console.WriteLine(dict.status);
+    Console.WriteLine(dict.error.Description);
+});
+```
+
+## LogAdRevenue
+[Here](https://dev.appsflyer.com/hc/docs/ad-revenue-2) you can find the info on what is the LogAdRevenue API purpose.
+```c#
+AFAdRevenueData adRevenueData = new AFAdRevenueData().initWithMonetizationNetwork("ironsource", AppsFlyerAdRevenueMediationNetworkType.Admost, "USD", 23.3);
+AppsFlyerLib.Shared.LogAdRevenue(adRevenueData, dictionary);
+```
+
 ## Sample App 
 Sample apps for `xamarin.ios10` and `net6.0-ios` can be found here:
 ```
