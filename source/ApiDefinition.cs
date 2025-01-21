@@ -478,7 +478,7 @@ namespace AppsFlyerXamarinBinding
         //                                currency:(NSString *_Nullable)currency
         //                           transactionId:(NSString *_Nullable)transactionId;
         [Export ("initWithProductId:price:currency:transactionId:")]
-        AFSDKPurchaseDetails initWithProductId([NullAllowed] string productId, [NullAllowed] string price, [NullAllowed] string currency, [NullAllowed] string transactionId);
+        IntPtr Constructor([NullAllowed] string productId, [NullAllowed] string price, [NullAllowed] string currency, [NullAllowed] string transactionId);
     }
 
     // @interface AFSDKValidateAndLogResult : NSObject
@@ -507,7 +507,7 @@ namespace AppsFlyerXamarinBinding
 //                                   currencyIso4217Code:(NSString *_Nonnull)currencyIso4217Code
 //                                          eventRevenue:(NSNumber *_Nonnull)eventRevenue;
         [Export ("initWithMonetizationNetwork:mediationNetwork:currencyIso4217Code:eventRevenue:")]
-        AFAdRevenueData initWithMonetizationNetwork(string monetizationNetwork, AppsFlyerAdRevenueMediationNetworkType mediationNetwork, string currencyIso4217Code, NSNumber eventRevenue);
+        IntPtr Constructor(string monetizationNetwork, AppsFlyerAdRevenueMediationNetworkType mediationNetwork, string currencyIso4217Code, NSNumber eventRevenue);
     }
 }
 

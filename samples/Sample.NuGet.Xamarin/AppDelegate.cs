@@ -69,7 +69,7 @@ namespace Sample.NuGet.Xamarin
             // Create NSDictionary
             var dictionary = NSDictionary.FromObjectsAndKeys(values, keys);
 
-            AFSDKPurchaseDetails details = new AFSDKPurchaseDetails().initWithProductId("1234", "4.0", "USD", "123456789");
+            AFSDKPurchaseDetails details = new AFSDKPurchaseDetails("1234", "4.0", "USD", "123456789");
             AppsFlyerLib.Shared.ValidateAndLogInAppPurchase(details, dictionary, (dict) =>
             {
                 Console.WriteLine(dict.Description);
@@ -77,7 +77,7 @@ namespace Sample.NuGet.Xamarin
                 Console.WriteLine(dict.error.Description);
             });
 
-            AFAdRevenueData adRevenueData = new AFAdRevenueData().initWithMonetizationNetwork("ironsource", AppsFlyerAdRevenueMediationNetworkType.Admost, "USD", 23.3);
+            AFAdRevenueData adRevenueData = new AFAdRevenueData("ironsource", AppsFlyerAdRevenueMediationNetworkType.Admost, "USD", 23.3);
             AppsFlyerLib.Shared.LogAdRevenue(adRevenueData, dictionary);
             AppsFlyerLib.Shared.LogEvent("####Moris###", dictionary);
         }        
