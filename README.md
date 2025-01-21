@@ -34,6 +34,7 @@ The API for the binding coincides with the native iOS API, which can be found [h
     -  [Get Conversion Data](#conversion_data)
     -  [Stop](#Stop)
     -  [validateAndLogV2](#validateAndLogV2)
+    -  [logAdRevenue](#logAdRevenue)
 - [Sample App](#sample_app)
 
 
