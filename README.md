@@ -276,7 +276,7 @@ Full example:
 ## ValidateAndLogV2
 [Here](https://dev.appsflyer.com/hc/docs/validate-and-log-purchase-ios) you can find the info on what is the ValidateAndLog API purpose.
 ```c#
-AFSDKPurchaseDetails details = new AFSDKPurchaseDetails().initWithProductId("1234", "4.0", "USD", "123456789");
+AFSDKPurchaseDetails details = new AFSDKPurchaseDetails("1234", "4.0", "USD", "123456789");
 AppsFlyerLib.Shared.ValidateAndLogInAppPurchase(details, dictionary, (dict) =>
 {
     Console.WriteLine(dict.Description);
@@ -288,7 +288,7 @@ AppsFlyerLib.Shared.ValidateAndLogInAppPurchase(details, dictionary, (dict) =>
 ## LogAdRevenue
 [Here](https://dev.appsflyer.com/hc/docs/ad-revenue-2) you can find the info on what is the LogAdRevenue API purpose.
 ```c#
-AFAdRevenueData adRevenueData = new AFAdRevenueData().initWithMonetizationNetwork("ironsource", AppsFlyerAdRevenueMediationNetworkType.Admost, "USD", 23.3);
+AFAdRevenueData adRevenueData = new AFAdRevenueData("ironsource", AppsFlyerAdRevenueMediationNetworkType.Admost, "USD", 23.3);
 AppsFlyerLib.Shared.LogAdRevenue(adRevenueData, dictionary);
 ```
 
