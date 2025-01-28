@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [6.15.3] - 2024-01-28
+
+### Changed
+
+- Upgraded to .NET 7.0
+- Min Deployment Version 10.0->12.0.
+- Added LogAdRevenue API.
+- Added ValidateAndLogV2 API.
+- Added Linking parameters for linking Swift packages in the sample apps.
+
 ## [6.13.1] - 2024-03-10
 
 ### Changed
