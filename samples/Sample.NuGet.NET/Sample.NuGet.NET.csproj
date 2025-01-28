@@ -1,12 +1,27 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-ios16.1</TargetFramework>
+    <TargetFramework>net7.0-ios</TargetFramework>
     <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
     <MtouchLink>SdkOnly</MtouchLink>
+    <UseInterpreter>true</UseInterpreter>
   </PropertyGroup>
+  <Target Name="LinkWithSwift" DependsOnTargets="_ParseBundlerArguments;_DetectSdkLocations" BeforeTargets="_LinkNativeExecutable">
+    <PropertyGroup>
+      <_SwiftPlatform Condition="$(RuntimeIdentifier.StartsWith('iossimulator-'))">iphonesimulator</_SwiftPlatform>
+      <_SwiftPlatform Condition="$(RuntimeIdentifier.StartsWith('ios-'))">iphoneos</_SwiftPlatform>
+    </PropertyGroup>
+    <ItemGroup>
+      <_CustomLinkFlags Include="-L" />
+      <_CustomLinkFlags Include="/usr/lib/swift" />
+      <_CustomLinkFlags Include="-L" />
+      <_CustomLinkFlags Include="$(_SdkDevPath)/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/$(_SwiftPlatform)" />
+      <_CustomLinkFlags Include="-Wl,-rpath" />
+      <_CustomLinkFlags Include="-Wl,/usr/lib/swift" />
+    </ItemGroup>
+  </Target>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <CreatePackage>false</CreatePackage>
   </PropertyGroup>
@@ -16,9 +31,6 @@
   <ItemGroup>
     <None Remove="Xamarin.AppsFlyer.iOS" />
     <None Remove="AppsFlyerXamarinBinding" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="AppsFlyerXamarinBinding" Version="6.12.*" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Icon167.png">
@@ -68,5 +80,8 @@
     <InterfaceDefinition Update="Resources\LaunchScreen.xib">
       <Link>Resources\LaunchScreen.xib</Link>
     </InterfaceDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AppsFlyerXamarinBinding" Version="6.15.3" />
   </ItemGroup>
 </Project>

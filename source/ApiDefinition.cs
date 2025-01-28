@@ -253,6 +253,14 @@ namespace AppsFlyerXamarinBinding
         [Export("validateAndLogInAppPurchase:price:currency:transactionId:additionalParameters:success:failure:")]
         void ValidateAndLogInAppPurchase([NullAllowed] string productIdentifier, [NullAllowed] string price, [NullAllowed] string currency, [NullAllowed] string transactionId, [NullAllowed] NSDictionary @params, [NullAllowed] Action<NSDictionary> successBlock, [NullAllowed] Action<NSError, NSObject> failedBlock);
 
+        // - (void)validateAndLogInAppPurchase:(AFSDKPurchaseDetails *)details extraEventValues:(NSDictionary * _Nullable)extraEventValues completionHandler:(AFSDKValidateAndLogCompletion)completionHandler NS_AVAILABLE(10_7, 7_0)
+        [Export("validateAndLogInAppPurchase:extraEventValues:completionHandler:")]
+        void ValidateAndLogInAppPurchase(AFSDKPurchaseDetails details, [NullAllowed] NSDictionary @extraEventValues, Action<AFSDKValidateAndLogResult> completionHandler);
+
+        // - (void)logAdRevenue:(AFAdRevenueData *)adRevenueData additionalParameters:(NSDictionary * _Nullable)additionalParameters;
+        [Export("logAdRevenue:additionalParameters:")]
+        void LogAdRevenue(AFAdRevenueData adRevenueData, [NullAllowed] NSDictionary @additionalParameters);
+
         // -(void)logLocation:(double)longitude latitude:(double)latitude;
         [Export ("logLocation:latitude:")]
         void LogLocation (double longitude, double latitude);
@@ -459,6 +467,47 @@ namespace AppsFlyerXamarinBinding
         // - (instancetype)initNonGDPRUser;
         [Export ("initNonGDPRUser")]
         AppsFlyerConsent initNonGDPRUser();
+    }
+
+    // @interface AFSDKPurchaseDetails : NSObject
+    [BaseType (typeof (NSObject))]
+    interface AFSDKPurchaseDetails
+    {
+        // - (instancetype _Nonnull )initWithProductId:(NSString *_Nullable)productId
+        //                                   price:(NSString *_Nullable)price
+        //                                currency:(NSString *_Nullable)currency
+        //                           transactionId:(NSString *_Nullable)transactionId;
+        [Export ("initWithProductId:price:currency:transactionId:")]
+        IntPtr Constructor([NullAllowed] string productId, [NullAllowed] string price, [NullAllowed] string currency, [NullAllowed] string transactionId);
+    }
+
+    // @interface AFSDKValidateAndLogResult : NSObject
+    [BaseType (typeof (NSObject))]
+    interface AFSDKValidateAndLogResult
+    {
+
+        [Export ("status")]
+        AFSDKValidateAndLogStatus status { get; }
+
+        [Export ("result")]
+        [NullAllowed] NSDictionary result { get; }
+
+        [Export ("errorData")]
+        [NullAllowed] NSDictionary errorData { get; }
+
+        [Export ("error")]
+        [NullAllowed] NSError error { get; }
+    }
+
+    [BaseType (typeof (NSObject))]
+    interface AFAdRevenueData
+    {
+// - (instancetype _Nonnull )initWithMonetizationNetwork:(NSString *_Nonnull)monetizationNetwork
+//                                      mediationNetwork:(AppsFlyerAdRevenueMediationNetworkType)mediationNetwork
+//                                   currencyIso4217Code:(NSString *_Nonnull)currencyIso4217Code
+//                                          eventRevenue:(NSNumber *_Nonnull)eventRevenue;
+        [Export ("initWithMonetizationNetwork:mediationNetwork:currencyIso4217Code:eventRevenue:")]
+        IntPtr Constructor(string monetizationNetwork, AppsFlyerAdRevenueMediationNetworkType mediationNetwork, string currencyIso4217Code, NSNumber eventRevenue);
     }
 }
 

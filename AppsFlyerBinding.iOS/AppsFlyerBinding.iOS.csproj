@@ -1,16 +1,16 @@
 <Project Sdk="Xamarin.Legacy.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>xamarin.ios10;net6.0-ios</TargetFrameworks>
+        <TargetFrameworks>xamarin.ios10;net7.0-ios</TargetFrameworks>
         <NoNFloatUsing Condition="'$(TargetFramework)' == 'xamarin.ios10'">true</NoNFloatUsing>
         <Nullable>enable</Nullable>
         <ImplicitUsings>true</ImplicitUsings>
         <IsBindingProject>true</IsBindingProject>
         <NoBindingEmbedding>true</NoBindingEmbedding>
-        <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
+        <SupportedOSPlatformVersion>12.0</SupportedOSPlatformVersion>
         <RootNamespace>AppsFlyerXamarinBinding</RootNamespace>
         <AssemblyName>AppsFlyerBinding.iOS</AssemblyName>
-        <AssemblyVersion>6.13.1</AssemblyVersion>
-        <FileVersion>6.13.1</FileVersion>
+        <AssemblyVersion>6.15.3</AssemblyVersion>
+        <FileVersion>6.15.3</FileVersion>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
     <PropertyGroup>
@@ -23,7 +23,7 @@
         <Copyright>AppsFlyer</Copyright>
         <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageVersion>6.13.1</PackageVersion>
+        <PackageVersion>6.15.3</PackageVersion>
         <!-- <GeneratePackageOnBuild>true</GeneratePackageOnBuild> -->
     </PropertyGroup>
 

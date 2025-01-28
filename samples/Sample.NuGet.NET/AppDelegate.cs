@@ -1,4 +1,4 @@
-﻿using AppsFlyerXamarinBinding;
+using AppsFlyerXamarinBinding;
 
 namespace Sample.NuGet.NET;
 
@@ -59,12 +59,32 @@ public class AppDelegate : UIApplicationDelegate {
     {
         AppsFlyerLib.Shared.Start();
 
+        var keys = new NSString[] { new NSString("Key1"), new NSString("Key2") };
+        var values = new NSObject[] { new NSString("Value1"), new NSString("Value2") };
 
-        AppsFlyerLib.Shared.ValidateAndLogInAppPurchase("productId", "price", "USD", "123", null, (dictionary) => {
+        // Create NSDictionary
+        var dictionary = NSDictionary.FromObjectsAndKeys(values, keys);
+
+
+        AppsFlyerLib.Shared.ValidateAndLogInAppPurchase("1234", "4.0", "USD", "1234567890", null, (dictionary) =>
+        {
             Console.WriteLine(dictionary.Description);
-        }, (err, obj) => {
+        }, (err, obj) =>
+        {
             Console.WriteLine(err.Description);
         });
+
+        AFSDKPurchaseDetails details = new AFSDKPurchaseDetails("1234", "4.0", "USD", "123456789");
+        AppsFlyerLib.Shared.ValidateAndLogInAppPurchase(details, dictionary, (dict) =>
+        {
+            Console.WriteLine(dict.Description);
+            Console.WriteLine(dict.status);
+            Console.WriteLine(dict.error.Description);
+        });
+
+        AFAdRevenueData adRevenueData = new AFAdRevenueData("ironsource", AppsFlyerAdRevenueMediationNetworkType.Admost, "USD", 23.3);
+        AppsFlyerLib.Shared.LogAdRevenue(adRevenueData, dictionary);
+        AppsFlyerLib.Shared.LogEvent("####Moris###", dictionary);
     }
 }
 

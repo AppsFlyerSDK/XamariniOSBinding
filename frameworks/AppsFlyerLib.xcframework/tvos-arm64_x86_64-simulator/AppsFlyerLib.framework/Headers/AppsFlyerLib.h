@@ -2,7 +2,7 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.13.1 (150)
+//  AppsFlyer iOS SDK 6.15.3 (217)
 //  Copyright (c) 2012-2023 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -13,6 +13,9 @@
 #import <AppsFlyerLib/AppsFlyerDeepLinkResult.h>
 #import <AppsFlyerLib/AppsFlyerDeepLink.h>
 #import <AppsFlyerLib/AppsFlyerConsent.h>
+#import <AppsFlyerLib/AFSDKPurchaseDetails.h>
+#import <AppsFlyerLib/AFSDKValidateAndLogResult.h>
+#import <AppsFlyerLib/AFAdRevenueData.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -125,13 +128,6 @@ NS_ASSUME_NONNULL_BEGIN
 #define AFEventParamPreferredPriceRange     @"af_preferred_price_range"    //array of int (basically a tuple (min,max) but we'll use array of int and instruct the developer to use two values)
 #define AFEventParamPreferredNeighborhoods  @"af_preferred_neighborhoods" //array of string
 #define AFEventParamPreferredNumStops       @"af_preferred_num_stops"
-
-#define AFEventParamAdRevenueAdType              @"af_adrev_ad_type"
-#define AFEventParamAdRevenueNetworkName         @"af_adrev_network_name"
-#define AFEventParamAdRevenuePlacementId         @"af_adrev_placement_id"
-#define AFEventParamAdRevenueAdSize              @"af_adrev_ad_size"
-#define AFEventParamAdRevenueMediatedNetworkName @"af_adrev_mediated_network_name"
-
 
 /// Mail hashing type
 typedef enum  {
@@ -489,6 +485,28 @@ NS_SWIFT_NAME(logEvent(name:values:completionHandler:));
                additionalParameters:(NSDictionary * _Nullable)params
                             success:(void (^ _Nullable)(NSDictionary * response))successBlock
                             failure:(void (^ _Nullable)(NSError * _Nullable error, id _Nullable reponse))failedBlock NS_AVAILABLE(10_7, 7_0);
+
+typedef void (^AFSDKValidateAndLogCompletion)(AFSDKValidateAndLogResult * _Nullable result);
+
+/**
+ To log and validate in app purchases you can call this method from the completeTransaction: method on
+ your `SKPaymentTransactionObserver`.
+ 
+ @param details The product details
+ @param extraEventValues The additional param, which you want to receive it in the raw reports
+ @param completionHandler The callback
+ */
+- (void)validateAndLogInAppPurchase:(AFSDKPurchaseDetails *)details
+                   extraEventValues:(NSDictionary * _Nullable)extraEventValues
+                  completionHandler:(AFSDKValidateAndLogCompletion)completionHandler NS_AVAILABLE(10_7, 7_0);
+
+/**
+ An API to provide the data from the impression payload to AdRevenue.
+ 
+ @param adRevenueData object used to hold all mandatory parameters of AdRevenue event.
+ @param additionalParameters non-mandatory dictionary which can include pre-defined keys (kAppsFlyerAdRevenueCountry, etc)
+ */
+- (void)logAdRevenue:(AFAdRevenueData *)adRevenueData additionalParameters:(NSDictionary * _Nullable)additionalParameters;
 
 /**
  To log location for geo-fencing. Does the same as code below.
