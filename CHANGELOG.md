@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ### Changed
 
+- Updated iOS SDK to v6.15.3
 - Upgraded to .NET 7.0
 - Min Deployment Version 10.0->12.0.
 - Added LogAdRevenue API.
