@@ -2,7 +2,7 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.15.3 (217)
+//  AppsFlyer iOS SDK 6.12.2 (999)
 //  Copyright (c) 2012-2023 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -12,10 +12,10 @@
 #import <AppsFlyerLib/AppsFlyerShareInviteHelper.h>
 #import <AppsFlyerLib/AppsFlyerDeepLinkResult.h>
 #import <AppsFlyerLib/AppsFlyerDeepLink.h>
-#import <AppsFlyerLib/AppsFlyerConsent.h>
 #import <AppsFlyerLib/AFSDKPurchaseDetails.h>
 #import <AppsFlyerLib/AFSDKValidateAndLogResult.h>
 #import <AppsFlyerLib/AFAdRevenueData.h>
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -129,6 +129,8 @@ NS_ASSUME_NONNULL_BEGIN
 #define AFEventParamPreferredNeighborhoods  @"af_preferred_neighborhoods" //array of string
 #define AFEventParamPreferredNumStops       @"af_preferred_num_stops"
 
+
+@class AppsFlyerConsent;
 /// Mail hashing type
 typedef enum  {
     /// None
@@ -687,6 +689,14 @@ typedef void (^AFSDKValidateAndLogCompletion)(AFSDKValidateAndLogResult * _Nulla
  */
 - (void)setSharingFilterForPartners:(NSArray<NSString *> * _Nullable)sharingFilter;
 
+
+/**
+    Sets Custom Install Id - this overrides the default AppsFlyer Install ID.
+    Only effective if Info.plist has `AppsFlyerAllowCustomInstallId=YES`
+     * Must be called before calling set appsFlyerDevKey and appleAppID
+    @param customID the customId.
+    */
+- (void)setInstallId:(NSString *)customID;
 
 /**
     Sets or updates the user consent data related to GDPR and DMA regulations for advertising and data usage
