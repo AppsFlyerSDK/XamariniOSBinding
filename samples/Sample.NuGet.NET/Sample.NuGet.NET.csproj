@@ -82,6 +82,6 @@
     </InterfaceDefinition>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="AppsFlyerXamarinBinding" Version="6.15.3" />
+    <PackageReference Include="AppsFlyerXamarinBinding" Version="6.17.0" />
   </ItemGroup>
 </Project>

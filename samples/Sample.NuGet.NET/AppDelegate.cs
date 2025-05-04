@@ -39,6 +39,11 @@ public class AppDelegate : UIApplicationDelegate {
         string[] networks = { "all", "another" };
         AppsFlyerLib.Shared.SetSharingFilterForPartners(networks);
         AppsFlyerLib.Shared.AddPushNotificationDeepLinkPath(new string[] { "key1", "key2" });
+        //AppsFlyerConsent consent = new AppsFlyerConsent().initForGDPRUser(false, true);
+        //AppsFlyerConsent consent = new AppsFlyerConsent().initNonGDPRUser();
+        //AppsFlyerConsent consent = new AppsFlyerConsent().InitWithConsentData(null, null, true, null);
+        AppsFlyerConsent consent = new AppsFlyerConsent().InitWithConsentData(null, null, null, null);
+        AppsFlyerLib.Shared.SetConsentData(consent);
 
         var partnerInfo = new NSDictionary("id", "id123", "type", 1, "desc", "Description example");
         AppsFlyerLib.Shared.SetPartnerData("test_partner", partnerInfo);

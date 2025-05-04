@@ -28,5 +28,21 @@ namespace AppsFlyerXamarinBinding
             }
         }
     }
+
+    partial class AppsFlyerConsent
+    {
+        public AppsFlyerConsent InitWithConsentData(bool? isUserSubjectToGDPR = null,
+                                        bool? hasConsentForDataUsage = null,
+                                        bool? hasConsentForAdsPersonalization = null,
+                                        bool? hasConsentForAdStorage = null)
+        {
+            return new AppsFlyerConsent().InitWithConsentInfo(
+                isUserSubjectToGDPR.HasValue ? NSNumber.FromBoolean(isUserSubjectToGDPR.Value) : null,
+                hasConsentForDataUsage.HasValue ? NSNumber.FromBoolean(hasConsentForDataUsage.Value) : null,
+                hasConsentForAdsPersonalization.HasValue ? NSNumber.FromBoolean(hasConsentForAdsPersonalization.Value) : null,
+                hasConsentForAdStorage.HasValue ? NSNumber.FromBoolean(hasConsentForAdStorage.Value) : null
+            );
+        }
+    }
 }
 
