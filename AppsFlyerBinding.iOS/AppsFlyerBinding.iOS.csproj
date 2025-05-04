@@ -11,6 +11,7 @@
         <AssemblyVersion>6.17.0</AssemblyVersion>
         <FileVersion>6.17.0</FileVersion>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <EnableSwiftRuntimeSupport>true</EnableSwiftRuntimeSupport>
     </PropertyGroup>
     <PropertyGroup>
         <PackageId>AppsFlyerXamarinBinding</PackageId>
@@ -23,7 +24,6 @@
         <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageVersion>6.17.0</PackageVersion>
-        <!-- <GeneratePackageOnBuild>true</GeneratePackageOnBuild> -->
     </PropertyGroup>
 
     <ItemGroup>
@@ -49,6 +49,9 @@
     <ItemGroup>
         <_NativeReference Include="../frameworks/AppsFlyerLib.xcframework">
             <_Id>$(_AppsFlyerLibId)</_Id>
+            <SmartLink>False</SmartLink>
+            <ForceLoad>True</ForceLoad>
+            <IsCxx>true</IsCxx>
         </_NativeReference>
     </ItemGroup>
     <!-- End of workaround -->
