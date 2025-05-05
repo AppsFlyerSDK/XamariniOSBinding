@@ -294,6 +294,8 @@ Use it this way:
         AppsFlyerLib.Shared.AppleAppID = "xXxXxX";
         AppsFlyerLib.Shared.AppsFlyerDevKey = "xXxXxX";
         AppsFlyerConsent consent = new AppsFlyerConsent().InitWithConsentData(null, null, true, false);
+        // Example to use this partial API.
+        // AppsFlyerConsent consent = new AppsFlyerConsent().InitWithConsentData(hasConsentForAdStorage: true);
         AppsFlyerLib.Shared.SetConsentData(consent);
         return true;
     }
