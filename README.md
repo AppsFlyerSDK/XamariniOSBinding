@@ -277,11 +277,13 @@ Full example:
 
 #### New API with all the freedom needed to decide id the user is `SubjectToGDPR`, `hasConsentForDataUsage`, `hasConsentForAdsPersonalization`, `hasConsentForAdStorage`:
 * call the following method: 
- ```AppsFlyerConsent InitWithConsentInfo(
+```c#
+ AppsFlyerConsent InitWithConsentInfo(
             bool? isUserSubjectToGDPR,
             bool? hasConsentForDataUsage,
             bool? hasConsentForAdsPersonalization,
-            bool? hasConsentForAdStorage)```
+            bool? hasConsentForAdStorage)
+```            
 
 Use it this way:            
 
