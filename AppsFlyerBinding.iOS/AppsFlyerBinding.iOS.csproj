@@ -1,7 +1,6 @@
-<Project Sdk="Xamarin.Legacy.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>xamarin.ios10;net7.0-ios</TargetFrameworks>
-        <NoNFloatUsing Condition="'$(TargetFramework)' == 'xamarin.ios10'">true</NoNFloatUsing>
+        <TargetFrameworks>net8.0-ios</TargetFrameworks>
         <Nullable>enable</Nullable>
         <ImplicitUsings>true</ImplicitUsings>
         <IsBindingProject>true</IsBindingProject>
@@ -9,9 +8,10 @@
         <SupportedOSPlatformVersion>12.0</SupportedOSPlatformVersion>
         <RootNamespace>AppsFlyerXamarinBinding</RootNamespace>
         <AssemblyName>AppsFlyerBinding.iOS</AssemblyName>
-        <AssemblyVersion>6.15.3</AssemblyVersion>
-        <FileVersion>6.15.3</FileVersion>
+        <AssemblyVersion>6.17.0</AssemblyVersion>
+        <FileVersion>6.17.0</FileVersion>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <EnableSwiftRuntimeSupport>true</EnableSwiftRuntimeSupport>
     </PropertyGroup>
     <PropertyGroup>
         <PackageId>AppsFlyerXamarinBinding</PackageId>
@@ -23,8 +23,7 @@
         <Copyright>AppsFlyer</Copyright>
         <PackageProjectUrl>https://github.com/AppsFlyerSDK/XamariniOSBinding</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageVersion>6.15.3</PackageVersion>
-        <!-- <GeneratePackageOnBuild>true</GeneratePackageOnBuild> -->
+        <PackageVersion>6.17.0</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -50,10 +49,13 @@
     <ItemGroup>
         <_NativeReference Include="../frameworks/AppsFlyerLib.xcframework">
             <_Id>$(_AppsFlyerLibId)</_Id>
+            <SmartLink>False</SmartLink>
+            <ForceLoad>True</ForceLoad>
+            <IsCxx>true</IsCxx>
         </_NativeReference>
     </ItemGroup>
     <!-- End of workaround -->
-    <ItemGroup Condition="'$(TargetFramework)' == 'xamarin.ios10'">
+    <ItemGroup>
         <Compile Remove="../source/ApiDefinition.cs" />
         <Compile Remove="../source/StructsAndEnums.cs" />
     </ItemGroup>

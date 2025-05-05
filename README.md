@@ -263,6 +263,7 @@ Full example:
         AppsFlyerLib.Shared.AppleAppID = "xXxXxX";
         AppsFlyerLib.Shared.AppsFlyerDevKey = "xXxXxX";
         AppsFlyerConsent consent = new AppsFlyerConsent().initNonGDPRUser();
+        // AppsFlyerConsent consent = new AppsFlyerConsent().InitWithConsentData(null, null, true, false);
         AppsFlyerLib.Shared.SetConsentData(consent);
         return true;
     }
@@ -273,6 +274,40 @@ Full example:
         AppsFlyerLib.Shared.Start();
     }
 ```
+
+#### New API with all the freedom needed to decide id the user is `SubjectToGDPR`, `hasConsentForDataUsage`, `hasConsentForAdsPersonalization`, `hasConsentForAdStorage`:
+* call the following method: 
+```c#
+ AppsFlyerConsent InitWithConsentInfo(
+            bool? isUserSubjectToGDPR,
+            bool? hasConsentForDataUsage,
+            bool? hasConsentForAdsPersonalization,
+            bool? hasConsentForAdStorage)
+```            
+
+Use it this way:            
+
+```c#
+[Export("application:didFinishLaunchingWithOptions:")]
+    public bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+    {
+        AppsFlyerLib.Shared.AppleAppID = "xXxXxX";
+        AppsFlyerLib.Shared.AppsFlyerDevKey = "xXxXxX";
+        AppsFlyerConsent consent = new AppsFlyerConsent().InitWithConsentData(null, null, true, false);
+        // Example to use this partial API.
+        // AppsFlyerConsent consent = new AppsFlyerConsent().InitWithConsentData(hasConsentForAdStorage: true);
+        AppsFlyerLib.Shared.SetConsentData(consent);
+        return true;
+    }
+
+[Export("applicationDidBecomeActive:")]
+    public void OnActivated(UIApplication application)
+    {
+        AppsFlyerLib.Shared.Start();
+    }
+```
+
+
 ## ValidateAndLogV2
 [Here](https://dev.appsflyer.com/hc/docs/validate-and-log-purchase-ios) you can find the info on what is the ValidateAndLog API purpose.
 ```c#

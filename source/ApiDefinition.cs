@@ -465,8 +465,16 @@ namespace AppsFlyerXamarinBinding
         AppsFlyerConsent initForGDPRUser (bool hasConsentForDataUsage, bool hasConsentForAdsPersonalization);
 
         // - (instancetype)initNonGDPRUser;
-        [Export ("initNonGDPRUser")]
+        [Export ("initWithNonGDPRUser")]
         AppsFlyerConsent initNonGDPRUser();
+
+        [Internal]
+        [Export("initWithIsUserSubjectToGDPR:hasConsentForDataUsage:hasConsentForAdsPersonalization:hasConsentForAdStorage:")]
+        AppsFlyerConsent InitWithConsentInfo(
+            [NullAllowed] NSNumber isUserSubjectToGDPR,
+            [NullAllowed] NSNumber hasConsentForDataUsage,
+            [NullAllowed] NSNumber hasConsentForAdsPersonalization,
+            [NullAllowed] NSNumber hasConsentForAdStorage);
     }
 
     // @interface AFSDKPurchaseDetails : NSObject
