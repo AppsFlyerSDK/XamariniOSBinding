@@ -7,7 +7,7 @@ Built with AppsFlyer iOS SDK `v6.17.0`
 
 ## ❗ v6 Breaking Changes
 
-We have renamed some of the APIs. For more details, please check out our [Help Center](https://support.appsflyer.com/hc/en-us/articles/360011571778#4-change-apis)
+Upgraded to .NET 8.0
     
 # Overview
     
