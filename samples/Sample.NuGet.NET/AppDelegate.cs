@@ -70,21 +70,17 @@ public class AppDelegate : UIApplicationDelegate {
         // Create NSDictionary
         var dictionary = NSDictionary.FromObjectsAndKeys(values, keys);
 
-
-        AppsFlyerLib.Shared.ValidateAndLogInAppPurchase("1234", "4.0", "USD", "1234567890", null, (dictionary) =>
+        AFSDKPurchaseDetails details = new AFSDKPurchaseDetails("1234", "123456789", AFSDKPurchaseType.OneTimePurchase);
+        AppsFlyerLib.Shared.ValidateAndLogInAppPurchase(details, dictionary, (response, error) =>
         {
-            Console.WriteLine(dictionary.Description);
-        }, (err, obj) =>
-        {
-            Console.WriteLine(err.Description);
-        });
-
-        AFSDKPurchaseDetails details = new AFSDKPurchaseDetails("1234", "4.0", "USD", "123456789");
-        AppsFlyerLib.Shared.ValidateAndLogInAppPurchase(details, dictionary, (dict) =>
-        {
-            Console.WriteLine(dict.Description);
-            Console.WriteLine(dict.status);
-            Console.WriteLine(dict.error.Description);
+            if (error != null)
+            {
+                Console.WriteLine($"Error: {error.Description}");
+            }
+            else if (response != null)
+            {
+                Console.WriteLine($"Response: {response.Description}");
+            }
         });
 
         AFAdRevenueData adRevenueData = new AFAdRevenueData("ironsource", AppsFlyerAdRevenueMediationNetworkType.Admost, "USD", 23.3);
@@ -154,7 +150,7 @@ public class MyAppsFlyerDeepLinkDelegate : AppsFlyerDeepLinkDelegate
         else
         {
             Console.WriteLine("DDL: " + result.status);
-        }
+        } 
     }
 }
 
