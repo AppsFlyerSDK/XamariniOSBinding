@@ -8,6 +8,10 @@ Built with AppsFlyer iOS SDK `v6.17.0`
 ## ❗ v6 Breaking Changes
 
 Upgraded to .NET 8.0
+
+### ⚠️ Breaking Changes in v6.17.2
+
+**ValidateAndLog API:** Changed API parameters - now `AFSDKPurchaseDetails` only accepts `productId`, `transactionId`, and `purchaseType` (new enum). See [implementation example](#validateAndLogV2) for the new callback signature with `response` or `error`.
     
 # Overview
     
@@ -310,13 +314,25 @@ Use it this way:
 
 ## ValidateAndLogV2
 [Here](https://dev.appsflyer.com/hc/docs/validate-and-log-purchase-ios) you can find the info on what is the ValidateAndLog API purpose.
+
+### AFSDKPurchaseType Enum
+
+A new enum `AFSDKPurchaseType` is now used to specify the purchase type in the `AFSDKPurchaseDetails` constructor for the ValidateAndLog API. The available values are:
+
+- `AFSDKPurchaseType.Subscription` — for subscription-based purchases (e.g., monthly or yearly recurring payments).
+- `AFSDKPurchaseType.OneTimePurchase` — for one-time purchases (e.g., single in-app purchase, non-recurring).
+
 ```c#
-AFSDKPurchaseDetails details = new AFSDKPurchaseDetails("1234", "4.0", "USD", "123456789");
-AppsFlyerLib.Shared.ValidateAndLogInAppPurchase(details, dictionary, (dict) =>
+AFSDKPurchaseDetails details = new AFSDKPurchaseDetails("1234", "123456789", AFSDKPurchaseType.OneTimePurchase);
+AppsFlyerLib.Shared.ValidateAndLogInAppPurchase(details, dictionary, (response, error) =>
 {
-    Console.WriteLine(dict.Description);
-    Console.WriteLine(dict.status);
-    Console.WriteLine(dict.error.Description);
+    if (error != null)
+    {
+        Console.WriteLine($"Error: {error.Description}");
+        return;
+    }
+    
+    Console.WriteLine($"Status: {response.Status}");
 });
 ```
 
