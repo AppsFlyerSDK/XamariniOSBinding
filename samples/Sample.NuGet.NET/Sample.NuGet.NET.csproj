@@ -82,7 +82,7 @@
     </InterfaceDefinition>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="AppsFlyerXamarinBinding" Version="6.17.3" />
+    <PackageReference Include="AppsFlyerXamarinBinding" Version="6.17.2" />
   </ItemGroup>
   
   <!-- Add native framework reference -->
