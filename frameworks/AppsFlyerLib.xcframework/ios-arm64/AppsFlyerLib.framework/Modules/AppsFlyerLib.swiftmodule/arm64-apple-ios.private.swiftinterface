@@ -4,7 +4,6 @@
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 @_exported import AppsFlyerLib
 import Foundation
-import StoreKit
 import Swift
 import _Concurrency
 import _StringProcessing

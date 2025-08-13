@@ -253,10 +253,10 @@ namespace AppsFlyerXamarinBinding
         [Export("validateAndLogInAppPurchase:price:currency:transactionId:additionalParameters:success:failure:")]
         void ValidateAndLogInAppPurchase([NullAllowed] string productIdentifier, [NullAllowed] string price, [NullAllowed] string currency, [NullAllowed] string transactionId, [NullAllowed] NSDictionary @params, [NullAllowed] Action<NSDictionary> successBlock, [NullAllowed] Action<NSError, NSObject> failedBlock);
 
-        // - (void)validateAndLogInAppPurchase:(AFSDKPurchaseDetails *)details extraEventValues:(NSDictionary * _Nullable)extraEventValues completionHandler:(AFSDKValidateAndLogCompletion)completionHandler NS_AVAILABLE(10_7, 7_0)
-        [Export("validateAndLogInAppPurchase:extraEventValues:completionHandler:")]
-        void ValidateAndLogInAppPurchase(AFSDKPurchaseDetails details, [NullAllowed] NSDictionary @extraEventValues, Action<AFSDKValidateAndLogResult> completionHandler);
-
+        // - (void)validateAndLogInAppPurchase:(AFSDKPurchaseDetails *)purchaseDetails purchaseAdditionalDetails:(NSDictionary * _Nullable)purchaseAdditionalDetails completion:(void (^)(NSDictionary * _Nullable response, NSError * _Nullable error))completion
+        [Export("validateAndLogInAppPurchase:purchaseAdditionalDetails:completion:")]
+        void ValidateAndLogInAppPurchase(AFSDKPurchaseDetails details, [NullAllowed] NSDictionary purchaseAdditionalDetails, [NullAllowed] Action<NSDictionary, NSError> completion);
+        
         // - (void)logAdRevenue:(AFAdRevenueData *)adRevenueData additionalParameters:(NSDictionary * _Nullable)additionalParameters;
         [Export("logAdRevenue:additionalParameters:")]
         void LogAdRevenue(AFAdRevenueData adRevenueData, [NullAllowed] NSDictionary @additionalParameters);
@@ -482,11 +482,10 @@ namespace AppsFlyerXamarinBinding
     interface AFSDKPurchaseDetails
     {
         // - (instancetype _Nonnull )initWithProductId:(NSString *_Nullable)productId
-        //                                   price:(NSString *_Nullable)price
-        //                                currency:(NSString *_Nullable)currency
-        //                           transactionId:(NSString *_Nullable)transactionId;
-        [Export ("initWithProductId:price:currency:transactionId:")]
-        IntPtr Constructor([NullAllowed] string productId, [NullAllowed] string price, [NullAllowed] string currency, [NullAllowed] string transactionId);
+        //                                   transactionId:(NSString *_Nullable)transactionId
+        //                                purchaseType:(AFSDKPurchaseType)purchaseType;
+        [Export ("initWithProductId:transactionId:purchaseType:")]
+        IntPtr Constructor([NullAllowed] string productId, [NullAllowed] string transactionId, AFSDKPurchaseType purchaseType);
     }
 
     // @interface AFSDKValidateAndLogResult : NSObject

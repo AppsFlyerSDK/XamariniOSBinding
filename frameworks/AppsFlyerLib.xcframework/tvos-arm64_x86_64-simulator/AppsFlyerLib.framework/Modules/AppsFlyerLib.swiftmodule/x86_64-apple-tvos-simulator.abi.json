@@ -15,204 +15,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "StoreKit",
-        "printedName": "StoreKit",
-        "declKind": "Import",
-        "moduleName": "AppsFlyerLib"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "AppTransactionWrapper",
-        "printedName": "AppTransactionWrapper",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "fetchAppTransaction",
-            "printedName": "fetchAppTransaction(completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.String?, (any Swift.Error)?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(Swift.String?, (any Swift.Error)?)",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Swift.String?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "(any Swift.Error)?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Error",
-                            "printedName": "any Swift.Error",
-                            "usr": "s:s5ErrorP"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AppsFlyerLib@objc(cs)AppTransactionWrapper(cm)fetchAppTransactionWithCompletion:",
-            "mangledName": "$s12AppsFlyerLib21AppTransactionWrapperC05fetchdE010completionyySSSg_s5Error_pSgtc_tFZ",
-            "moduleName": "AppsFlyerLib",
-            "static": true,
-            "objc_name": "fetchAppTransactionWithCompletion:",
-            "declAttributes": [
-              "Final",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "AppTransactionWrapper",
-                "printedName": "AppsFlyerLib.AppTransactionWrapper",
-                "usr": "c:@M@AppsFlyerLib@objc(cs)AppTransactionWrapper"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@AppsFlyerLib@objc(cs)AppTransactionWrapper(im)init",
-            "mangledName": "$s12AppsFlyerLib21AppTransactionWrapperCACycfc",
-            "moduleName": "AppsFlyerLib",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@AppsFlyerLib@objc(cs)AppTransactionWrapper",
-        "mangledName": "$s12AppsFlyerLib21AppTransactionWrapperC",
-        "moduleName": "AppsFlyerLib",
-        "isOpen": true,
-        "declAttributes": [
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "AppsFlyerLib",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "AppsFlyerDMADataMapper",
         "printedName": "AppsFlyerDMADataMapper",
@@ -2857,154 +2659,154 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 225,
       "length": 17,
       "value": "\"IABTCF_CmpSdkID\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 280,
       "length": 12,
       "value": "\"cmp_sdk_id\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 328,
       "length": 22,
       "value": "\"IABTCF_CmpSdkVersion\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 389,
       "length": 17,
       "value": "\"cmp_sdk_version\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 445,
       "length": 22,
       "value": "\"IABTCF_PolicyVersion\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 509,
       "length": 16,
       "value": "\"policy_version\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 562,
       "length": 20,
       "value": "\"IABTCF_gdprApplies\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 622,
       "length": 14,
       "value": "\"gdpr_applies\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 673,
       "length": 17,
       "value": "\"IABTCF_TCString\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 730,
       "length": 10,
       "value": "\"tcstring\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 784,
       "length": 14,
       "value": "\"gdpr_applies\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 848,
       "length": 22,
       "value": "\"ad_user_data_enabled\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 927,
       "length": 28,
       "value": "\"ad_personalization_enabled\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 1001,
       "length": 20,
       "value": "\"ad_storage_enabled\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 1050,
       "length": 5,
       "value": "\"tcf\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "StringLiteral",
       "offset": 1087,
       "length": 8,
       "value": "\"manual\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMADataMapper.swift",
       "kind": "BooleanLiteral",
       "offset": 1491,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMAService.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerDMAService.swift",
       "kind": "BooleanLiteral",
       "offset": 300,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
       "kind": "StringLiteral",
       "offset": 289,
       "length": 21,
       "value": "\"isUserSubjectToGDPR\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
       "kind": "StringLiteral",
       "offset": 355,
       "length": 24,
       "value": "\"hasConsentForDataUsage\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
       "kind": "StringLiteral",
       "offset": 433,
       "length": 33,
       "value": "\"hasConsentForAdsPersonalization\""
     },
     {
-      "filePath": "\/Users\/moris.gateno\/builds\/t3_taScGy\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
+      "filePath": "\/Users\/amit.levy\/xCodeWorkspace\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/CMP\/AppsFlyerConsent.swift",
       "kind": "StringLiteral",
       "offset": 511,
       "length": 24,

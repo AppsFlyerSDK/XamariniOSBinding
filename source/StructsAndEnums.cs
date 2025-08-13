@@ -114,6 +114,13 @@ namespace AppsFlyerXamarinBinding
 		AFSDKValidateAndLogStatusError,
 	}
 
+	// @typedef AFSDKPurchaseType
+    public enum AFSDKPurchaseType : uint
+    {
+        Subscription = 0,
+        OneTimePurchase = 1
+    }
+
 // typedef NS_CLOSED_ENUM(NSUInteger, AppsFlyerAdRevenueMediationNetworkType) {
 //     AppsFlyerAdRevenueMediationNetworkTypeGoogleAdMob = 1,
 //     AppsFlyerAdRevenueMediationNetworkTypeIronSource = 2,
