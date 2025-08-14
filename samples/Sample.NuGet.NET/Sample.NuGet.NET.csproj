@@ -82,17 +82,6 @@
     </InterfaceDefinition>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="AppsFlyerXamarinBinding" Version="6.17.2" />
-  </ItemGroup>
-  
-  <!-- Add native framework reference -->
-  <ItemGroup>
-    <NativeReference Include="../../frameworks/AppsFlyerLib.xcframework">
-      <_Id>AppsFlyerLib</_Id>
-      <Kind>Static</Kind>
-      <SmartLink>False</SmartLink>
-      <ForceLoad>True</ForceLoad>
-      <LinkerFlags>-ObjC</LinkerFlags>
-    </NativeReference>
+    <PackageReference Include="AppsFlyerXamarinBinding" Version="6.17.21" />
   </ItemGroup>
 </Project>
