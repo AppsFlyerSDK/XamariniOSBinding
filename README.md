@@ -2,8 +2,8 @@
 
 Xamarin Binding integration guide For iOS 
 
-AppsFlyer Xamarin Binding version `v6.17.22` <br>
-Built with AppsFlyer iOS SDK `v6.17.2`
+AppsFlyer Xamarin Binding version `v6.17.3` <br>
+Built with AppsFlyer iOS SDK `v6.17.3`
 
 ## ❗ v6 Breaking Changes
 
