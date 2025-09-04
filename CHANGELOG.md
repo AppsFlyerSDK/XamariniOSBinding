@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [6.17.5] - 2025-09-04
+- Bump version to 6.17.5
+
 ## [6.17.3] - 2025-08-25
 - Bump version to 6.17.3
 

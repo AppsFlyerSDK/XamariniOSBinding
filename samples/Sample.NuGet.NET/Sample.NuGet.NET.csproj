@@ -7,6 +7,7 @@
     <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
     <MtouchLink>SdkOnly</MtouchLink>
     <UseInterpreter>true</UseInterpreter>
+    <RuntimeIdentifier>iossimulator-arm64</RuntimeIdentifier>
   </PropertyGroup>
   <Target Name="LinkWithSwift" DependsOnTargets="_ParseBundlerArguments;_DetectSdkLocations" BeforeTargets="_LinkNativeExecutable">
     <PropertyGroup>
@@ -82,6 +83,6 @@
     </InterfaceDefinition>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="AppsFlyerXamarinBinding" Version="6.17.3" />
+    <PackageReference Include="AppsFlyerXamarinBinding" Version="6.17.5" />
   </ItemGroup>
 </Project>
