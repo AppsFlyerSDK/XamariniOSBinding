@@ -104,7 +104,7 @@
               "HasInitialValue",
               "Final",
               "HasStorage",
-              "SetterAccess",
+              "AccessControl",
               "ObjC"
             ],
             "fixedbinaryorder": 2,
@@ -140,6 +140,230 @@
                   "ObjC"
                 ],
                 "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AFSDKOnDeviceMeasurement(im)setCurrentODMInfo:",
+                "mangledName": "$s12AppsFlyerLib24AFSDKOnDeviceMeasurementC14currentODMInfoSSSgvs",
+                "moduleName": "AppsFlyerLib",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12AppsFlyerLib24AFSDKOnDeviceMeasurementC14currentODMInfoSSSgvM",
+                "mangledName": "$s12AppsFlyerLib24AFSDKOnDeviceMeasurementC14currentODMInfoSSSgvM",
+                "moduleName": "AppsFlyerLib",
+                "implicit": true,
+                "intro_iOS": "12.0",
+                "declAttributes": [
+                  "Final",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "metadata",
+            "printedName": "metadata",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AppsFlyerLib@objc(cs)AFSDKOnDeviceMeasurement(py)metadata",
+            "mangledName": "$s12AppsFlyerLib24AFSDKOnDeviceMeasurementC8metadataSDySSypGSgvp",
+            "moduleName": "AppsFlyerLib",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AFSDKOnDeviceMeasurement(im)metadata",
+                "mangledName": "$s12AppsFlyerLib24AFSDKOnDeviceMeasurementC8metadataSDySSypGSgvg",
+                "moduleName": "AppsFlyerLib",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AppsFlyerLib@objc(cs)AFSDKOnDeviceMeasurement(im)setMetadata:",
+                "mangledName": "$s12AppsFlyerLib24AFSDKOnDeviceMeasurementC8metadataSDySSypGSgvs",
+                "moduleName": "AppsFlyerLib",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12AppsFlyerLib24AFSDKOnDeviceMeasurementC8metadataSDySSypGSgvM",
+                "mangledName": "$s12AppsFlyerLib24AFSDKOnDeviceMeasurementC8metadataSDySSypGSgvM",
+                "moduleName": "AppsFlyerLib",
+                "implicit": true,
+                "intro_iOS": "12.0",
+                "declAttributes": [
+                  "Final",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
               }
             ]
           },
@@ -262,7 +486,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.String?, Swift.Int, Foundation.NSError?) -> ()",
+                "printedName": "(Swift.String?, [Swift.String : Any]?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -272,7 +496,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(Swift.String?, Swift.Int, Foundation.NSError?)",
+                    "printedName": "(Swift.String?, [Swift.String : Any]?)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -290,20 +514,27 @@
                       },
                       {
                         "kind": "TypeNominal",
-                        "name": "Int",
-                        "printedName": "Swift.Int",
-                        "usr": "s:Si"
-                      },
-                      {
-                        "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Foundation.NSError?",
+                        "printedName": "[Swift.String : Any]?",
                         "children": [
                           {
                             "kind": "TypeNominal",
-                            "name": "NSError",
-                            "printedName": "Foundation.NSError",
-                            "usr": "c:objc(cs)NSError"
+                            "name": "Dictionary",
+                            "printedName": "[Swift.String : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
                           }
                         ],
                         "usr": "s:Sq"
@@ -315,7 +546,7 @@
             ],
             "declKind": "Func",
             "usr": "c:@M@AppsFlyerLib@objc(cs)AFSDKOnDeviceMeasurement(im)getODMConversionDataWithTimeout:completion:",
-            "mangledName": "$s12AppsFlyerLib24AFSDKOnDeviceMeasurementC20getODMConversionData7timeout10completionySd_ySSSg_SiSo7NSErrorCSgtctF",
+            "mangledName": "$s12AppsFlyerLib24AFSDKOnDeviceMeasurementC20getODMConversionData7timeout10completionySd_ySSSg_SDySSypGSgtctF",
             "moduleName": "AppsFlyerLib",
             "objc_name": "getODMConversionDataWithTimeout:completion:",
             "declAttributes": [
@@ -2995,168 +3226,301 @@
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "StringLiteral",
-      "offset": 918,
+      "offset": 958,
       "length": 25,
       "value": "\"com.appsflyer.dma.queue\""
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1388,
-      "length": 1,
-      "value": "0"
+      "kind": "StringLiteral",
+      "offset": 1452,
+      "length": 7,
+      "value": "\"error\""
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "IntegerLiteral",
-      "offset": 1436,
+      "offset": 1461,
       "length": 2,
       "value": "-5"
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "StringLiteral",
-      "offset": 1532,
-      "length": 16,
-      "value": "\"sharedInstance\""
+      "offset": 1481,
+      "length": 7,
+      "value": "\"delay\""
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "IntegerLiteral",
-      "offset": 1764,
+      "offset": 1490,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 1635,
+      "length": 16,
+      "value": "\"sharedInstance\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 1880,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "IntegerLiteral",
-      "offset": 1812,
+      "offset": 1889,
       "length": 2,
       "value": "-4"
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "StringLiteral",
-      "offset": 1952,
-      "length": 21,
-      "value": "\"setFirstLaunchTime:\""
+      "offset": 1909,
+      "length": 7,
+      "value": "\"delay\""
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "IntegerLiteral",
-      "offset": 2106,
+      "offset": 1918,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 2107,
+      "length": 21,
+      "value": "\"setFirstLaunchTime:\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 2274,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "IntegerLiteral",
-      "offset": 2154,
+      "offset": 2283,
       "length": 2,
       "value": "-3"
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 2303,
+      "length": 7,
+      "value": "\"delay\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2312,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "BooleanLiteral",
-      "offset": 2337,
+      "offset": 2544,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "BooleanLiteral",
-      "offset": 2676,
+      "offset": 2935,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 3214,
+      "length": 7,
+      "value": "\"delay\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 3263,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "IntegerLiteral",
-      "offset": 3226,
+      "offset": 3272,
+      "length": 2,
+      "value": "-7"
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 3575,
+      "length": 7,
+      "value": "\"delay\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 3772,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3781,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "StringLiteral",
-      "offset": 3322,
+      "offset": 3809,
+      "length": 7,
+      "value": "\"delay\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 4053,
+      "length": 7,
+      "value": "\"delay\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4062,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 4228,
       "length": 56,
       "value": "\"fetchAggregateConversionInfoForInteraction:completion:\""
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3521,
-      "length": 1,
-      "value": "0"
+      "kind": "StringLiteral",
+      "offset": 4445,
+      "length": 7,
+      "value": "\"error\""
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "IntegerLiteral",
-      "offset": 3569,
+      "offset": 4454,
       "length": 2,
       "value": "-2"
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 4474,
+      "length": 7,
+      "value": "\"delay\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "IntegerLiteral",
-      "offset": 3700,
+      "offset": 4483,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "IntegerLiteral",
-      "offset": 3787,
+      "offset": 4616,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3935,
-      "length": 1,
-      "value": "0"
+      "kind": "StringLiteral",
+      "offset": 4782,
+      "length": 7,
+      "value": "\"error\""
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "IntegerLiteral",
-      "offset": 3983,
+      "offset": 4791,
       "length": 2,
       "value": "-6"
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "StringLiteral",
-      "offset": 4542,
+      "offset": 4811,
+      "length": 7,
+      "value": "\"delay\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4820,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 5439,
       "length": 25,
       "value": "\"ODM token fetch timeout\""
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "BooleanLiteral",
-      "offset": 4594,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4694,
-      "length": 2,
-      "value": "-2"
-    },
-    {
-      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4789,
+      "offset": 5495,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
       "kind": "StringLiteral",
-      "offset": 4911,
+      "offset": 5555,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5564,
+      "length": 2,
+      "value": "-2"
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 5588,
+      "length": 7,
+      "value": "\"delay\""
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5725,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ec2-user\/builds\/t3_Q67Ns\/0\/mobile\/ios\/appsflyer.sdk.ios\/AppsFlyerLib\/AppsFlyerLib\/ODM\/AFSDKOnDeviceMeasurement.swift",
+      "kind": "StringLiteral",
+      "offset": 5849,
       "length": 22,
       "value": "\"ODCConversionManager\""
     },
