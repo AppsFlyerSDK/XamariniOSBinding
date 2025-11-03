@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [6.17.7] - 2025-01-XX
+- Bump version to 6.17.7
+- Updated iOS SDK to v6.17.7
+
 ## [6.17.5] - 2025-09-04
 - Bump version to 6.17.5
 
