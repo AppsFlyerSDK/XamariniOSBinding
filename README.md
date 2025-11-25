@@ -5,6 +5,11 @@ Xamarin Binding integration guide For iOS
 AppsFlyer Xamarin Binding version `v6.17.7` <br>
 Built with AppsFlyer iOS SDK `v6.17.7`
 
+---
+🛠 In order for us to provide optimal support, please contact AppsFlyer support through the Customer Assistant Chatbot for assistance with troubleshooting issues or product guidance. </br>
+To do so, please follow [this article](https://support.appsflyer.com/hc/en-us/articles/23583984402193-Using-the-Customer-Assistant-Chatbot)
+
+
 ## ❗ v6 Breaking Changes
 
 Upgraded to .NET 8.0
@@ -349,14 +354,6 @@ Sample apps for `xamarin.ios10` and `net6.0-ios` can be found here:
 XamariniOSBinding/samples
 ```
 
-
----
-
-In order for us to provide optimal support, we would kindly ask you to submit any issues to support@appsflyer.com.
-
-
-
-*_When submitting an issue please specify your AppsFlyer sign-up (account) email, your app ID, production steps, logs, code snippets and any additional relevant information._*
 
 
 
