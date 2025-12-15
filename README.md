@@ -2,8 +2,8 @@
 
 Xamarin Binding integration guide For iOS 
 
-AppsFlyer Xamarin Binding version `v6.17.7` <br>
-Built with AppsFlyer iOS SDK `v6.17.7`
+AppsFlyer Xamarin Binding version `v6.17.8` <br>
+Built with AppsFlyer iOS SDK `v6.17.8`
 
 ## ❗ v6 Breaking Changes
 
@@ -12,6 +12,10 @@ Upgraded to .NET 8.0
 ### ⚠️ Breaking Changes in v6.17.2
 
 **ValidateAndLog API:** Changed API parameters - now `AFSDKPurchaseDetails` only accepts `productId`, `transactionId`, and `purchaseType` (new enum). See [implementation example](#validateAndLogV2) for the new callback signature with `response` or `error`.
+
+### ⚠️ Deprecated API
+
+**ValidateAndLog (v1):** The legacy `ValidateAndLogInAppPurchase` method with separate `productIdentifier`, `price`, `currency`, and `transactionId` parameters is deprecated. Please migrate to the new API using `AFSDKPurchaseDetails` (see [ValidateAndLogV2](#validateAndLogV2)).
     
 # Overview
     
@@ -37,7 +41,7 @@ The API for the binding coincides with the native iOS API, which can be found [h
     -  [Logging In-App Events](#adding_events)
     -  [Get Conversion Data](#conversion_data)
     -  [Stop](#Stop)
-    -  [validateAndLogV2](#validateAndLogV2)
+    -  [ValidateAndLog (v2)](#validateAndLogV2)
     -  [logAdRevenue](#logAdRevenue)
 - [Sample App](#sample_app)
 
@@ -312,7 +316,7 @@ Use it this way:
 ```
 
 
-## ValidateAndLogV2
+## ValidateAndLog (v2) {#validateAndLogV2}
 [Here](https://dev.appsflyer.com/hc/docs/validate-and-log-purchase-ios) you can find the info on what is the ValidateAndLog API purpose.
 
 ### AFSDKPurchaseType Enum
@@ -341,6 +345,23 @@ AppsFlyerLib.Shared.ValidateAndLogInAppPurchase(details, dictionary, (response, 
 ```c#
 AFAdRevenueData adRevenueData = new AFAdRevenueData("ironsource", AppsFlyerAdRevenueMediationNetworkType.Admost, "USD", 23.3);
 AppsFlyerLib.Shared.LogAdRevenue(adRevenueData, dictionary);
+```
+
+## Linking Swift System Libraries (MAUI8)
+
+Since the native iOS SDK includes Swift code, MAUI8 apps need to manually link Swift system libraries. Add the following property to your `.csproj` file:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+    ...
+    <LinkWithSwiftSystemLibraries>true</LinkWithSwiftSystemLibraries>
+    ...
+    </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="AppsFlyerXamarinBinding" Version="6.17.8" />
+    </ItemGroup>
+</Project>
 ```
 
 ## Sample App 
