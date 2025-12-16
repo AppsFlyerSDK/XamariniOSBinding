@@ -4,7 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-## [6.17.7] - 2025-01-XX
+## [6.17.8] - 2025-12-16
+- Bump version to 6.17.8
+- Updated iOS SDK to v6.17.8
+- Marked ValidateAndLog (v1) API as deprecated
+
+## [6.17.7] - 2025-11-3
 - Bump version to 6.17.7
 - Updated iOS SDK to v6.17.7
 

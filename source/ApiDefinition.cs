@@ -250,6 +250,7 @@ namespace AppsFlyerXamarinBinding
         void LogEventWithEventName (string eventName, [NullAllowed] NSDictionary<NSString, NSObject> eventValues, [NullAllowed] Action<NSDictionary<NSString, NSObject>, NSError> completionHandler);
 
         // -(void)validateAndLogInAppPurchase:(NSString * _Nullable)productIdentifier price:(NSString * _Nullable)price currency:(NSString * _Nullable)currency transactionId:(NSString * _Nullable)transactionId additionalParameters:(NSDictionary * _Nullable)params success:(void (^ _Nullable)(NSDictionary * _Nonnull))successBlock failure:(void (^ _Nullable)(NSError * _Nullable, id _Nullable))failedBlock __attribute__((availability(ios, introduced=7.0)));
+        [Obsolete("This API is deprecated. Please use ValidateAndLogInAppPurchase with AFSDKPurchaseDetails instead.")]
         [Export("validateAndLogInAppPurchase:price:currency:transactionId:additionalParameters:success:failure:")]
         void ValidateAndLogInAppPurchase([NullAllowed] string productIdentifier, [NullAllowed] string price, [NullAllowed] string currency, [NullAllowed] string transactionId, [NullAllowed] NSDictionary @params, [NullAllowed] Action<NSDictionary> successBlock, [NullAllowed] Action<NSError, NSObject> failedBlock);
 
