@@ -2,8 +2,10 @@
 
 Xamarin Binding integration guide For iOS 
 
-AppsFlyer Xamarin Binding version `v6.17.8` <br>
-Built with AppsFlyer iOS SDK `v6.17.8`
+AppsFlyer Xamarin Binding version `v6.18.1` <br>
+Built with AppsFlyer iOS SDK `v6.18.1`
+
+Multi-targets `net8.0-ios`, `net9.0-ios18.0`, and `net10.0-ios26.0` — consuming projects can target any of the three. Building the binding itself from source requires the .NET 10 SDK (10.0.302); see `pack.sh` for the per-TFM SDK matrix.
 
 ## ❗ v6 Breaking Changes
 
@@ -349,7 +351,7 @@ AppsFlyerLib.Shared.LogAdRevenue(adRevenueData, dictionary);
 
 ## Linking Swift System Libraries (MAUI8)
 
-Since the native iOS SDK includes Swift code, MAUI8 apps need to manually link Swift system libraries. Add the following property to your `.csproj` file:
+Since the native iOS SDK includes Swift code, MAUI8 apps need to manually link Swift system libraries. Add the following property to your `.csproj` file — works whether your app targets `net8.0-ios`, `net9.0-ios18.0`, or `net10.0-ios26.0`, the package resolves the matching binding for each:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -359,7 +361,7 @@ Since the native iOS SDK includes Swift code, MAUI8 apps need to manually link S
     ...
     </PropertyGroup>
     <ItemGroup>
-      <PackageReference Include="AppsFlyerXamarinBinding" Version="6.17.8" />
+      <PackageReference Include="AppsFlyerXamarinBinding" Version="6.18.1" />
     </ItemGroup>
 </Project>
 ```

@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [6.18.1] - 2026-07-20
+- Bump version to 6.18.1
+- Added net9.0-ios18.0 and net10.0-ios26.0 targets (in addition to net8.0-ios); requires the .NET 10 SDK (10.0.302) to build/restore the full multi-targeted project — see README for per-TFM SDK requirements
+
 ## [6.17.8] - 2025-12-16
 - Bump version to 6.17.8
 - Updated iOS SDK to v6.17.8

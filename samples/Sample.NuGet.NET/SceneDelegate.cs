@@ -3,15 +3,38 @@
 [Register ("SceneDelegate")]
 public class SceneDelegate : UIResponder, IUIWindowSceneDelegate {
 
+	public SceneDelegate () { }
+
+	public SceneDelegate (IntPtr handle) : base (handle) { }
+
 	[Export ("window")]
 	public UIWindow? Window { get; set; }
+
+	// AppsFlyerLib.Delegate/DeepLinkDelegate are unretained (ArgumentSemantic.Assign) - hold a strong
+	// reference here or the GC can collect these once WillConnect returns.
+	AppsFlyerConversionDataDelegate? conversionDataDelegate;
+	MyAppsFlyerDeepLinkDelegate? deepLinkDelegate;
 
 	[Export ("scene:willConnectToSession:options:")]
 	public void WillConnect (UIScene scene, UISceneSession session, UISceneConnectionOptions connectionOptions)
 	{
-		// Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-		// If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-		// This delegate does not imply the connecting scene or session are new (see UIApplicationDelegate `GetConfiguration` instead).
+		if (scene is not UIWindowScene windowScene)
+			return;
+
+		var mainViewController = new MainViewController ();
+
+		Window = new UIWindow (windowScene);
+		Window.RootViewController = mainViewController;
+		Window.MakeKeyAndVisible ();
+
+		conversionDataDelegate = new AppsFlyerConversionDataDelegate (mainViewController);
+		deepLinkDelegate = new MyAppsFlyerDeepLinkDelegate (mainViewController);
+		AppsFlyerXamarinBinding.AppsFlyerLib.Shared.Delegate = conversionDataDelegate;
+		AppsFlyerXamarinBinding.AppsFlyerLib.Shared.DeepLinkDelegate = deepLinkDelegate;
+
+		// Start once per launch, not on every foreground re-activation (avoids inflating session counts).
+		AppsFlyerXamarinBinding.AppsFlyerLib.Shared.Start ();
+		mainViewController.UpdateStatus ("AppsFlyer Start called.");
 	}
 
 	[Export ("sceneDidDisconnect:")]
@@ -26,8 +49,6 @@ public class SceneDelegate : UIResponder, IUIWindowSceneDelegate {
 	[Export ("sceneDidBecomeActive:")]
 	public void DidBecomeActive (UIScene scene)
 	{
-		// Called when the scene has moved from an inactive state to an active state.
-		// Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
 	}
 
 	[Export ("sceneWillResignActive:")]
