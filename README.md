@@ -7,6 +7,11 @@ Built with AppsFlyer iOS SDK `v6.18.1`
 
 Multi-targets `net8.0-ios`, `net9.0-ios18.0`, and `net10.0-ios26.0` — consuming projects can target any of the three. Building the binding itself from source requires the .NET 10 SDK (10.0.302); see `pack.sh` for the per-TFM SDK matrix.
 
+---
+🛠 In order for us to provide optimal support, please contact AppsFlyer support through the Customer Assistant Chatbot for assistance with troubleshooting issues or product guidance. </br>
+To do so, please follow [this article](https://support.appsflyer.com/hc/en-us/articles/23583984402193-Using-the-Customer-Assistant-Chatbot)
+
+
 ## ❗ v6 Breaking Changes
 
 Upgraded to .NET 8.0
@@ -372,14 +377,6 @@ Sample apps for `xamarin.ios10` and `net6.0-ios` can be found here:
 XamariniOSBinding/samples
 ```
 
-
----
-
-In order for us to provide optimal support, we would kindly ask you to submit any issues to support@appsflyer.com.
-
-
-
-*_When submitting an issue please specify your AppsFlyer sign-up (account) email, your app ID, production steps, logs, code snippets and any additional relevant information._*
 
 
 
